@@ -2,11 +2,17 @@ function App() {
   return (
     <>
       <header>
-        {/* header */}
-        {/* nav */}
-        my gamer cred
+        <h1>MY-GAMER-CRED</h1>
       </header>
-      <div>{/* page related */}</div>
+      <main>
+        <div className="top-border" />
+        <nav>
+          <a href="">HOME</a>
+          <a href="">SEARCH</a>
+          <a href="">ABOUT</a>
+          <a href="">ACCOUNT</a>
+        </nav>
+      </main>
     </>
   );
 }
