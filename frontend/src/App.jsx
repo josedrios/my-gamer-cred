@@ -2,7 +2,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>MY-GAMER-CRED</h1>
+        <h1>GOT GAMER CRED?</h1>
       </header>
       <main>
         <div className="top-border" />

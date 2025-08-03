@@ -1,5 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 
+$primary-font: 'Tiny5', monospace;
+
+// ==========================
+// Font Measurements
+// ==========================
+$font-size-xs: 0.6875rem; // 11px
+$font-size-sm: 0.75rem; // 12px
+$font-size-md: 0.9375rem; // 15px
+$font-size-lg: 1.0625rem; // 17px
+
 body {
-    font-family: "Tiny5", sans-serif;
+  font-family: 'Tiny5', sans-serif;
+}
+
+// ==========================
+// Tag Adjustments
+// ==========================
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+// --- Breakpoint Adjustments ---
+@media (max-width: #{$breakpoint-xs}) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.875rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
 }
