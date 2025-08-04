@@ -1,0 +1,18 @@
+header {
+  background-image: url('/banner.png');
+  filter: grayscale(15%);
+  background-size: 750px auto;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  border-bottom: 2px solid $tertiary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #banner-title {
+    text-align: center;
+    margin: $spacing-md;
+  }
+}

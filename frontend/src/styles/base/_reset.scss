@@ -3,7 +3,6 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  // add margin to vert
 }
 
 #root {
@@ -11,8 +10,6 @@ body {
   min-width: 0px;
   width: calc(100% - 4px);
   height: 100vh;
-  // when margin is added to vert body
-  // do calc for this height
 }
 
 header {
@@ -23,9 +20,18 @@ main {
   padding: $spacing-xs;
 }
 
-// .top-border {
-//   margin: 1px;
-//   height: 8px;
-//   background-image: radial-gradient(#cacaca 1px, transparent 1px);
-//   background-size: 4px 4px;
-// }
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  text-align: center;
+}
+
+button, a {
+  &:hover {
+    cursor: pointer;
+  }
+}

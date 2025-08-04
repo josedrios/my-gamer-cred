@@ -1,6 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+// ==========================
+// Font Families
+// ==========================
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap");
 
-$primary-font: 'Tiny5', monospace;
+@font-face {
+  font-family: 'Pixel';
+  src: url('/Fonts/TT2-BRK.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$primary-font: 'Pixel';
+$secondary-font: 'Spline Sans Mono';
 
 // ==========================
 // Font Measurements
@@ -11,34 +23,49 @@ $font-size-md: 0.9375rem; // 15px
 $font-size-lg: 1.0625rem; // 17px
 
 body {
-  font-family: 'Tiny5', sans-serif;
+  color: $secondary-font-color;
 }
 
 // ==========================
 // Tag Adjustments
 // ==========================
+h1, h2, h3, h4, h4, h5, h6 {
+  font-family: $primary-font;
+  color: $primary-font-color;
+  font-weight: 100;
+}
+
 h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.4em;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h6 {
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+
+button {
+  font-family: $primary-font !important;
+}
+
+p {
+  font-family: $secondary-font;
+  font-size: $font-size-md;
 }
 
 // --- Breakpoint Adjustments ---

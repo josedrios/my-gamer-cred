@@ -1,22 +1,3 @@
-header {
-  background-image: url('/banner1.png');
-  filter: grayscale(15%);
-  background-size: 750px auto;
-  background-repeat: no-repeat;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
-  border-bottom: 2px solid $tertiary-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#banner-title {
-  text-align: center;
-  margin: $spacing-md;
-}
-
 nav {
   display: flex;
   flex-direction: row;
@@ -25,7 +6,7 @@ nav {
   padding: $spacing-sm;
 
   a {
-    width: 25%;
+    width: 100% !important;
     text-align: center;
     font-size: $font-size-md;
     color: black;

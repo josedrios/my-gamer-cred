@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import About from './pages/About';
 import Account from './pages/Account';
+import Design from './pages/Design';
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
       <Nav />
       <main>
         <Routes>
-          {/* <div className="top-border" /> */}
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/about" element={<About />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/design" element={<Design />} />
         </Routes>
       </main>
     </Router>
