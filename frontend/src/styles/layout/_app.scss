@@ -1,0 +1,19 @@
+body {
+  background-color: $primary-bg;
+  background-image: radial-gradient(#cacaca 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+#root {
+  border: 2px solid $primary-color;
+  border-top: none;
+  border-bottom: none;
+  margin: auto;
+  background-color: $secondary-bg;
+}
+
+main{
+  padding: $spacing-sm;
+}
+
+// BODY & APP LAYOUT RELATED STYLING

@@ -1,19 +1,29 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Nav from './components/Nav';
+
+import Home from './pages/Home';
+import Search from './pages/Search';
+import About from './pages/About';
+import Account from './pages/Account';
+
 function App() {
   return (
-    <>
+    <Router>
       <header>
-        <h1>GOT GAMER CRED?</h1>
+        <h1 id="banner-title">GOT GAMER CRED?</h1>
       </header>
+      <Nav />
       <main>
-        <div className="top-border" />
-        <nav>
-          <a href="">HOME</a>
-          <a href="">SEARCH</a>
-          <a href="">ABOUT</a>
-          <a href="">ACCOUNT</a>
-        </nav>
+        <Routes>
+          {/* <div className="top-border" /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
       </main>
-    </>
+    </Router>
   );
 }
 

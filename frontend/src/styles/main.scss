@@ -1,8 +1,11 @@
-// BASE SASS FILES
+// BASE FILES
 @import './base/_variables';
 @import './base/_typography';
 @import './base/_reset';
 
-// LAYOUT SASS FILES
+// LAYOUT FILES
 @import './layout/_nav';
 @import './layout/_app';
+
+// COMPONENTS SASS FILES
+@import './components/_buttons';
