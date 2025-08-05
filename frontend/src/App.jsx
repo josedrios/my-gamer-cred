@@ -10,21 +10,23 @@ import Design from './pages/Design';
 
 function App() {
   return (
-    <Router>
-      <header>
-        <h1 id="banner-title">GOT GAMER CRED?</h1>
-      </header>
-      <Nav />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/design" element={<Design />} />
-        </Routes>
-      </main>
-    </Router>
+    <div id='website-container'>
+      <Router>
+        <header>
+          <h1 id="banner-title">GOT GAMER CRED?</h1>
+        </header>
+        <Nav />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/design" element={<Design />} />
+          </Routes>
+        </main>
+      </Router>
+    </div>
   );
 }
 

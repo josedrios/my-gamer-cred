@@ -5,15 +5,12 @@ body {
   display: flex;
   justify-content: center;
   overflow: auto;
-  min-height: 100vh;
-  height: 100%;
 }
 
 #root {
-  width: calc(100% - 4px);
+  width: calc(100%);
   min-width: 0px;
   max-width: 750px;
-  height: 100%;
   overflow: auto;
   border: 2px solid $primary-color;
   border-top: none;
@@ -26,7 +23,6 @@ main {
   padding: $spacing-sm;
   display: flex;
   gap: $spacing-lg;
-  overflow: auto;
 
   aside {
     order: 1;
