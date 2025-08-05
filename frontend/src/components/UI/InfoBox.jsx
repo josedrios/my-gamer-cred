@@ -1,4 +1,4 @@
-export default function InfoBox({ header, children }) {
+export default function InfoBox({ header = "missing header", children }) {
   return (
     <div className="info-box">
       <div className="top-border" />

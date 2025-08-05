@@ -1,5 +1,7 @@
 .info-box {
     border: 2px solid $primary-color;
+    box-shadow: 4px 4px 0px 0px $tertiary-color;
+    margin-bottom: $spacing-md;
     
     .top-border {
       margin: 1px;

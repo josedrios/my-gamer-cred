@@ -1,16 +1,16 @@
-import Accordion from '../components/UI/InfoBox';
+import InfoBox from '../components/UI/InfoBox';
 
 export default function Design() {
   return (
     <>
       <div className="content design-content">
         <h2 className="page-header">DESIGN</h2>
-        <Accordion header={'design - testing the accordion'}>
+        <InfoBox header={'design - testing info boxes'}>
           <p>
             This is sample text to see how it would look like inside an info box
             for my design system.
           </p>
-        </Accordion>
+        </InfoBox>
         <button>BUTTON</button>
       </div>
       <aside>

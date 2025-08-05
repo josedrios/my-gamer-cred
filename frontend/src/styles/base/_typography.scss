@@ -66,6 +66,10 @@ button {
 p {
   font-family: $secondary-font;
   font-size: $font-size-md;
+
+  &.sm {
+    font-size: $font-size-sm;
+  }
 }
 
 // --- Breakpoint Adjustments ---

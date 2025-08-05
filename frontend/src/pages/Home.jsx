@@ -1,3 +1,102 @@
+import InfoBox from '../components/UI/InfoBox';
+import WaveText from '../components/UI/WaveText';
+
 export default function Home() {
-  return <div>HOME</div>;
+  return (
+    <>
+      <div className="content main-content">
+        <Welcome />
+        <Currency />
+        <Rules />
+      </div>
+      <aside>
+        <GameLegend />
+        <Badges />
+      </aside>
+    </>
+  );
+}
+
+function Welcome() {
+  return (
+    <>
+      <h1 className="page-header">
+        WELCOME TO MY
+        <WaveText text={'gamercred'} />
+        .COM!
+      </h1>
+      <p>
+        This website helps gamers know how much gamer cred they have accumulated
+        amongst their years of gaming. Vote on each games gamer cred score and
+        also add it to your profile to accumulate a higher score for your
+        profile. Comment on game's comments sections to debate whether the given
+        score is fitting. It is time to see what type of gamer you are.
+      </p>
+    </>
+  );
+}
+
+function Currency() {
+  return (
+    <>
+      <h2 className="page-subheader">Gamer Cred</h2>
+      <p>This is the most valuable currency in the universe:</p>
+      <p>
+        <i>INSERT GAMER CRED UNIT IMAGE</i>
+      </p>
+      <p>
+        {' '}
+        <WaveText text={'GAMER CRED'} />!
+      </p>
+      <p>
+        This currency originates from the respect a gamer gives to another
+        gamer. If you play a game that is of good taste, you are a respectable
+        individual in the gaming community. Great games tend to have a greater
+        gamer cred score because of its support from the community and its way
+        to connect gamers together.
+      </p>
+      <p>
+        Each game will have a gamer cred score from 0 to 100. As for
+        individuals, every gamer should strive to get their gamer cred score as
+        high as possible. Wear it like a badge of honor, because it is
+        essentially who you are.
+      </p>
+    </>
+  );
+}
+
+function Rules() {
+  return (
+    <>
+      <h2 className='page-subheader'>Main Rules</h2>
+      <p>
+        - Be kind to each other <br />
+        - Strive to get all fellow individuals gamer cred score up <br />
+        - Don't spam or be aggressive in comment sections <br />
+        - Never stop gaming (or do, its up to you)
+      </p>
+    </>
+  )
+}
+
+function GameLegend() {
+  return (
+    <InfoBox header={'game ratings'}>
+      <p>Games will be color coded in respect to their score:</p>
+      <br />
+      <p className="rank-legend purple">&nbsp;81 - 100 GC</p>
+      <p className="rank-legend blue">61 - 80 GC</p>
+      <p className="rank-legend skyblue">41 - 60 GC</p>
+      <p className="rank-legend brown">21 - 40 GC</p>
+      <p className="rank-legend red">&nbsp;0 - 20 GC</p>
+    </InfoBox>
+  );
+}
+
+function Badges() {
+  return (
+    <InfoBox header={'collect badges'}>
+      <p>Earn badges that will distinguish you from other gamers:</p>
+    </InfoBox>
+  );
 }

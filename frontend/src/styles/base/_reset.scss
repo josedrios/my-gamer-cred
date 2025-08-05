@@ -9,7 +9,7 @@ body {
   max-width: 750px;
   min-width: 0px;
   width: calc(100% - 4px);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {

@@ -1,0 +1,9 @@
+@each $name, $color in $accent-colors {
+  .#{$name} {
+    color: $color;
+  }
+}
+
+.rank-legend {
+    text-align: center;
+}

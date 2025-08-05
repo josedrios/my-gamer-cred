@@ -7,10 +7,13 @@
 @import './layout/_app';
 @import './layout/_header';
 @import './layout/_nav';
+@import './layout/_content';
 
 // PAGES
+@import './pages/_home';
 @import './pages/_design';
 
 // COMPONENTS SASS FILES
 @import './components/_buttons';
 @import './components/_infobox';
+@import './components/_wavetext';

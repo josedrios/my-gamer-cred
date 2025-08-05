@@ -27,3 +27,13 @@ main{
     width: 70%;
   }
 }
+
+@media (max-width: #{$breakpoint-xs}) {
+  main {
+    flex-direction: column;
+  }
+
+  div.content, aside {
+    width: 100% !important; 
+  }
+}
