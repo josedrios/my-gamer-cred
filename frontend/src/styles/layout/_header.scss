@@ -1,7 +1,7 @@
 header {
   background-image: url('/banner.png');
   filter: grayscale(15%);
-  background-size: 750px auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
@@ -10,6 +10,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
 
   #banner-title {
     text-align: center;

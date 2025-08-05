@@ -1,18 +1,20 @@
 .button,
 button {
-  background-color: $primary-bg;
-  box-shadow: inset -1px -1px 0 1px black, inset -3px -3px 0 1px $tertiary-color,
-    inset 0px 0px 0 2px white, inset 2px 2px 0px 2px $secondary-color;
+  font-family: $primary-font;
+  font-size: 1.2rem;
+
   height: $spacing-lg;
+  width: fit-content;
   padding: 0 $spacing-sm;
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: fit-content;
-  font-family: $primary-font;
-  font-size: 1.2rem;
+
+  background-color: $primary-bg;
+  box-shadow: inset -1px -1px 0 1px black, inset -3px -3px 0 1px $tertiary-color,
+    inset 0px 0px 0 2px white, inset 2px 2px 0px 2px $secondary-color;
+  text-decoration: none;
+  color: black;
 
   &:hover {
     box-shadow: inset -1px -1px 0 1px white,

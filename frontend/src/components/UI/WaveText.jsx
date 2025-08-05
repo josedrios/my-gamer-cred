@@ -24,10 +24,7 @@ export default function WaveText({ text }) {
           <span key={i} className="border-wave">
             {char}
           </span>
-        ) : diff === 2 ||
-          diff === 3 ||
-          diff === text.length - 2 ||
-          diff === text.length - 3 ? (
+        ) : diff === 2 || diff === text.length - 2 ? (
           <span key={i} className="border-wave">
             {char}
           </span>

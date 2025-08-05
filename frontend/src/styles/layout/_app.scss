@@ -2,20 +2,31 @@ body {
   background-color: $primary-bg;
   background-image: radial-gradient(#cacaca 1px, transparent 1px);
   background-size: 4px 4px;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  min-height: 100vh;
+  height: 100%;
 }
 
 #root {
+  width: calc(100% - 4px);
+  min-width: 0px;
+  max-width: 750px;
+  height: 100%;
+  overflow: auto;
   border: 2px solid $primary-color;
   border-top: none;
   border-bottom: none;
-  margin: auto;
   background-color: $secondary-bg;
+  padding-bottom: $spacing-lg;
 }
 
-main{
+main {
   padding: $spacing-sm;
   display: flex;
   gap: $spacing-lg;
+  overflow: auto;
 
   aside {
     order: 1;
@@ -33,7 +44,8 @@ main{
     flex-direction: column;
   }
 
-  div.content, aside {
-    width: 100% !important; 
+  div.content,
+  aside {
+    width: 100% !important;
   }
 }

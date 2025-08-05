@@ -1,7 +1,7 @@
 // ==========================
 // Font Families
 // ==========================
-@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
 
 @font-face {
   font-family: 'Pixel';
@@ -24,12 +24,19 @@ $font-size-lg: 1.0625rem; // 17px
 
 body {
   color: $secondary-font-color;
+  font-family: $secondary-font;
 }
 
 // ==========================
 // Tag Adjustments
 // ==========================
-h1, h2, h3, h4, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
   font-family: $primary-font;
   color: $primary-font-color;
   font-weight: 100;
@@ -91,5 +98,13 @@ p {
   }
   h6 {
     font-size: 0.75rem;
+  }
+
+  p {
+    font-size: $font-size-sm;
+
+    &.sm {
+      font-size: $font-size-xs;
+    }
   }
 }

@@ -15,9 +15,9 @@ export default function Nav() {
       <NavLink className="button" to='/account'>
         ACCOUNT
       </NavLink>
-      <NavLink className="button" to='/design'>
+      {/* <NavLink className="button" to='/design'>
         DESIGN
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 }

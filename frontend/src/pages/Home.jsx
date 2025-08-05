@@ -8,6 +8,8 @@ export default function Home() {
         <Welcome />
         <Currency />
         <Rules />
+        {/* ADD GAMER SCORE GAME CARDS */}
+        {/* LIKE: TOP, NEW, HOT (SAME FOR PLAYERS) */}
       </div>
       <aside>
         <GameLegend />
@@ -27,8 +29,8 @@ function Welcome() {
       </h1>
       <p>
         This website helps gamers know how much gamer cred they have accumulated
-        amongst their years of gaming. Vote on each games gamer cred score and
-        also add it to your profile to accumulate a higher score for your
+        amongst their years of gaming. Vote on each game's gamer cred score and
+        also add it to your profile to accumulate more gamer cred for your
         profile. Comment on game's comments sections to debate whether the given
         score is fitting. It is time to see what type of gamer you are.
       </p>
@@ -39,7 +41,7 @@ function Welcome() {
 function Currency() {
   return (
     <>
-      <h2 className="page-subheader">Gamer Cred</h2>
+      <h2 className="page-subheader">What is Gamer Cred?</h2>
       <p>This is the most valuable currency in the universe:</p>
       <p>
         <i>INSERT GAMER CRED UNIT IMAGE</i>
@@ -51,15 +53,15 @@ function Currency() {
       <p>
         This currency originates from the respect a gamer gives to another
         gamer. If you play a game that is of good taste, you are a respectable
-        individual in the gaming community. Great games tend to have a greater
-        gamer cred score because of its support from the community and its way
-        to connect gamers together.
+        individual in the gaming community. Great games tend to have greater
+        gamer cred because of its support from the community and its energy to
+        connect gamers together.
       </p>
       <p>
         Each game will have a gamer cred score from 0 to 100. As for
-        individuals, every gamer should strive to get their gamer cred score as
-        high as possible. Wear it like a badge of honor, because it is
-        essentially who you are.
+        individuals, every gamer should strive to get their gamer cred as high
+        as possible. Add games to your profile to up your gamer cred. Wear it
+        like a badge of honor, because it is essentially who you are.
       </p>
     </>
   );
@@ -68,15 +70,15 @@ function Currency() {
 function Rules() {
   return (
     <>
-      <h2 className='page-subheader'>Main Rules</h2>
+      <h2 className="page-subheader">Main Rules</h2>
       <p>
         - Be kind to each other <br />
-        - Strive to get all fellow individuals gamer cred score up <br />
-        - Don't spam or be aggressive in comment sections <br />
-        - Never stop gaming (or do, its up to you)
+        - Strive to get all fellow individual's gamer cred up <br />
+        - Don't spam or be aggressive in comment sections <br />- Never stop
+        gaming (or do, its up to you)
       </p>
     </>
-  )
+  );
 }
 
 function GameLegend() {

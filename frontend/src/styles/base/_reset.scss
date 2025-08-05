@@ -1,23 +1,15 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-}
-
-#root {
-  max-width: 750px;
-  min-width: 0px;
-  width: calc(100% - 4px);
-  min-height: 100vh;
-}
-
-header {
-  height: 100px;
-}
-
-main {
-  padding: $spacing-xs;
+    -webkit-overflow-scrolling: touch;
 }
 
 p {
@@ -25,12 +17,18 @@ p {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   text-align: center;
 }
 
-button, a {
+button,
+a {
   &:hover {
     cursor: pointer;
   }
