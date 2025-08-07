@@ -1,0 +1,15 @@
+.input {
+  padding: 0px $spacing-sm;
+  padding-top: 2px;
+  height: calc($spacing-xl + 5px);
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: $font-size-md;
+  box-shadow: inset -1px -1px 0 1px white, inset 0px 0px 0 2px $primary-color,
+    inset 2px 2px 0px 2px black, inset -3px -3px 0 1px $tertiary-color;
+
+  &::placeholder {
+    color: $primary-color;
+  }
+}

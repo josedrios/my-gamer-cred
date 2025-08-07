@@ -3,7 +3,7 @@
 }
 
 @media (max-width: #{$breakpoint-xs}) {
-  .about-content {
+  #about-content {
     order: 2 !important;
   }
 }

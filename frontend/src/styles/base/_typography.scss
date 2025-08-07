@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Pixel';
-  src: url('/Fonts/TT2-BRK.ttf');
+  src: url('/fonts/TT2-BRK.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -30,6 +30,10 @@ body {
 // ==========================
 // Tag Adjustments
 // ==========================
+body {
+  font-size: $font-size-md;
+}
+
 h1,
 h2,
 h3,
@@ -66,6 +70,10 @@ h6 {
   font-size: 1rem;
 }
 
+input {
+  font-family: $secondary-font !important;
+}
+
 button {
   font-family: $primary-font !important;
 }
@@ -79,7 +87,7 @@ p {
   }
 }
 
-// --- Breakpoint Adjustments ---
+// --- Breakpoint Tag Adjustments ---
 @media (max-width: #{$breakpoint-xs}) {
   h1 {
     font-size: 1.4rem;

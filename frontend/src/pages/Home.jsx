@@ -4,7 +4,7 @@ import WaveText from '../components/UI/WaveText';
 export default function Home() {
   return (
     <>
-      <div className="content main-content">
+      <div id="home-content" className="content">
         <Welcome />
         <Currency />
         <Rules />
@@ -43,10 +43,8 @@ function Currency() {
     <>
       <h2 className="page-subheader">What is Gamer Cred?</h2>
       <p>This is the most valuable currency in the universe:</p>
-      <p>
-        <i>INSERT GAMER CRED UNIT IMAGE</i>
-      </p>
-      <p>
+      <img src="/images/gc.png" alt="" className='pixel-art gc-unit' id='gc-unit-home'/>
+      <p id='gc-unit-label'>
         {' '}
         <WaveText text={'GAMER CRED'} />!
       </p>
@@ -72,10 +70,12 @@ function Rules() {
     <>
       <h2 className="page-subheader">Main Rules</h2>
       <p>
-        - Be kind to each other <br />
-        - Strive to get all fellow individual's gamer cred up <br />
-        - Don't spam or be aggressive in comment sections <br />- Never stop
-        gaming (or do, its up to you)
+        <span className="blue">*</span> Be kind to each other <br />
+        <span className="blue">*</span> Strive to get all fellow individual's
+        gamer cred up <br />
+        <span className="blue">*</span> Don't spam or be aggressive in comment
+        sections <br />
+        <span className="blue">*</span> Never stop gaming (or do, its up to you)
       </p>
     </>
   );
@@ -99,6 +99,7 @@ function Badges() {
   return (
     <InfoBox header={'collect badges'}>
       <p>Earn badges that will distinguish you from other gamers:</p>
+      <p><i>INSERT BADGES IMAGES HERE</i></p>
     </InfoBox>
   );
 }

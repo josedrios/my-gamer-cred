@@ -18,7 +18,6 @@ body {
 }
 
 div {
-    overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -56,11 +55,4 @@ h5,
 h6 {
   margin: 0;
   text-align: center;
-}
-
-button,
-a {
-  &:hover {
-    cursor: pointer;
-  }
 }

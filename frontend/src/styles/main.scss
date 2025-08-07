@@ -2,19 +2,23 @@
 @import './base/_variables';
 @import './base/_typography';
 @import './base/_reset';
+@import './base/_base';
 
 // LAYOUT FILES
 @import './layout/_app';
 @import './layout/_header';
 @import './layout/_nav';
-@import './layout/_content';
 
 // PAGES
 @import './pages/_home';
+@import './pages/_search';
 @import './pages/_about';
 @import './pages/_design';
 
 // COMPONENTS SASS FILES
 @import './components/_buttons';
+@import './components/_inputs';
+@import './components/_icons';
+@import './components/_selects';
 @import './components/_infobox';
 @import './components/_wavetext';

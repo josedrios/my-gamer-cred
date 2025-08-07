@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function WaveText({ text }) {
+export default function WaveText({ text = 'TEXT' }) {
   const [charIndex, setCharIndex] = useState(0);
   const textLen = text.length;
 

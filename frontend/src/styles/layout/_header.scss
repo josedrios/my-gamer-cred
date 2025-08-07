@@ -1,19 +1,23 @@
 header {
-  background-image: url('/banner.png');
-  filter: grayscale(15%);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
-  border-bottom: 2px solid $tertiary-color;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+
+  border-bottom: 2px solid $tertiary-color;
+
+  background-image: url('/images/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
 
   #banner-title {
     text-align: center;
+    font-size: 45px;
+    line-height: 30px;
     margin: $spacing-md;
+    // text-shadow: -2px 2px 0 $skyblue, -4px 4px 0 $blue, -6px 6px 0 $purple;
   }
 }

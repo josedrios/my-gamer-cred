@@ -1,0 +1,21 @@
+// Un-blur pixel art
+img.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox fallback */
+  image-rendering: -o-crisp-edges; /* Opera fallback */
+}
+
+button,
+a {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Basic Headers
+.page-header,
+.page-subheader {
+  text-align: left;
+  border-bottom: 2px solid $primary-color;
+}

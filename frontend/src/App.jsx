@@ -10,7 +10,7 @@ import Design from './pages/Design';
 
 function App() {
   return (
-    <div id='website-container'>
+    <div id="website-container">
       <Router>
         <header>
           <h1 id="banner-title">GOT GAMER CRED?</h1>

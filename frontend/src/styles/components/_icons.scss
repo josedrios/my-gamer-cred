@@ -1,0 +1,19 @@
+.icon {
+  height: 16px;
+  width: 16px;
+  transform: scale(2);
+  transform-origin: top left;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox fallback */
+  image-rendering: -o-crisp-edges;
+}
+
+#search-icon {
+    background-position: 0px 0px;
+}
+
+#game-icon {
+    background-position: -16px 0px;
+}

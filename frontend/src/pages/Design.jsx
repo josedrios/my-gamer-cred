@@ -12,6 +12,7 @@ export default function Design() {
           </p>
         </InfoBox>
         <button>BUTTON</button>
+        <input type="text" placeholder='Enter text...' className='input'/>
       </div>
       <aside>
         <p>
