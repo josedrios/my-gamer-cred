@@ -1,5 +1,8 @@
+// ABSTRACT FILES
+@import './abstracts/_variables';
+@import './abstracts/_mixins';
+
 // BASE FILES
-@import './base/_variables';
 @import './base/_typography';
 @import './base/_reset';
 @import './base/_base';
@@ -18,6 +21,7 @@
 
 // COMPONENTS SASS FILES
 @import './components/_buttons';
+@import './components/_cards';
 @import './components/_inputs';
 @import './components/_icons';
 @import './components/_infobox';

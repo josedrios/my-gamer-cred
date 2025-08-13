@@ -1,0 +1,34 @@
+.game-card {
+  border: 1px solid black;
+  height: 220px;
+  width: 160px;
+  display: flex;
+  align-items: end;
+
+  .game-card-info {
+    @include old-style;
+    pointer-events: none;
+    padding: $spacing-xs;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    .game-card-gc {
+      display: flex;
+      flex-direction: row;
+      gap: $spacing-sm;
+      align-items: center;
+      font-size: $font-size-lg;
+
+      img {
+        height: 26px;
+      }
+    }
+  }
+}
+
+.game-card:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 0px 0px $tertiary-color;
+}

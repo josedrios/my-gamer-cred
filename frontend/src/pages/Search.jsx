@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DropDown from '../components/UI/DropDown';
 import InfoBox from '../components/UI/InfoBox';
+import { GameCard } from '../components/UI/Cards';
 
 export default function Search() {
   const [searchForm, setSearchForm] = useState({
@@ -14,7 +15,11 @@ export default function Search() {
       <div className="content" id="search-content">
         <Header searchForm={searchForm} setSearchForm={setSearchForm} />
         <Sort searchForm={searchForm} setSearchForm={setSearchForm} />
-        <Results />
+        {searchForm.query === '' ? (
+          <Defaults />
+        ) : (
+          <Results searchForm={searchForm} />
+        )}
       </div>
       <Aside />
     </>
@@ -45,7 +50,7 @@ function Header({ searchForm, setSearchForm }) {
 
   return (
     <form action="" id="search-header" onSubmit={e => handleSubmit(e)}>
-      <button onClick={e => toggleType(e)}>
+      <button type="button" onClick={e => toggleType(e)}>
         {searchForm.searchType.toUpperCase()}
       </button>
       <input
@@ -54,6 +59,10 @@ function Header({ searchForm, setSearchForm }) {
         placeholder={`Enter a ${
           searchForm.searchType === 'game' ? 'game title' : 'player name'
         }...`}
+        value={searchForm.query}
+        onChange={e =>
+          setSearchForm(prev => ({ ...prev, query: e.target.value }))
+        }
       />
       <button type="submit">GO!</button>
     </form>
@@ -89,11 +98,20 @@ function Sort({ searchForm, setSearchForm }) {
   );
 }
 
-function Results() {
+function Results({ searchForm }) {
   return (
     <div id="search-results-container">
-      <p id="results-count"># Result(s) for 'search_query'</p>
+      <p id="results-count"># Result(s) for '{searchForm.query}'</p>
       <div id="results-layout"></div>
+    </div>
+  );
+}
+
+function Defaults() {
+  return (
+    <div id="search-defaults-container">
+      <p>THERE ARE DEFAULTS</p>
+      <GameCard />
     </div>
   );
 }

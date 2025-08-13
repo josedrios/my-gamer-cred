@@ -43,7 +43,7 @@ function Currency() {
     <>
       <h2 className="page-subheader">What is Gamer Cred?</h2>
       <p>This is the most valuable currency in the universe:</p>
-      <img src="/images/gc.png" alt="" className='pixel-art gc-unit' id='gc-unit-home'/>
+      <img src="/images/gc.png" alt="" className='pixel-art' id='gc-unit-home'/>
       <p id='gc-unit-label'>
         {' '}
         <WaveText text={'GAMER CRED'} />!

@@ -1,0 +1,14 @@
+@mixin old-style {
+  background-color: $primary-bg;
+  box-shadow: inset -1px -1px 0 1px black, inset -3px -3px 0 1px $tertiary-color,
+    inset 0px 0px 0 2px white, inset 2px 2px 0px 2px $secondary-color;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    box-shadow: inset -1px -1px 0 1px white,
+      inset -3px -3px 0 1px $secondary-color, inset 0px 0px 0 2px black,
+      inset 2px 2px 0px 2px $tertiary-color;
+    background-color: $primary-bg;
+  }
+}
