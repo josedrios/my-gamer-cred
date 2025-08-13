@@ -2,6 +2,7 @@ import { useState } from 'react';
 import DropDown from '../components/UI/DropDown';
 import InfoBox from '../components/UI/InfoBox';
 import { GameCard } from '../components/UI/Cards';
+import { IoIosSearch } from 'react-icons/io';
 
 export default function Search() {
   const [searchForm, setSearchForm] = useState({
@@ -64,7 +65,9 @@ function Header({ searchForm, setSearchForm }) {
           setSearchForm(prev => ({ ...prev, query: e.target.value }))
         }
       />
-      <button type="submit">GO!</button>
+      <button type="submit" className="search-button">
+        <IoIosSearch />
+      </button>
     </form>
   );
 }
@@ -110,8 +113,13 @@ function Results({ searchForm }) {
 function Defaults() {
   return (
     <div id="search-defaults-container">
-      <p>THERE ARE DEFAULTS</p>
-      <GameCard />
+      <div className='game-card-layout'>
+        <GameCard gc={100}/>
+        <GameCard gc={50}/>
+        <GameCard gc={0}/>
+        <GameCard gc={-50}/>
+        <GameCard gc={-100}/>
+      </div>
     </div>
   );
 }

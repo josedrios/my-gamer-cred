@@ -43,8 +43,13 @@ function Currency() {
     <>
       <h2 className="page-subheader">What is Gamer Cred?</h2>
       <p>This is the most valuable currency in the universe:</p>
-      <img src="/images/gc.png" alt="" className='pixel-art' id='gc-unit-home'/>
-      <p id='gc-unit-label'>
+      <img
+        src="/images/gc.png"
+        alt=""
+        className="pixel-art"
+        id="gc-unit-home"
+      />
+      <p id="gc-unit-label">
         {' '}
         <WaveText text={'GAMER CRED'} />!
       </p>
@@ -86,11 +91,10 @@ function GameLegend() {
     <InfoBox header={'game ratings'}>
       <p>Games will be color coded in respect to their score:</p>
       <br />
-      <p className="rank-legend purple">&nbsp;81 - 100 GC</p>
-      <p className="rank-legend blue">61 - 80 GC</p>
-      <p className="rank-legend skyblue">41 - 60 GC</p>
-      <p className="rank-legend brown">21 - 40 GC</p>
-      <p className="rank-legend red">&nbsp;0 - 20 GC</p>
+      <p className="rank-legend purple">&nbsp;&nbsp;51 to 100</p>
+      <p className="rank-legend blue">&nbsp;&nbsp;0 to 50</p>
+      <p className="rank-legend brown">-51 to -1</p>
+      <p className="rank-legend red">-100 to -50</p>
     </InfoBox>
   );
 }
@@ -99,7 +103,9 @@ function Badges() {
   return (
     <InfoBox header={'collect badges'}>
       <p>Earn badges that will distinguish you from other gamers:</p>
-      <p><i>INSERT BADGES IMAGES HERE</i></p>
+      <p>
+        <i>INSERT BADGES IMAGES HERE</i>
+      </p>
     </InfoBox>
   );
 }
