@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Select from 'react-select';
+import DropDown from '../components/UI/DropDown';
 import InfoBox from '../components/UI/InfoBox';
 
 export default function Search() {
@@ -77,66 +77,25 @@ function Sort({ searchForm, setSearchForm }) {
   const selectedOption =
     options.find(opt => opt.value === searchForm.sortType) || null;
 
-  const customStyles = {
-    control: provided => ({
-      ...provided,
-      borderRadius: '0px',
-      border: 'none',
-      boxShadow:
-        'inset -1px -1px 0 1px black, inset -3px -3px 0 1px #80808067, inset 0px 0px 0 2px white, inset 2px 2px 0 2px #c0c0c0',
-      backgroundColor: '#c0c0c0',
-      height: '30px',
-      color: '#000',
-    }),
-    menu: provided => ({
-      ...provided,
-      borderRadius: '0px',
-      padding: '0px',
-      margin: '0px',
-    }),
-    menuList: provided => ({
-      ...provided,
-      padding: '0px',
-      margin: '0px',
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      boxShadow:
-        'inset -1px -1px 0 1px black, inset -3px -3px 0 1px #80808067, inset 0px 0px 0 2px white, inset 2px 2px 0 2px #c0c0c0',
-      backgroundColor: '#c0c0c0',
-      color: '#000',
-      cursor: 'pointer',
-      boxShadow: state.isFocused
-        ? 'inset -1px -1px 0 1px white, inset -3px -3px 0 1px #c0c0c0, inset 0px 0px 0 2px black, inset 2px 2px 0 2px #80808067'
-        : 'inset -1px -1px 0 1px black, inset -3px -3px 0 1px #80808067, inset 0px 0px 0 2px white, inset 2px 2px 0 2px #c0c0c0',
-    }),
-    singleValue: provided => ({
-      ...provided,
-      color: '#222',
-    }),
-    placeholder: provided => ({
-      ...provided,
-      color: '#999',
-    }),
-  };
-
   return (
     <div id="search-sort-container">
       <p>Sort By:</p>
-      <Select
-        styles={customStyles}
+      <DropDown
         value={selectedOption}
         options={options}
-        className="select"
-        onChange={handleChange}
-        placeholder=""
+        handleChange={handleChange}
       />
     </div>
   );
 }
 
 function Results() {
-  return <div></div>;
+  return (
+    <div id="search-results-container">
+      <p id="results-count"># Result(s) for 'search_query'</p>
+      <div id="results-layout"></div>
+    </div>
+  );
 }
 
 function Aside() {
