@@ -1,14 +1,47 @@
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: $spacing-sm;
-  padding: $spacing-sm;
+  #nav-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: $spacing-xs;
 
-  a {
-    width: 100% !important;
-    text-align: center;
-    font-size: $font-size-md;
-    color: black;
+    #nav-header-bg {
+      flex: 1;
+      height: 12px;
+      margin: auto;
+      background-image: radial-gradient($tertiary-color 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+
+    #nav-account-link {
+      margin: 0 $spacing-sm;
+      color: black;
+
+      &:hover {
+        color: $secondary-font-color;
+      }
+    }
+  }
+
+  #nav-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: $spacing-sm;
+    padding: $spacing-sm;
+
+    a {
+      width: 100% !important;
+      text-align: center;
+      font-size: $font-size-xl;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  #nav-main {
+    flex-direction: column !important;
+    gap: $spacing-xs !important;
   }
 }

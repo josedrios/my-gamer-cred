@@ -4,7 +4,7 @@
   }
 }
 
-#search-header {
+#game-search-header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,8 +28,5 @@
 #search-results-container {
   #results-count {
     margin-bottom: $spacing-xs;
-  }
-
-  #results-layout {
   }
 }

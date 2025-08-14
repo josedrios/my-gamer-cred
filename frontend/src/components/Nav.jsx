@@ -1,20 +1,30 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 export default function Nav() {
   return (
     <nav>
-      <NavLink className="button" to='/'>
-        HOME
-      </NavLink>
-      <NavLink className="button" to='/search'>
-        SEARCH
-      </NavLink>
-      <NavLink className="button" to='/about'>
-        ABOUT
-      </NavLink>
-      <NavLink className="button" to='/account'>
-        ACCOUNT
-      </NavLink>
+      <div id="nav-header">
+        <div id="nav-header-bg" />
+        {/* MAKE IT WHEN CLICKED, OVERLAY FOR SIGN/LOG??? */}
+        {/* and if logged, go to account page*/}
+        <NavLink id="nav-account-link" to="/account">
+          ACCOUNT?
+        </NavLink>
+      </div>
+      <div id="nav-main">
+        <NavLink className="button" to="/">
+          HOME
+        </NavLink>
+        <NavLink className="button" to="/games">
+          GAMES
+        </NavLink>
+        <NavLink className="button" to="/players">
+          PLAYERS
+        </NavLink>
+        <NavLink className="button" to="/about">
+          ABOUT
+        </NavLink>
+      </div>
       {/* <NavLink className="button" to='/design'>
         DESIGN
       </NavLink> */}

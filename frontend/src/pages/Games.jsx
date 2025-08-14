@@ -1,8 +1,14 @@
 import { useState } from 'react';
+
 import DropDown from '../components/UI/DropDown';
 import InfoBox from '../components/UI/InfoBox';
+
 import { GameCard } from '../components/UI/Cards';
 import { IoIosSearch } from 'react-icons/io';
+
+import GameCover from '../assets/images/game_cover.jpg';
+import GameCover2 from '../assets/images/game_cover2.jpg';
+import GameCover3 from '../assets/images/game_cover3.jpg';
 
 export default function Search() {
   const [searchForm, setSearchForm] = useState({
@@ -50,7 +56,7 @@ function Header({ searchForm, setSearchForm }) {
   };
 
   return (
-    <form action="" id="search-header" onSubmit={e => handleSubmit(e)}>
+    <form action="" id="game-search-header" onSubmit={e => handleSubmit(e)}>
       <button type="button" onClick={e => toggleType(e)}>
         {searchForm.searchType.toUpperCase()}
       </button>
@@ -113,12 +119,21 @@ function Results({ searchForm }) {
 function Defaults() {
   return (
     <div id="search-defaults-container">
-      <div className='game-card-layout'>
-        <GameCard gc={100}/>
-        <GameCard gc={50}/>
-        <GameCard gc={0}/>
-        <GameCard gc={-50}/>
-        <GameCard gc={-100}/>
+      <div className="game-category-container">
+        <h3 className="game-card-layout-header">Top Games</h3>
+        <div className="game-card-layout">
+          <GameCard gc={100} image={GameCover} title="Batman: Arkham Asylum" />
+          <GameCard gc={100} image={GameCover2} title="Elden Ring" />
+          <GameCard gc={100} image={GameCover3} title="Titanfall 2" />
+        </div>
+      </div>
+      <div className="game-category-container">
+        <h3 className="game-card-layout-header">Trending Games</h3>
+        <div className="game-card-layout">
+          <GameCard gc={100} image={GameCover} title="Batman: Arkham Asylum" />
+          <GameCard gc={100} image={GameCover2} title="Elden Ring" />
+          <GameCard gc={100} image={GameCover3} title="Titanfall 2" />
+        </div>
       </div>
     </div>
   );

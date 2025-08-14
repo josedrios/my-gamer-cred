@@ -11,4 +11,8 @@ button {
   justify-content: center;
 
   @include old-style;
+  
+  &:hover {
+    @include old-style-hover;
+  }
 }

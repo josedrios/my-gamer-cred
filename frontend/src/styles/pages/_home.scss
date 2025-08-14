@@ -6,11 +6,12 @@
 
 #gc-unit-home {
   margin: auto;
-  margin-bottom: $spacing-sm;
+  margin-top: $spacing-sm;
   aspect-ratio: 1 / 1;
   width: 50px;
   position: relative;
-  animation: floating 4s ease-in-out infinite;
+  
+  @include floating;
 }
 
 #gc-unit-label {
@@ -18,19 +19,7 @@
 }
 
 
-@keyframes floating {
-  0% {
-    transform: translateY(0);
-  }
 
-  50% {
-    transform: translateY($spacing-md);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
 
 .rank-legend {
   text-align: center;

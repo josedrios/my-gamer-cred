@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 
-export default function WaveText({ text = 'TEXT' }) {
+export default function WaveText({
+  text = 'TEXT',
+  longText = true,
+  duration = 200,
+}) {
   const [charIndex, setCharIndex] = useState(0);
   const textLen = text.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCharIndex(prev => (prev + 1) % textLen);
-    }, 200);
+    }, duration);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,7 +28,7 @@ export default function WaveText({ text = 'TEXT' }) {
           <span key={i} className="border-wave">
             {char}
           </span>
-        ) : diff === 2 || diff === text.length - 2 ? (
+        ) : (diff === 2 || diff === text.length - 2) && longText ? (
           <span key={i} className="border-wave">
             {char}
           </span>
