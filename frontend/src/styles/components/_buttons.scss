@@ -16,3 +16,9 @@ button {
     @include old-style-hover;
   }
 }
+
+.search-button {
+    svg {
+        font-size: 25px;
+    }
+}

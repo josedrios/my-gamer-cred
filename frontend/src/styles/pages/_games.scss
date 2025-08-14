@@ -1,20 +1,9 @@
-@media (max-width: #{$breakpoint-xs}) {
-  #search-content {
-    order: 2;
-  }
-}
-
 #game-search-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: $spacing-sm;
-}
-
-.search-button {
-    svg {
-        font-size: 25px;
-    }
+  margin-bottom: $spacing-sm;
 }
 
 #search-sort-container {

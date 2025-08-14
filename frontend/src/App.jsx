@@ -12,12 +12,12 @@ import Design from './pages/Design';
 function App() {
   return (
     <div id="website-container">
+      <header>
+        <h1 id="banner-title">GOT GAMER CRED?</h1>
+      </header>
       <Router>
-        <header>
-          <h1 id="banner-title">GOT GAMER CRED?</h1>
-        </header>
         <Nav />
-        <main>
+        <div id='content-container'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/games" element={<Games />} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/account" element={<Account />} />
           </Routes>
-        </main>
+        </div>
       </Router>
     </div>
   );

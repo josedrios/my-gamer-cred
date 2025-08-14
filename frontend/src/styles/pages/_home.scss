@@ -6,7 +6,8 @@
 
 #gc-unit-home {
   margin: auto;
-  margin-top: $spacing-sm;
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-sm;
   aspect-ratio: 1 / 1;
   width: 50px;
   position: relative;
@@ -16,10 +17,8 @@
 
 #gc-unit-label {
   text-align: center;
+  margin-bottom: $spacing-sm;
 }
-
-
-
 
 .rank-legend {
   text-align: center;

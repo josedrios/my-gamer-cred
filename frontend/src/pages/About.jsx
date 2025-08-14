@@ -4,14 +4,14 @@ import WaveText from '../components/UI/WaveText';
 export default function About() {
   return (
     <>
-      <div id="about-content" className="content">
+      <main>
         <AboutWebsite />
         <AboutMyself />
-      </div>
+      </main>
       <aside>
         <Contact />
-        <OneManTeam />
         {/* ADD MY ACCOUNT CARD HERE */}
+        <OneManTeam />
       </aside>
     </>
   );
@@ -19,7 +19,7 @@ export default function About() {
 
 function AboutWebsite() {
   return (
-    <>
+    <section>
       <h1 className="page-header">About</h1>
       <p>
         I lack gamer cred. For the majority of my gaming career I have played
@@ -40,13 +40,13 @@ function AboutWebsite() {
         account to show off to their friends how much gamer cred they truly
         possess.
       </p>
-    </>
+    </section>
   );
 }
 
 function AboutMyself() {
   return (
-    <>
+    <section>
       <h2 className="page-subheader">About Me</h2>
       <p>
         I am a <span className="blue">web developer</span> who likes making
@@ -60,7 +60,7 @@ function AboutMyself() {
         of the scores of games I find on this website made by you guys and gals
         (if people even find this website).
       </p>
-    </>
+    </section>
   );
 }
 

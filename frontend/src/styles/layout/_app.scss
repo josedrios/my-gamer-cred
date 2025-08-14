@@ -19,28 +19,37 @@ body {
   padding-bottom: $spacing-lg;
 }
 
-main {
+#website-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#content-container {
   padding: $spacing-sm;
   display: flex;
   gap: $spacing-lg;
+
+  main {
+    order: 0;
+    flex: 1;
+  }
 
   aside {
     order: 1;
     width: 30%;
   }
+}
 
-  div.content {
-    order: 0;
-    width: 70%;
-  }
+section {
+  margin-bottom: $spacing-md;
 }
 
 @media (max-width: #{$breakpoint-xs}) {
-  main {
+  #content-container {
     flex-direction: column;
   }
 
-  div.content,
+  main,
   aside {
     width: 100% !important;
   }

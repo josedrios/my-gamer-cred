@@ -4,13 +4,11 @@ import WaveText from '../components/UI/WaveText';
 export default function Home() {
   return (
     <>
-      <div id="home-content" className="content">
+      <main >
         <Welcome />
         <Currency />
         <Rules />
-        {/* ADD GAMER SCORE GAME CARDS */}
-        {/* LIKE: TOP, NEW, HOT (SAME FOR PLAYERS) */}
-      </div>
+      </main>
       <aside>
         <GameLegend />
         <Badges />
@@ -21,7 +19,7 @@ export default function Home() {
 
 function Welcome() {
   return (
-    <>
+    <section>
       <h1 className="page-header">
         WELCOME TO MY
         <WaveText text={'gamercred'} />
@@ -34,13 +32,13 @@ function Welcome() {
         profile. Comment on game's comments sections to debate whether the given
         score is fitting. It is time to see what type of gamer you are.
       </p>
-    </>
+    </section>
   );
 }
 
 function Currency() {
   return (
-    <>
+    <section>
       <h2 className="page-subheader">What is Gamer Cred?</h2>
       <p>This is the most valuable currency in the universe:</p>
       <img
@@ -66,13 +64,13 @@ function Currency() {
         as possible. Add games to your profile to up your gamer cred. Wear it
         like a badge of honor, because it is essentially who you are.
       </p>
-    </>
+    </section>
   );
 }
 
 function Rules() {
   return (
-    <>
+    <section>
       <h2 className="page-subheader">Main Rules</h2>
       <p>
         <span className="blue">*</span> Be kind to each other <br />
@@ -82,7 +80,7 @@ function Rules() {
         sections <br />
         <span className="blue">*</span> Never stop gaming (or do, its up to you)
       </p>
-    </>
+    </section>
   );
 }
 

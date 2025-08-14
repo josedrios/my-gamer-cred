@@ -1,8 +1,8 @@
 export default function Players()
 {
     return (
-        <div>
+        <main>
             PLAYERS
-        </div>
+        </main>
     )
 }
