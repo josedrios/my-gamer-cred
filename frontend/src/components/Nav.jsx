@@ -12,16 +12,16 @@ export default function Nav() {
         </NavLink>
       </div>
       <div id="nav-main">
-        <NavLink className="button" to="/">
+        <NavLink className="button nav-button" to="/">
           HOME
         </NavLink>
-        <NavLink className="button" to="/games">
+        <NavLink className="button nav-button" to="/games">
           GAMES
         </NavLink>
-        <NavLink className="button" to="/players">
+        <NavLink className="button nav-button" to="/players">
           PLAYERS
         </NavLink>
-        <NavLink className="button" to="/about">
+        <NavLink className="button nav-button" to="/about">
           ABOUT
         </NavLink>
       </div>

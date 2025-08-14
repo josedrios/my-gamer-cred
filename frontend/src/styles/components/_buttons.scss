@@ -11,14 +11,21 @@ button {
   justify-content: center;
 
   @include old-style;
-  
+
   &:hover {
     @include old-style-hover;
   }
 }
 
+.nav-button {
+  width: 100% !important;
+  text-align: center;
+  font-size: $font-size-xl;
+  color: black;
+}
+
 .search-button {
-    svg {
-        font-size: 25px;
-    }
+  svg {
+    font-size: 25px;
+  }
 }

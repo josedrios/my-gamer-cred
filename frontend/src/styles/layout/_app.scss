@@ -1,10 +1,10 @@
 body {
-  background-color: $primary-bg;
-  background-image: radial-gradient(#cacaca 1px, transparent 1px);
-  background-size: 4px 4px;
   display: flex;
   justify-content: center;
   overflow: auto;
+  background-color: $primary-bg;
+  background-image: radial-gradient(#cacaca 1px, transparent 1px);
+  background-size: 4px 4px;
 }
 
 #root {
@@ -14,16 +14,12 @@ body {
   min-width: 0px;
   max-width: 750px;
   overflow: auto;
+  background-color: $secondary-bg;
   border: 2px solid $primary-color;
   border-top: none;
   border-bottom: none;
-  background-color: $secondary-bg;
 }
 
-footer {
-  justify-self: flex-end;
-  margin-top: auto;
-}
 
 #website-container {
   display: flex;
@@ -34,20 +30,24 @@ footer {
   padding: $spacing-sm;
   display: flex;
   gap: $spacing-lg;
-
+  
   main {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
     order: 0;
     flex: 1;
   }
-
+  
   aside {
     order: 1;
     width: 30%;
   }
 }
 
-section {
-  margin-bottom: $spacing-md;
+footer {
+  justify-self: flex-end;
+  margin-top: auto;
 }
 
 @media (max-width: #{$breakpoint-xs}) {

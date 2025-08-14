@@ -29,13 +29,6 @@ nav {
     justify-content: space-around;
     gap: $spacing-sm;
     padding: $spacing-sm;
-
-    a {
-      width: 100% !important;
-      text-align: center;
-      font-size: $font-size-xl;
-      color: black;
-    }
   }
 }
 

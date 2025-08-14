@@ -1,9 +1,0 @@
-.left-align {
-  text-align: center;
-}
-
-@media (max-width: #{$breakpoint-xs}) {
-  #about-content {
-    order: 2 !important;
-  }
-}

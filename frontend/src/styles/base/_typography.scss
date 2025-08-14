@@ -119,8 +119,18 @@ p {
   }
 }
 
-// Page Headers
-// Basic Headers
+// ==========================
+// Common Text Styling
+// ==========================
+
+// Accent Color styling (by classname)
+@each $name, $color in $accent-colors {
+  .#{$name} {
+    color: $color;
+  }
+}
+
+// Page headers
 .page-header,
 .page-subheader {
   text-align: left;

@@ -4,13 +4,13 @@ import WaveText from '../components/UI/WaveText';
 export default function Home() {
   return (
     <>
-      <main >
+      <main>
         <Welcome />
         <Currency />
         <Rules />
       </main>
       <aside>
-        <GameLegend />
+        <GameRatings />
         <Badges />
       </aside>
     </>
@@ -45,9 +45,9 @@ function Currency() {
         src="/images/gc.png"
         alt=""
         className="pixel-art"
-        id="gc-unit-home"
+        id="home-gamercred"
       />
-      <p id="gc-unit-label">
+      <p id="home-gamercred-label">
         {' '}
         <WaveText text={'GAMER CRED'} />!
       </p>
@@ -84,7 +84,7 @@ function Rules() {
   );
 }
 
-function GameLegend() {
+function GameRatings() {
   return (
     <InfoBox header={'game ratings'}>
       <p>Games will be color coded in respect to their score:</p>

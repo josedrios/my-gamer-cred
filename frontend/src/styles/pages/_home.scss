@@ -1,10 +1,4 @@
-@each $name, $color in $accent-colors {
-  .#{$name} {
-    color: $color;
-  }
-}
-
-#gc-unit-home {
+#home-gamercred {
   margin: auto;
   margin-top: $spacing-md;
   margin-bottom: $spacing-sm;
@@ -15,11 +9,12 @@
   @include floating;
 }
 
-#gc-unit-label {
+#home-gamercred-label {
   text-align: center;
   margin-bottom: $spacing-sm;
 }
 
+// Home Aside Gamercred Legend
 .rank-legend {
   text-align: center;
 }
