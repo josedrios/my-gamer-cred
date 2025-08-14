@@ -87,6 +87,9 @@ function Defaults() {
   return (
     <div id="search-defaults-container">
       <GameCategory />
+      <GameCategory />
+      <GameCategory />
+      <GameCategory />
     </div>
   );
 }

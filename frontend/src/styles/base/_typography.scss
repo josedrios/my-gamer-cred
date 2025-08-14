@@ -82,6 +82,7 @@ button {
 p {
   font-family: $secondary-font;
   font-size: $font-size-md;
+  margin-bottom: $spacing-sm !important;
 
   &.sm {
     font-size: $font-size-sm;
@@ -116,4 +117,13 @@ p {
       font-size: $font-size-xs;
     }
   }
+}
+
+// Page Headers
+// Basic Headers
+.page-header,
+.page-subheader {
+  text-align: left;
+  border-bottom: 2px solid $primary-color;
+  margin-bottom: $spacing-sm;
 }

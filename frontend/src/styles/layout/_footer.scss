@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $tertiary-color;
+
+  #footer-decoration {
+    height: 8px;
+    background-image: radial-gradient($primary-color 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  #footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: $spacing-xs $spacing-sm;
+
+    a {
+      color: black;
+      font-family: $primary-font;
+      font-size: $font-size-lg;
+
+      &:hover {
+        color: $secondary-font-color;
+      }
+    }
+  }
+
+  #footer-copyright {
+    padding-top: $spacing-xs;
+    width: 100%;
+    text-align: center;
+    font-size: $font-size-xs;
+  }
+}

@@ -88,7 +88,6 @@ function GameLegend() {
   return (
     <InfoBox header={'game ratings'}>
       <p>Games will be color coded in respect to their score:</p>
-      <br />
       <p className="rank-legend purple">&nbsp;&nbsp;51 to 100</p>
       <p className="rank-legend blue">&nbsp;&nbsp;0 to 50</p>
       <p className="rank-legend brown">-51 to -1</p>
