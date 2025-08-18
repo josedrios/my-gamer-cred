@@ -13,6 +13,8 @@
   background-color: $primary-bg;
 }
 
+// mixin for gridded background
+
 @mixin floating($distance: $spacing-md, $duration: 4s, $ease: ease-in-out) {
   animation: floating #{$duration} #{$ease} infinite;
 

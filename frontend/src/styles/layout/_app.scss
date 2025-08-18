@@ -30,6 +30,7 @@ body {
   padding: $spacing-sm;
   display: flex;
   gap: $spacing-lg;
+  padding-bottom: calc($spacing-lg * 2);
   
   main {
     display: flex;

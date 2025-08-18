@@ -3,7 +3,7 @@ import { SearchButton } from '../components/UI/Buttons';
 import { GameCategory } from '../components/UI/Cards';
 import DropDown from '../components/UI/DropDown';
 
-export default function Search() {
+export default function Games() {
   const [searchForm, setSearchForm] = useState({
     query: '',
     sortType: 'desc',
@@ -30,7 +30,7 @@ function Header({ searchForm, setSearchForm }) {
   };
 
   return (
-    <form action="" id="game-search-header" onSubmit={e => handleSubmit(e)}>
+    <form action="" className="search-form" onSubmit={e => handleSubmit(e)}>
       <input
         className="input"
         type="text"
@@ -52,25 +52,17 @@ function Sort({ searchForm, setSearchForm }) {
     { value: 'latest', label: 'Latest Release' },
   ];
 
-  const handleChange = selectedOption => {
-    setSearchForm(prev => ({
-      ...prev,
-      sortType: selectedOption ? selectedOption.value : '',
-    }));
-  };
-
   const selectedOption =
     options.find(opt => opt.value === searchForm.sortType) || null;
 
   return (
-    <div id="search-sort-container">
-      <p>Sort By:</p>
+    <>
       <DropDown
+        setForm={setSearchForm}
         value={selectedOption}
         options={options}
-        handleChange={handleChange}
       />
-    </div>
+    </>
   );
 }
 

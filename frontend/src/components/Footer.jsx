@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div id="footer-decoration" />
       <div id="footer-content">
-        <NavLink to="/">About</NavLink>
+        <NavLink to="/about">About</NavLink>
         <NavLink to="/">Contact</NavLink>
         <NavLink to="/">Help</NavLink>
         <NavLink to="/">Terms</NavLink>

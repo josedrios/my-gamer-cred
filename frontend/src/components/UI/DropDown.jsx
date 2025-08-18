@@ -1,6 +1,6 @@
 import Select from 'react-select';
 
-export default function DropDown({ value, options, handleChange }) {
+export default function DropDown({ setForm, value, options }) {
   const customStyle = {
     control: provided => ({
       ...provided,
@@ -44,14 +44,25 @@ export default function DropDown({ value, options, handleChange }) {
     }),
   };
 
+  const handleChange = selectedOption => {
+    setForm(prev => ({
+      ...prev,
+      sortType: selectedOption ? selectedOption.value : '',
+    }));
+  };
+
+
   return (
-    <Select
-      styles={customStyle}
-      value={value}
-      options={options}
-      className="select"
-      onChange={handleChange}
-      placeholder=""
-    />
+    <div className='dropdown-layout'>
+      <p>Sort:</p>
+      <Select
+        styles={customStyle}
+        value={value}
+        options={options}
+        className="select"
+        onChange={handleChange}
+        placeholder=""
+      />
+    </div>
   );
 }

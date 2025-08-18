@@ -21,8 +21,8 @@ export default function Nav() {
         <NavLink className="button nav-button" to="/players">
           PLAYERS
         </NavLink>
-        <NavLink className="button nav-button" to="/about">
-          ABOUT
+        <NavLink className="button nav-button" to="/lists">
+          Lists
         </NavLink>
       </div>
       {/* <NavLink className="button" to='/design'>
