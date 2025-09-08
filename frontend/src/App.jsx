@@ -16,9 +16,6 @@ function App() {
     <>
       <Router>
         <div id="website-container">
-          <header>
-            <h1 id="banner-title">GOT GAMER CRED?</h1>
-          </header>
           <Nav />
           <div id="content-container">
             <Routes>

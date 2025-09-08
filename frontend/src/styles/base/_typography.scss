@@ -24,7 +24,6 @@ $font-size-lg: 1.0625rem; // 17px
 $font-size-xl: 1.2rem;
 
 body {
-  color: $secondary-font-color;
   font-family: $secondary-font;
 }
 
@@ -43,7 +42,6 @@ h4,
 h5,
 h6 {
   font-family: $primary-font;
-  color: $primary-font-color;
   font-weight: 100;
 }
 
@@ -123,17 +121,4 @@ p {
 // Common Text Styling
 // ==========================
 
-// Accent Color styling (by classname)
-@each $name, $color in $accent-colors {
-  .#{$name} {
-    color: $color;
-  }
-}
-
-// Page headers
-.page-header,
-.page-subheader {
-  text-align: left;
-  border-bottom: 2px solid $primary-color;
-  margin-bottom: $spacing-sm;
-}
+// put other comment text styling here

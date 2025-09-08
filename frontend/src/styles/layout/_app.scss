@@ -2,9 +2,6 @@ body {
   display: flex;
   justify-content: center;
   overflow: auto;
-  background-color: $primary-bg;
-  background-image: radial-gradient(#cacaca 1px, transparent 1px);
-  background-size: 4px 4px;
 }
 
 #root {
@@ -14,12 +11,7 @@ body {
   min-width: 0px;
   max-width: 750px;
   overflow: auto;
-  background-color: $secondary-bg;
-  border: 2px solid $primary-color;
-  border-top: none;
-  border-bottom: none;
 }
-
 
 #website-container {
   display: flex;

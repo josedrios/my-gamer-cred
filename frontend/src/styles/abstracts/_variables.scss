@@ -1,33 +1,17 @@
 // ==========================
 // Colors
 // ==========================
-// main colors
-$primary-color: gray;
-$secondary-color: #c0c0c0;
-$tertiary-color: #80808067;
 
-//accent colors
-$purple: #978bff;
-$blue: #4890fd;
-$skyblue: #86b4ef;
-$brown: rgb(118, 53, 53);
-$red: rgb(255, 72, 72);
+// MAIN
+$primary-color: #978bff;
+$secondary-color: #4890fd;
+$tertiary-color: #86b4ef;
 
-$accent-colors: (
-  skyblue: $skyblue,
-  blue: $blue,
-  purple: $purple,
-  brown: $brown,
-  red: $red
-);
+// FONT
+$font-color: white;
 
-// font colors
-$primary-font-color: black;
-$secondary-font-color: rgb(85, 85, 85);
-
-// background colors
-$primary-bg: rgb(180, 180, 180);
-$secondary-bg: rgb(217, 217, 217);
+// BACKGROUND
+$bg-color: #333333;
 
 // ==========================
 // Spacings
