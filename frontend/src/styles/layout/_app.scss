@@ -9,21 +9,29 @@ body {
   flex-direction: column;
   width: calc(100%);
   min-width: 0px;
-  max-width: 750px;
   overflow: auto;
+  background-color: $bg-color;
 }
 
 #website-container {
   display: flex;
   flex-direction: column;
+  padding-bottom: calc($spacing-lg * 2);
+}
+
+nav {
+  margin-bottom: $spacing-lg;
+  width: 100%;
 }
 
 #content-container {
-  padding: $spacing-sm;
   display: flex;
+  flex-direction: row;
   gap: $spacing-lg;
-  padding-bottom: calc($spacing-lg * 2);
-  
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+
   main {
     display: flex;
     flex-direction: column;
@@ -31,7 +39,7 @@ body {
     order: 0;
     flex: 1;
   }
-  
+
   aside {
     order: 1;
     width: 30%;

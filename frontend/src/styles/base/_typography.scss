@@ -1,7 +1,8 @@
 // ==========================
 // Font Families
 // ==========================
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 @font-face {
   font-family: 'Pixel';
@@ -11,8 +12,13 @@
   font-display: swap;
 }
 
-$primary-font: 'Pixel';
-$secondary-font: 'Spline Sans Mono';
+// primary - paragraph
+// secondary - title
+// tertiary - website logo
+
+$primary-font: 'Inconsolata';
+$secondary-font: 'Space Mono';
+$tertiary-font: 'Pixel';
 
 // ==========================
 // Font Measurements
@@ -24,7 +30,7 @@ $font-size-lg: 1.0625rem; // 17px
 $font-size-xl: 1.2rem;
 
 body {
-  font-family: $secondary-font;
+  font-family: $primary-font;
 }
 
 // ==========================
@@ -41,7 +47,7 @@ h4,
 h4,
 h5,
 h6 {
-  font-family: $primary-font;
+  font-family: $tertiary-font;
   font-weight: 100;
 }
 
@@ -70,7 +76,7 @@ h6 {
 }
 
 input {
-  font-family: $secondary-font !important;
+  font-family: $primary-font !important;
 }
 
 button {
@@ -78,7 +84,7 @@ button {
 }
 
 p {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: $font-size-md;
   margin-bottom: $spacing-sm !important;
 
