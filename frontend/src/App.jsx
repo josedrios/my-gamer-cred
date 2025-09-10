@@ -21,11 +21,13 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/games" element={<Games />} />
+              <Route path="/lists" element={<Lists />} />
               <Route path="/players" element={<Players />} />
               <Route path="/account" element={<Account />} />
               <Route path="/about" element={<About />} />
-              <Route path="/lists" element={<Lists />} />
               <Route path="/design" element={<Design />} />
+              {/* need to add: */}
+              {/* search(global), contact, help, terms, socials */}
             </Routes>
           </div>
         </div>

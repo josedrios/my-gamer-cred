@@ -1,9 +1,7 @@
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: $spacing-sm 0  ;
-  margin: auto;
+  padding: $spacing-sm 0;
   margin-top: $spacing-sm;
   max-width: 1000px;
   border-bottom: 1px solid $border-color;
@@ -27,20 +25,30 @@ nav {
 
   #nav-body {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     gap: $spacing-xl;
     flex: 1;
 
     a {
       width: min-content;
-      min-width: 30px;
+      min-width: 25px;
       white-space: nowrap;
       transition: color $transition-normal;
 
-      &:hover {
+      span {
         color: $primary-color;
+        transition: color $transition-normal;
+
+        &.hide {
+          color: transparent;
+        }
+      }
+
+      &:hover {
+        span {
+          color: $primary-color;
+        }
       }
 
       svg {
@@ -60,13 +68,32 @@ nav {
   }
 }
 
-@media (max-width: #{$breakpoint-sm}) {
-  #nav-container {
+@media (max-width: #{$breakpoint-xs}) {
+  nav {
     flex-direction: column !important;
 
     #nav-home {
       margin: auto;
       margin-bottom: $spacing-md;
+    }
+
+    #nav-body {
+      justify-content: space-between !important;
+      
+       .non-icon-link {
+        min-width: 50px;
+       }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  #nav-body {
+    flex-wrap: wrap;
+    gap: $spacing-xs !important;
+
+    a {
+      margin: auto;
     }
   }
 }
