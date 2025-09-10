@@ -2,6 +2,7 @@ nav {
   display: flex;
   flex-direction: row;
   padding: $spacing-sm 0;
+  margin: auto;
   margin-top: $spacing-sm;
   max-width: 1000px;
   border-bottom: 1px solid $border-color;
@@ -68,6 +69,10 @@ nav {
   }
 }
 
+#responsive-icon-container {
+  display: none;
+}
+
 @media (max-width: #{$breakpoint-xs}) {
   nav {
     flex-direction: column !important;
@@ -94,6 +99,22 @@ nav {
 
     a {
       margin: auto;
+    }
+  }
+
+  .icon-link {
+    display: none;
+  }
+
+  #responsive-icon-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-top: $spacing-xs;
+
+    a {
+      margin: 0 !important;
     }
   }
 }

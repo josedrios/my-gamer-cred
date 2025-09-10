@@ -14,7 +14,7 @@ export default function Nav() {
         <IoCubeOutline />
       </NavLink>
       <div id="nav-body">
-        <NavLink className="nav-link" to="/home">
+        <NavLink className="nav-link icon-link" to="/home">
           <IoSearchOutline />
         </NavLink>
         <NavLink className="nav-link non-icon-link" to="/games">
@@ -29,9 +29,17 @@ export default function Nav() {
           <span className={path !== '/players' ? `hide` : ``}>*</span>
           PLAYERS
         </NavLink>
-        <NavLink className="nav-link" to="/account">
+        <NavLink className="nav-link icon-link" to="/account">
           <IoPersonOutline />
         </NavLink>
+        <div id="responsive-icon-container">
+          <NavLink className="nav-link" to="/home">
+            <IoSearchOutline />
+          </NavLink>
+          <NavLink className="nav-link" to="/account">
+            <IoPersonOutline />
+          </NavLink>
+        </div>
       </div>
     </nav>
   );
