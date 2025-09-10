@@ -1,20 +1,11 @@
-// #home-gamercred {
-//   margin: auto;
-//   margin-top: $spacing-md;
-//   margin-bottom: $spacing-sm;
-//   aspect-ratio: 1 / 1;
-//   width: 50px;
-//   position: relative;
-  
-//   @include floating;
-// }
+.home-right {
+    text-align: right;
+}
 
-// #home-gamercred-label {
-//   text-align: center;
-//   margin-bottom: $spacing-sm;
-// }
+#gc-showcase {
+    svg {
+        stroke: $primary-color;
+        font-size: 40px;
 
-// // Home Aside Gamercred Legend
-// .rank-legend {
-//   text-align: center;
-// }
+    }
+}

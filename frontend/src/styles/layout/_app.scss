@@ -14,13 +14,14 @@ body {
 }
 
 #website-container {
+  margin: 0 $spacing-md;
   display: flex;
   flex-direction: column;
+  gap: $spacing-lg;
   padding-bottom: calc($spacing-lg * 2);
 }
 
 nav {
-  margin-bottom: $spacing-lg;
   width: 100%;
 }
 
@@ -38,11 +39,6 @@ nav {
     gap: $spacing-sm;
     order: 0;
     flex: 1;
-  }
-
-  aside {
-    order: 1;
-    width: 30%;
   }
 }
 

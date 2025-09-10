@@ -33,3 +33,9 @@
 //     font-size: $font-size-xs;
 //   }
 // }
+
+footer {
+    #footer-content, #footer-copyright {
+        color: $border-color;
+    }
+}

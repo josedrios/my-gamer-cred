@@ -1,24 +1,11 @@
 // ==========================
 // Font Families
 // ==========================
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-@font-face {
-  font-family: 'Pixel';
-  src: url('/fonts/TT2-BRK.ttf');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-// primary - paragraph
-// secondary - title
-// tertiary - website logo
-
-$primary-font: 'Inconsolata';
-$secondary-font: 'Space Mono';
-$tertiary-font: 'Pixel';
+$primary-font: 'JetBrains Mono';
+$primary-font: 'Roboto Mono';
 
 // ==========================
 // Font Measurements
@@ -27,7 +14,7 @@ $font-size-xs: 0.6875rem; // 11px
 $font-size-sm: 0.75rem; // 12px
 $font-size-md: 0.9375rem; // 15px
 $font-size-lg: 1.0625rem; // 17px
-$font-size-xl: 1.2rem;
+$font-size-xl: 1.2rem; // 19px
 
 body {
   font-family: $primary-font;
@@ -47,8 +34,8 @@ h4,
 h4,
 h5,
 h6 {
-  font-family: $tertiary-font;
-  font-weight: 100;
+  font-family: $primary-font;
+  font-weight: 300;
 }
 
 h1 {

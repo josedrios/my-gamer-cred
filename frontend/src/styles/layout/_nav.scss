@@ -1,49 +1,72 @@
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: $spacing-sm 0  ;
+  margin: auto;
+  margin-top: $spacing-sm;
+  max-width: 1000px;
   border-bottom: 1px solid $border-color;
 
-  #nav-container {
+  #nav-home {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: $spacing-md;
-    margin: auto;
-    max-width: 1000px;
+    align-items: center;
 
-    #nav-home {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: $spacing-sm;
+    svg {
+      font-size: 30px;
+      stroke: $primary-color;
+      transition: transform $transition-slow;
+    }
 
-      img {
-        aspect-ratio: 1/1;
-        height: $spacing-xl;
+    &:hover {
+      svg {
+        transform: translateY(-$spacing-xs);
       }
     }
+  }
 
-    #nav-body {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      flex: 1;
-    }
+  #nav-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: $spacing-xl;
+    flex: 1;
 
     a {
-      font-size: $font-size-md;
-      letter-spacing: 1px;
-      font-family: $secondary-font;
+      width: min-content;
+      min-width: 30px;
+      white-space: nowrap;
+      transition: color $transition-normal;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      svg {
+        font-size: $font-size-xl;
+        transition: stroke $transition-normal;
+
+        &:hover {
+          stroke: $primary-color;
+        }
+      }
     }
+  }
+
+  a {
+    font-size: $font-size-sm;
+    letter-spacing: 1px;
   }
 }
 
-@media(max-width: #{$breakpoint-sm}) {
-    #nav-container {
-        flex-direction: column !important;
+@media (max-width: #{$breakpoint-sm}) {
+  #nav-container {
+    flex-direction: column !important;
 
-        #nav-home {
-            margin: auto;
-            margin-bottom: $spacing-md;
-        }
+    #nav-home {
+      margin: auto;
+      margin-bottom: $spacing-md;
     }
+  }
 }

@@ -3,9 +3,7 @@
 // ==========================
 
 // MAIN
-$primary-color: #978bff;
-$secondary-color: #4890fd;
-$tertiary-color: #86b4ef;
+$primary-color: #e98b38;
 
 // FONT
 $font-color: white;
@@ -33,12 +31,12 @@ $breakpoint-md: 1024px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1800px;
 
-// --- Border thickness ---
-$border-thickness-sm: 0.01rem;
-$border-thickness-md: 0.07rem;
-$border-thickness-lg: 0.1rem;
-
 // --- Border radius ---
 $border-radius-sm: 8px;
 $border-radius-md: 13px;
 $border-radius-lg: 18px;
+
+// --- Transitions --- 
+$transition-fast: 0.1s;
+$transition-normal: 0.15s;
+$transition-slow: 0.2s;
