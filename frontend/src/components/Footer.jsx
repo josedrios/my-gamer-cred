@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer>
-      <div id="footer-decoration" />
       <div id="footer-content">
         <NavLink to="/about">About</NavLink>
         <NavLink to="/">Contact</NavLink>

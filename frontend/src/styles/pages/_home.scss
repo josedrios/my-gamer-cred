@@ -2,15 +2,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 30vh;
+  height: 40vh;
   min-height: 200px;
-  max-height: 300px;
+  max-height: 400px;
+  margin-bottom: $spacing-lg;
 }
 
 #home-greeting {
   font-weight: bold;
   letter-spacing: 2px;
   text-align: center;
+  font-family: 'JetBrains Mono';
 }
 
 #sub-home-greeting {
@@ -32,14 +34,71 @@
   }
 }
 
-section {
-    border-left: 2px solid $primary-color;
-    padding-left: $spacing-sm;
-}
-
 .home-section-indent-normal {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 .home-section-indent-large {
-    margin-left: 10%;
+  margin-left: 10%;
+}
+
+#home-card-section {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.home-card {
+  max-width: 750px;
+  margin: auto;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-lg;
+
+  .home-card-body {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing-md;
+
+    h3 {
+      color: $primary-color;
+    }
+  }
+
+  .home-card-diagram {
+    width: 40%;
+  }
+
+  // SPECIFIC HOME CARD DIAGRAM STYLINGS
+  #gc-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    aspect-ratio: 1/1 !important;
+    max-width: 200px;
+
+    svg {
+      stroke: $primary-color-transparent;
+      font-size: 30px;
+    }
+
+    #glowing-gc {
+      svg {
+        stroke: $primary-color;
+        filter: drop-shadow(0 0 4px $primary-color);
+        @include floating($spacing-sm);
+      }
+    }
+  }
+
+  #share-explore {
+
+  }
+
+  #accumulate-gc {
+
+  }
 }
