@@ -5,20 +5,34 @@ nav {
   margin: auto;
   margin-top: $spacing-sm;
   max-width: 1000px;
-  border-bottom: 1px solid $border-color;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right,
+      $bg-color,
+      5%,
+      $border-color,
+      95%,
+      $bg-color
+    )
+    1;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 
   #nav-home {
     display: flex;
     align-items: center;
-
+    
     svg {
       font-size: 30px;
       stroke: $primary-color;
-      transition: transform $transition-slow;
+      transition: transform $transition-slow, filter $transition-slow;
     }
-
+    
     &:hover {
       svg {
+        filter: drop-shadow(0 0 4px $primary-color);
         transform: translateY(-$spacing-xs);
       }
     }
@@ -84,10 +98,10 @@ nav {
 
     #nav-body {
       justify-content: space-between !important;
-      
-       .non-icon-link {
+
+      .non-icon-link {
         min-width: 50px;
-       }
+      }
     }
   }
 }

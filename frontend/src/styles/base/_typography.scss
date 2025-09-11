@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-$primary-font: 'JetBrains Mono';
+$primary-font: 'Helvetica';
 $primary-font: 'Roboto Mono';
 
 // ==========================
@@ -73,7 +73,7 @@ button {
 p {
   font-family: $primary-font;
   font-size: $font-size-md;
-  margin-bottom: $spacing-sm !important;
+  margin-bottom: $spacing-xs !important;
 
   &.sm {
     font-size: $font-size-sm;
@@ -114,4 +114,10 @@ p {
 // Common Text Styling
 // ==========================
 
-// put other comment text styling here
+.primary {
+  color: $primary-color;
+}
+
+.border {
+  color: $border-color;
+}

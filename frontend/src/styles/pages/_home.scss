@@ -1,11 +1,45 @@
-.home-right {
-    text-align: right;
+#home-greeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30vh;
+  min-height: 200px;
+  max-height: 300px;
 }
 
-#gc-showcase {
-    svg {
-        stroke: $primary-color;
-        font-size: 40px;
+#home-greeting {
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
 
-    }
+#sub-home-greeting {
+  text-align: center;
+  text-align: center;
+}
+
+#floating-gc-container {
+  display: flex;
+  justify-content: center;
+  margin: $spacing-lg 0;
+  padding-top: $spacing-md;
+
+  svg {
+    stroke: $primary-color;
+    font-size: 40px;
+    filter: drop-shadow(0 0 4px $primary-color);
+    @include floating;
+  }
+}
+
+section {
+    border-left: 2px solid $primary-color;
+    padding-left: $spacing-sm;
+}
+
+.home-section-indent-normal {
+    margin-left: 5%;
+}
+.home-section-indent-large {
+    margin-left: 10%;
 }

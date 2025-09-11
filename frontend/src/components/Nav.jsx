@@ -18,15 +18,15 @@ export default function Nav() {
           <IoSearchOutline />
         </NavLink>
         <NavLink className="nav-link non-icon-link" to="/games">
-          <span className={path !== '/games' ? `hide` : ``}>*</span>
+          <span className={path !== '/games' ? `hide` : ``}>#</span>
           GAMES
         </NavLink>
         <NavLink className="nav-link non-icon-link" to="/lists">
-          <span className={path !== '/lists' ? `hide` : ``}>*</span>
+          <span className={path !== '/lists' ? `hide` : ``}>#</span>
           LISTS
         </NavLink>
         <NavLink className="nav-link non-icon-link" to="/players">
-          <span className={path !== '/players' ? `hide` : ``}>*</span>
+          <span className={path !== '/players' ? `hide` : ``}>#</span>
           PLAYERS
         </NavLink>
         <NavLink className="nav-link icon-link" to="/account">
