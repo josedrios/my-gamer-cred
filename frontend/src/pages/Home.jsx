@@ -2,10 +2,35 @@ import { useState } from 'react';
 import { IoCubeOutline } from 'react-icons/io5';
 import { IoEarthOutline } from 'react-icons/io5';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
-import { motion } from 'motion/react';
+import { easeOut, motion } from 'motion/react';
+
+const container = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      type: easeOut,
+    },
+  },
+};
+
+const items = {
+  hidden: {
+    y: 75,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'ease-out', bounce: 0, duration: 0.5 },
+  },
+};
 
 const cardVariants = {
-  offscreen: { y: 75 ,opacity: 0 },
+  offscreen: { y: 75, opacity: 0 },
   onscreen: {
     y: 0,
     opacity: 1,
@@ -16,13 +41,19 @@ const cardVariants = {
 export default function Home() {
   return (
     <main>
-      <div id="home-greeting-container">
-        <h2 id="home-greeting">MY GAMER CRED</h2>
-        <div id="floating-gc-container">
-          <IoCubeOutline />
-        </div>
-        <p id="sub-home-greeting">real gamers, real takes</p>
-      </div>
+      <motion.div variants={container} initial="hidden" animate="show">
+        <motion.div variants={items} id="home-greeting-container">
+          <h2 id="home-greeting">My Gamer Cred</h2>
+          <div id="floating-gc-container">
+            <IoCubeOutline />
+          </div>
+          <p id="sub-home-greeting">real gamers, real reviews</p>
+        </motion.div>
+
+        <motion.div variants={items} className="landing-page-placeholder">
+          <p>ADD TOP HOT GAMES SECTION</p>
+        </motion.div>
+      </motion.div>
 
       <section id="home-card-section">
         <HomeCard
@@ -44,7 +75,7 @@ export default function Home() {
         <HomeCard
           title={'share and explore'}
           content={
-            'Let the words of others help you find your next game or voice your unheard gaming takes & reviews.'
+            'Let the words of others help you find your next game. Also voice your own gaming takes & reviews.'
           }
           id={'share-explore'}
         >
@@ -78,8 +109,7 @@ function HomeCard({ title, content, id, children }) {
     <motion.div
       className="home-card"
       variants={cardVariants}
-      //initial={id === 'gc-info' ? "onscreen" : "offscreen"}
-      initial={"offscreen"}
+      initial={'offscreen'}
       animate={shown ? 'onscreen' : ''}
       onViewportEnter={() => setShown(true)}
       viewport={{ amount: 0.7 }}

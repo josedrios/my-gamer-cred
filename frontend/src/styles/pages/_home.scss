@@ -23,21 +23,26 @@
   display: flex;
   justify-content: center;
   margin: $spacing-lg 0;
-  padding-top: $spacing-md;
 
   svg {
     stroke: $primary-color;
     font-size: 40px;
     filter: drop-shadow(0 0 4px $primary-color);
-    @include floating;
+    @include floating($distance: $spacing-md, $name: main-gc);
   }
 }
 
-.home-section-indent-normal {
-  margin-left: 5%;
-}
-.home-section-indent-large {
-  margin-left: 10%;
+.landing-page-placeholder {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $border-color;
+  margin-bottom: $spacing-xl;
+
+  p {
+    color: $border-color;
+  }
 }
 
 #home-card-section {
@@ -47,7 +52,7 @@
 }
 
 .home-card {
-    border-width: 1px;
+  border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(
       to right,
@@ -58,7 +63,7 @@
       $bg-color
     )
     1;
-      border-left: 0;
+  border-left: 0;
   border-right: 0;
   border-bottom: 0;
   max-width: 750px;
@@ -104,12 +109,10 @@
       font-size: 30px;
     }
 
-    #glowing-gc {
-      svg {
-        stroke: $primary-color;
-        filter: drop-shadow(0 0 4px $primary-color);
-        @include floating($spacing-sm);
-      }
+    #glowing-gc svg {
+      stroke: $primary-color;
+      filter: drop-shadow(0 0 4px $primary-color);
+      @include floating($distance: $spacing-sm, $name: distinguished-gc);
     }
   }
 
@@ -133,6 +136,7 @@
       top: calc(50% - 15px);
       stroke: $primary-color;
       fill: $primary-color;
+      @include floating($distance: $spacing-sm, $name: planet);
     }
 
     #plane {

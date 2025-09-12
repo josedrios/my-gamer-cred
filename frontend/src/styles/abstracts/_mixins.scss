@@ -1,7 +1,12 @@
-@mixin floating($distance: $spacing-md, $duration: 4s, $ease: ease-in-out) {
-  animation: floating #{$duration} #{$ease} infinite;
+@mixin floating(
+  $distance: $spacing-md,
+  $duration: 4s,
+  $ease: ease-in-out,
+  $name: floating
+) {
+  animation: #{$name} #{$duration} #{$ease} infinite;
 
-  @keyframes floating {
+  @keyframes #{$name} {
     0% {
       transform: translateY(0);
     }
