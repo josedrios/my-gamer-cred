@@ -18,3 +18,7 @@
     }
   }
 }
+
+@mixin glowing() {
+  filter: drop-shadow(0 0 4px $primary-color);
+}

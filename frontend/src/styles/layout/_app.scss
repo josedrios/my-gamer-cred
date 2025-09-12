@@ -44,6 +44,7 @@ section {
     gap: $spacing-sm;
     order: 0;
     flex: 1;
+    margin-bottom: calc($spacing-xl * 2);
   }
 }
 

@@ -1,8 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IoCubeOutline } from 'react-icons/io5';
 import { IoEarthOutline } from 'react-icons/io5';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
-import { easeOut, motion } from 'motion/react';
+import { IoPersonOutline } from 'react-icons/io5';
+import {
+  easeOut,
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+} from 'motion/react';
 
 const container = {
   hidden: {
@@ -39,11 +46,21 @@ const cardVariants = {
 };
 
 export default function Home() {
+  const [countEnter, setCountEnter] = useState(false);
+  const count = useMotionValue(0);
+  const rounded = useTransform(() => Math.round(count.get()));
+
+  useEffect(() => {
+    if (!countEnter) return;
+    const controls = animate(count, 1854, { duration: 5, ease: [0.25, 1, 0.5, 1] });
+    return () => controls.stop();
+  }, [countEnter]);
+
   return (
     <main>
       <motion.div variants={container} initial="hidden" animate="show">
         <motion.div variants={items} id="home-greeting-container">
-          <h2 id="home-greeting">My Gamer Cred</h2>
+          <h2 id="home-greeting">MY GAMER CRED</h2>
           <div id="floating-gc-container">
             <IoCubeOutline />
           </div>
@@ -95,7 +112,23 @@ export default function Home() {
           }
           id={'accumulate-gc'}
         >
-          ...
+          <div id="account-header-row">
+            <div id="account-icon-container">
+              <IoPersonOutline />
+            </div>
+            <p id="account-name-example">DRAGONSLAYER420</p>
+          </div>
+          <div id="gc-value-row">
+            <div id="gc-value-icon-container">
+              <IoCubeOutline />
+            </div>
+            <motion.pre
+              onViewportEnter={() => setCountEnter(true)}
+              id="gc-value"
+            >
+              {rounded}
+            </motion.pre>
+          </div>
         </HomeCard>
       </section>
     </main>
@@ -112,7 +145,7 @@ function HomeCard({ title, content, id, children }) {
       initial={'offscreen'}
       animate={shown ? 'onscreen' : ''}
       onViewportEnter={() => setShown(true)}
-      viewport={{ amount: 0.7 }}
+      viewport={{ amount: 1 }}
       id={id === 'share-explore' ? 'home-left' : ''}
     >
       <div className="home-card-body">
