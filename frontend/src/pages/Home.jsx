@@ -1,49 +1,13 @@
 import { useState, useEffect } from 'react';
-import { IoCubeOutline } from 'react-icons/io5';
-import { IoEarthOutline } from 'react-icons/io5';
-import { IoPaperPlaneOutline } from 'react-icons/io5';
-import { IoPersonOutline } from 'react-icons/io5';
 import {
-  easeOut,
-  motion,
-  useMotionValue,
-  useTransform,
-  animate,
-} from 'motion/react';
-
-const container = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5,
-      type: easeOut,
-    },
-  },
-};
-
-const items = {
-  hidden: {
-    y: 75,
-    opacity: 0,
-  },
-  show: {
-    y: 0,
-    opacity: 1,
-    transition: { type: 'ease-out', bounce: 0, duration: 0.5 },
-  },
-};
-
-const cardVariants = {
-  offscreen: { y: 75, opacity: 0 },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: { type: 'ease-out', bounce: 0, duration: 1 },
-  },
-};
+  IoCubeOutline,
+  IoPersonOutline,
+  IoEarthOutline,
+  IoPaperPlaneOutline,
+} from 'react-icons/io5';
+import { motion, useMotionValue, useTransform, animate } from 'motion/react';
+import { HomeCard } from '../components/UI/Cards';
+import { container, children } from '../components/animations.js';
 
 export default function Home() {
   const [countEnter, setCountEnter] = useState(false);
@@ -52,14 +16,17 @@ export default function Home() {
 
   useEffect(() => {
     if (!countEnter) return;
-    const controls = animate(count, 1854, { duration: 5, ease: [0.25, 1, 0.5, 1] });
+    const controls = animate(count, 2841, {
+      duration: 20,
+      ease: [0.25, 1, 0.5, 1],
+    });
     return () => controls.stop();
   }, [countEnter]);
 
   return (
     <main>
       <motion.div variants={container} initial="hidden" animate="show">
-        <motion.div variants={items} id="home-greeting-container">
+        <motion.div variants={children} id="home-greeting-container">
           <h2 id="home-greeting">MY GAMER CRED</h2>
           <div id="floating-gc-container">
             <IoCubeOutline />
@@ -67,7 +34,7 @@ export default function Home() {
           <p id="sub-home-greeting">real gamers, real reviews</p>
         </motion.div>
 
-        <motion.div variants={items} className="landing-page-placeholder">
+        <motion.div variants={children} className="landing-page-placeholder">
           <p>ADD TOP HOT GAMES SECTION</p>
         </motion.div>
       </motion.div>
@@ -108,7 +75,7 @@ export default function Home() {
         <HomeCard
           title={'accumulate gc'}
           content={
-            'Add games you played to your account to accumulate gamer cred. The higher the gamer cred, the more you need to be in the sun.'
+            'Add games you played to your account to accumulate gamer cred. The higher the gamer cred, the more sunlight you need.'
           }
           id={'accumulate-gc'}
         >
@@ -132,29 +99,5 @@ export default function Home() {
         </HomeCard>
       </section>
     </main>
-  );
-}
-
-function HomeCard({ title, content, id, children }) {
-  const [shown, setShown] = useState(false);
-
-  return (
-    <motion.div
-      className="home-card"
-      variants={cardVariants}
-      initial={'offscreen'}
-      animate={shown ? 'onscreen' : ''}
-      onViewportEnter={() => setShown(true)}
-      viewport={{ amount: 1 }}
-      id={id === 'share-explore' ? 'home-left' : ''}
-    >
-      <div className="home-card-body">
-        <h3>{title.toUpperCase()}</h3>
-        <p>{content}</p>
-      </div>
-      <motion.div className="home-card-diagram" id={id}>
-        {children}
-      </motion.div>
-    </motion.div>
   );
 }

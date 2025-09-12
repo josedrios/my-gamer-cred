@@ -4,11 +4,8 @@ export default function About() {
   return (
     <>
       <main>
-        <AboutWebsite />
-        <AboutMyself />
+        ABOUT
       </main>
-      <aside>
-      </aside>
     </>
   );
 }
