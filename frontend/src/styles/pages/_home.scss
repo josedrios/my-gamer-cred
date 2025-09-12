@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 40vh;
+  height: 70vh;
   min-height: 200px;
   max-height: 400px;
-  margin-bottom: $spacing-lg;
 }
 
 #home-greeting {
@@ -44,16 +43,36 @@
 #home-card-section {
   display: flex;
   flex-direction: column;
-  gap: $spacing-lg;
+  gap: $spacing-md;
 }
 
 .home-card {
+    border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right,
+      $bg-color,
+      5%,
+      $border-color,
+      95%,
+      $bg-color
+    )
+    1;
+      border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
   max-width: 750px;
   margin: auto;
   padding: $spacing-md;
   display: flex;
   flex-direction: row;
   gap: $spacing-lg;
+
+  &#home-left {
+    .home-card-body {
+      order: 100;
+    }
+  }
 
   .home-card-body {
     width: 60%;
@@ -95,10 +114,34 @@
   }
 
   #share-explore {
+    aspect-ratio: 1/1;
+    max-width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    #rotating-container {
+      width: 100px;
+      height: 100px;
+    }
+
+    #planet {
+      position: absolute;
+      font-size: 30px;
+      left: calc(50% - 15px);
+      top: calc(50% - 15px);
+      stroke: $primary-color;
+      fill: $primary-color;
+    }
+
+    #plane {
+      stroke: $primary-color;
+      filter: drop-shadow(0 0 4px $primary-color);
+      font-size: 30px;
+    }
   }
 
   #accumulate-gc {
-
   }
 }

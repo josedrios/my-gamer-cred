@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { IoCubeOutline } from 'react-icons/io5';
+import { IoEarthOutline } from 'react-icons/io5';
+import { IoPaperPlaneOutline } from 'react-icons/io5';
 import { motion } from 'motion/react';
 
 const cardVariants = {
-  offscreen: { opacity: 0 },
+  offscreen: { y: 75 ,opacity: 0 },
   onscreen: {
+    y: 0,
     opacity: 1,
-    transition: { type: 'spring', bounce: 0.4, duration: 0.75 },
+    transition: { type: 'ease-out', bounce: 0, duration: 1 },
   },
 };
 
@@ -45,7 +48,14 @@ export default function Home() {
           }
           id={'share-explore'}
         >
-          ...
+          <IoEarthOutline id="planet" />
+          <motion.div
+            id="rotating-container"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 4, ease: 'linear' }}
+          >
+            <IoPaperPlaneOutline id="plane" />
+          </motion.div>
         </HomeCard>
         <HomeCard
           title={'accumulate gc'}
@@ -68,18 +78,20 @@ function HomeCard({ title, content, id, children }) {
     <motion.div
       className="home-card"
       variants={cardVariants}
-      initial="offscreen"
+      //initial={id === 'gc-info' ? "onscreen" : "offscreen"}
+      initial={"offscreen"}
       animate={shown ? 'onscreen' : ''}
       onViewportEnter={() => setShown(true)}
-      viewport={{ amount: 0.85 }}
+      viewport={{ amount: 0.7 }}
+      id={id === 'share-explore' ? 'home-left' : ''}
     >
       <div className="home-card-body">
         <h3>{title.toUpperCase()}</h3>
         <p>{content}</p>
       </div>
-      <div className="home-card-diagram" id={id}>
+      <motion.div className="home-card-diagram" id={id}>
         {children}
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
