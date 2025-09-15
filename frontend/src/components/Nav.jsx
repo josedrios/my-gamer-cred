@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+import { container, fadeIn } from './animations';
 import { NavLink } from 'react-router-dom';
 import { IoCubeOutline } from 'react-icons/io5';
 import { IoPersonOutline } from 'react-icons/io5';
@@ -9,12 +11,14 @@ export default function Nav() {
   const path = location.pathname;
 
   return (
-    <nav>
-      <NavLink id="nav-home" to="/">
-        <IoCubeOutline />
-      </NavLink>
-      <div id="nav-body">
-        <NavLink className="nav-link icon-link" to="/home">
+    <motion.nav variants={container} initial="hidden" animate="show">
+      <motion.div id='nav-home-wrapper' variants={fadeIn}>
+        <NavLink id="nav-home" to="/">
+          <IoCubeOutline />
+        </NavLink>
+      </motion.div>
+      <motion.div variants={fadeIn} id="nav-body">
+        <NavLink className="nav-link icon-link" to="/">
           <IoSearchOutline />
         </NavLink>
         <NavLink className="nav-link non-icon-link" to="/games">
@@ -40,7 +44,7 @@ export default function Nav() {
             <IoPersonOutline />
           </NavLink>
         </div>
-      </div>
-    </nav>
+      </motion.div>
+    </motion.nav>
   );
 }

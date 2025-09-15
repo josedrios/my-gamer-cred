@@ -25,6 +25,16 @@ export const children = {
   },
 };
 
+export const fadeIn = {
+  hidden: {
+    opacity: 0
+  },
+  show: {
+    opacity: 1,
+    transition: {type: 'ease-out', duration: 0.5}
+  }
+}
+
 export const whenInViewport = {
   offscreen: { y: 75, opacity: 0 },
   onscreen: {

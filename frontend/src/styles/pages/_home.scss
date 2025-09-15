@@ -47,159 +47,114 @@
 #home-card-section {
   display: flex;
   flex-direction: column;
-  gap: $spacing-md;
+  gap: $spacing-xl;
 }
 
-.home-card {
-  border-width: 1px;
-  border-style: solid;
-  border-image: linear-gradient(
-      to right,
-      $bg-color,
-      5%,
-      $border-color,
-      95%,
-      $bg-color
-    )
-    1;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
-  max-width: 750px;
-  margin: auto;
-  padding: $spacing-md;
+// SPECIFIC HOME CARD DIAGRAM STYLINGS
+#gc-info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  aspect-ratio: 1/1 !important;
+  max-width: 200px;
+
+  svg {
+    stroke: $primary-color-transparent;
+    font-size: 30px;
+  }
+
+  #glowing-gc svg {
+    stroke: $primary-color;
+    @include glowing();
+    @include floating($distance: $spacing-sm, $name: distinguished-gc);
+  }
+}
+
+#share-explore {
+  aspect-ratio: 1/1;
+  max-width: 200px;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  gap: $spacing-lg;
+  justify-content: center;
+  align-items: center;
 
-  &#home-left {
-    .home-card-body {
-      order: 100;
-    }
+  #rotating-container {
+    width: 100px;
+    height: 100px;
   }
 
-  .home-card-body {
-    width: 60%;
+  #planet {
+    position: absolute;
+    font-size: 30px;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    stroke: $primary-color;
+    fill: $primary-color;
+    @include floating($distance: $spacing-sm, $name: planet);
+  }
+
+  #plane {
+    stroke: $primary-color;
+    @include glowing();
+    font-size: 30px;
+  }
+}
+
+#accumulate-gc {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  gap: $spacing-xs;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-xs;
+  padding: $spacing-sm;
+  margin: auto;
+
+  #account-header-row {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: $spacing-md;
-
-    h3 {
-      color: $primary-color;
-    }
-  }
-
-  .home-card-diagram {
-    width: 40%;
-  }
-
-  // SPECIFIC HOME CARD DIAGRAM STYLINGS
-  #gc-info {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
-    aspect-ratio: 1/1 !important;
-    max-width: 200px;
+    gap: $spacing-sm;
 
-    svg {
-      stroke: $primary-color-transparent;
-      font-size: 30px;
-    }
-
-    #glowing-gc svg {
-      stroke: $primary-color;
-      @include glowing();
-      @include floating($distance: $spacing-sm, $name: distinguished-gc);
-    }
-  }
-
-  #share-explore {
-    aspect-ratio: 1/1;
-    max-width: 200px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    #rotating-container {
-      width: 100px;
-      height: 100px;
-    }
-
-    #planet {
-      position: absolute;
-      font-size: 30px;
-      left: calc(50% - 15px);
-      top: calc(50% - 15px);
-      stroke: $primary-color;
-      fill: $primary-color;
-      @include floating($distance: $spacing-sm, $name: planet);
-    }
-
-    #plane {
-      stroke: $primary-color;
-      @include glowing();
-      font-size: 30px;
-    }
-  }
-
-  #accumulate-gc {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    height: fit-content;
-    gap: $spacing-xs;
-    border: 1px solid $border-color;
-    border-radius: $border-radius-xs;
-    padding: $spacing-sm;
-    margin: auto;
-
-    #account-header-row {
+    #account-icon-container {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: $spacing-sm;
-
-      #account-icon-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $primary-color-transparent;
-        padding: $spacing-xs;
-        border-radius: $border-radius-sm;
-
-        svg {
-          font-size: $font-size-xl;
-          stroke: $primary-color;
-        }
-      }
-
-      #account-name-example {
-        color: $secondary-font-color;
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 0 !important;
-      }
-    }
-
-    #gc-value-row {
-      display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: $spacing-xs;
+      background-color: $primary-color-transparent;
+      padding: $spacing-xs;
+      border-radius: $border-radius-sm;
 
-      #gc-value-icon-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      svg {
+        font-size: $font-size-xl;
+        stroke: $primary-color;
+      }
+    }
 
-        svg { 
-          stroke: $primary-color;
-          @include glowing();
-        }
+    #account-name-example {
+      color: $secondary-font-color;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  #gc-value-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-xs;
+
+    #gc-value-icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        stroke: $primary-color;
+        @include glowing();
       }
     }
   }
