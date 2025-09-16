@@ -28,7 +28,7 @@ export default function AccumulateCard() {
         <div id="account-icon-container">
           <IoPersonOutline />
         </div>
-        <p id="account-name-example">DRAGONSLAYER420</p>
+        <p id="account-name-example">N00B_420</p>
       </div>
       <div id="gc-value-row">
         <div id="gc-value-icon-container">

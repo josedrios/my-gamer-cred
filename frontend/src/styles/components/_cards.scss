@@ -42,3 +42,19 @@
     width: 40%;
   }
 }
+
+@media (max-width: 500px) {
+  .home-card {
+    flex-direction: column;
+
+    .home-card-body {
+      order: 1;
+      width: 100%;
+    }
+
+    .home-card-diagram {
+      order: 100;
+      margin: auto;
+    }
+  }
+}

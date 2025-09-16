@@ -42,6 +42,11 @@ select {
   font: inherit;
 }
 
+input, button {
+  border: none;
+  outline: none;
+}
+
 p {
   margin: 0;
   padding: 0;

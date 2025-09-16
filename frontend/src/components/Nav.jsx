@@ -18,7 +18,7 @@ export default function Nav() {
         </NavLink>
       </motion.div>
       <motion.div variants={fadeIn} id="nav-body">
-        <NavLink className="nav-link icon-link" to="/">
+        <NavLink className="nav-link icon-link" to="/search">
           <IoSearchOutline />
         </NavLink>
         <NavLink className="nav-link non-icon-link" to="/games">

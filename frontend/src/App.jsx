@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Games from './pages/Games';
 import Players from './pages/Players';
 import Lists from './pages/Lists';
+import Search from './pages/Search';
 import About from './pages/About';
 import Account from './pages/Account';
 import Design from './pages/Design';
@@ -25,6 +26,7 @@ function App() {
               <Route path="/players" element={<Players />} />
               <Route path="/account" element={<Account />} />
               <Route path="/about" element={<About />} />
+              <Route path="/search" element={<Search />} />
               <Route path="/design" element={<Design />} />
               {/* need to add: */}
               {/* search(global), contact, help, terms, socials */}
