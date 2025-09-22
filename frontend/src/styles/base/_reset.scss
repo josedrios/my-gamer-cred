@@ -18,12 +18,12 @@ body {
 }
 
 div {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 div::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 img,
@@ -42,7 +42,8 @@ select {
   font: inherit;
 }
 
-input, button {
+input,
+button {
   border: none;
   outline: none;
 }
