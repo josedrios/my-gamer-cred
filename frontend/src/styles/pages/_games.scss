@@ -51,6 +51,7 @@
     gap: $spacing-md;
     overflow: auto;
     padding: $spacing-sm 0;
-    scrollbar-width: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $border-color transparent;
   }
 }

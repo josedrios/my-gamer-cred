@@ -60,11 +60,81 @@
 }
 
 // GAME PAGE RELATED
-.game-section-children {
-  .test {
-    border: 1px solid red;
-    background-color: white;
-    height: 220px;
-    flex: 0 0 150px;
+.game-card {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+
+  .game-card-body {
+    height: 200px;
+    width: 100%;
+    flex: 1;
+    margin-bottom: $spacing-xs;
+    transition: filter $transition-fast;
+    position: relative;
+
+    .game-card-gc {
+      opacity: 1;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($border-color, 0.75);
+      transition: opacity $transition-fast;
+
+      svg * {
+        stroke: $primary-color;
+        stroke-width: 40;
+      }
+    }
+
+    .game-card-title {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      top: 20%;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: opacity $transition-fast;
+    }
+    
+    .game-card-options {
+      opacity: 0;
+      position: absolute;
+      display: flex;
+      width: 100%;
+      padding: 0 $spacing-lg;
+      justify-content: space-around;
+      align-items: center;
+      margin: $spacing-sm 0;
+      bottom: 0;
+      transition: opacity $transition-fast;
+    }
+  }
+
+  .player-count {
+    text-align: center;
+    height: $spacing-md;
+    font-size: $font-size-xs;
+    color: $border-color;
+    margin-bottom: 0 !important;
+  }
+
+  &:hover {
+    .game-card-body img {
+      filter: brightness(0.5);
+    }
+
+    .game-card-title, .game-card-options {
+      opacity: 1;
+    }
+
+    .game-card-gc {
+      opacity: 0;
+    }
   }
 }
