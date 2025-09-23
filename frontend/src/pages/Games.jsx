@@ -17,6 +17,10 @@ export default function Games() {
       <SearchForm filters={filters} placeholder={'Search for games...'} />
       <GameSection title={'Trending in September'} />
       <GameSection title={'Recently Reviewed'} />
+      <div id="games-misc-section">
+        <RecentReviews />
+        <ListRecommendations />
+      </div>
     </main>
   );
 }
@@ -24,12 +28,12 @@ export default function Games() {
 function GameSection({ title }) {
   return (
     <section className="game-section">
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       <div className="game-section-children">
         <GameCard source={elden} title="Elden Ring" />
         <GameCard source={batman} title="Batman Arkham Asylum" />
         <GameCard source={titan} title="Titan Fall 2" />
-        <GameCard source={lbp} title="LittleBigPlanettttttt" />
+        <GameCard source={lbp} title="LittleBigPlanet" />
         <GameCard source={mgs} title="Metal Gear Solid 3: Snake Eater" />
         <GameCard source={re} title="Resident Evil 2 Remake" />
       </div>
@@ -37,7 +41,7 @@ function GameSection({ title }) {
   );
 }
 
-function GameCard({ source, title = 'Temporary' }) {
+function GameCard({ source, title = 'NO TITLE' }) {
   return (
     <div className="game-card">
       <div className="game-card-body">
@@ -47,7 +51,7 @@ function GameCard({ source, title = 'Temporary' }) {
           <IoCubeOutline />
           100
         </p>
-        <div className='game-card-options'>
+        <div className="game-card-options">
           <IoCheckmark />
           <IoCubeOutline />
           <IoEllipsisVertical />
@@ -56,4 +60,12 @@ function GameCard({ source, title = 'Temporary' }) {
       <p className="player-count">627k Players</p>
     </div>
   );
+}
+
+function RecentReviews() {
+  return <div id="games-recent-reviews"></div>;
+}
+
+function ListRecommendations() {
+  return <div id="games-list-recommendations"></div>;
 }
