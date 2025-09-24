@@ -95,7 +95,7 @@
       opacity: 0;
       position: absolute;
       padding: 0 $spacing-xs;
-      width: calc(100% - 2*$spacing-xs);
+      width: calc(100% - 2 * $spacing-xs);
       left: $spacing-xs;
       top: 20%;
       text-align: center;
@@ -103,7 +103,7 @@
       text-overflow: ellipsis;
       transition: opacity $transition-fast;
     }
-    
+
     .game-card-options {
       opacity: 0;
       position: absolute;
@@ -117,7 +117,13 @@
       transition: opacity $transition-fast;
 
       svg {
-        font-size: $font-size-lg;
+        font-size: $font-size-xl;
+        transition: stroke $transition-fast;
+
+        &:hover {
+          stroke: $primary-color;
+          fill: $primary-color;
+        }
       }
     }
   }
@@ -137,13 +143,13 @@
       filter: brightness(0.5);
     }
 
-    .game-card-title, .game-card-options {
+    .game-card-title,
+    .game-card-options {
       opacity: 1;
     }
 
     .game-card-gc {
       opacity: 0;
     }
-
   }
 }

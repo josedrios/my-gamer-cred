@@ -26,10 +26,6 @@ nav {
   width: 100%;
 }
 
-section {
-  margin-bottom: $spacing-md;
-}
-
 #content-container {
   display: flex;
   flex-direction: row;
@@ -49,7 +45,7 @@ section {
 }
 
 footer {
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 @media (max-width: #{$breakpoint-xs}) {

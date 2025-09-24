@@ -16,7 +16,7 @@ export default function Games() {
     <main>
       <SearchForm filters={filters} placeholder={'Search for games...'} />
       <GameSection title={'Trending in September'} />
-      <GameSection title={'Recently Reviewed'} />
+      <GameSection title={'Recently Played'} />
       <div id="games-misc-section">
         <RecentReviews />
         <ListRecommendations />
@@ -28,7 +28,7 @@ export default function Games() {
 function GameSection({ title }) {
   return (
     <section className="game-section">
-      <h4>{title}</h4>
+      <h4 className="section-header">{title}</h4>
       <div className="game-section-children">
         <GameCard source={elden} title="Elden Ring" />
         <GameCard source={batman} title="Batman Arkham Asylum" />
@@ -63,9 +63,20 @@ function GameCard({ source, title = 'NO TITLE' }) {
 }
 
 function RecentReviews() {
-  return <div id="games-recent-reviews"></div>;
+  return (
+    <div id="games-recent-reviews">
+      <h4 className="section-header">Hot Reviews</h4>
+      <p>Review</p>
+      <p>Review</p>
+      <p>Review</p>
+      <p>Review</p>
+      <p>Review</p>
+    </div>
+  );
 }
 
 function ListRecommendations() {
-  return <div id="games-list-recommendations"></div>;
+  return (
+    <div id="games-list-recommendations">List Recommendations Go Here</div>
+  );
 }
