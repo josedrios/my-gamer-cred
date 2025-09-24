@@ -76,5 +76,9 @@ function RecentReviews() {
 }
 
 function ListRecommendations() {
-  return <div id="games-list-recommendations">List Recommendations </div>;
+  return (
+    <div id="games-list-recommendations">
+      <h4 className="section-header">List Recommendations</h4>
+    </div>
+  );
 }

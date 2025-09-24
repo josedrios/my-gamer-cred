@@ -54,6 +54,7 @@
 #games-misc-section {
   height: 200px;
   display: flex;
+  gap: $spacing-md;
 
   #games-recent-reviews {
     width: 60%;
@@ -61,7 +62,6 @@
   }
 
   #games-list-recommendations {
-    border: 1px solid $border-color;
     width: 40%;
     height: 100%;
   }
