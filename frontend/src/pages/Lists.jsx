@@ -2,7 +2,7 @@ export default function Lists() {
   return (
     <main>
       <ListSection title={'Trending in September'} />
-      <ListSection title={"2025's Best"} />
+      <ListSection title={'Best of 2025'} />
     </main>
   );
 }
@@ -27,9 +27,9 @@ function ListCard() {
   return (
     <div className="list-card">
       <p className="list-game-count">6 games</p>
-      <div className="list-poster-cards">include cards</div>
-      <p>My Game List</p>
-      <div>
+      <div className="list-poster-cards"></div>
+      <p className="list-card-title">My Game List</p>
+      <div className="list-user-container">
         <div className="list-user-pfp" />
         <p className="list-user-name">LoreConsumer</p>
       </div>

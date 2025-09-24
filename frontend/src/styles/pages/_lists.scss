@@ -2,6 +2,53 @@
   .list-section-children {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    width: 100%;
+    gap: $spacing-md;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $border-color transparent;
+    padding-bottom: $spacing-sm;
+  }
+}
+
+.list-card {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+
+  .list-game-count {
+    font-size: $font-size-sm;
+    color: $border-color;
+  }
+
+  .list-poster-cards {
+    height: 200px;
+    background-color: $border-color;
+    margin-bottom: $spacing-xs;
+  }
+
+  .list-card-title {
+    font-size: $font-size-lg;
+  }
+
+  .list-user-container {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-sm;
+    align-items: center;
+
+    .list-user-pfp {
+      height: 20px;
+      width: 20px;
+      border-radius: 1000px;
+      background-color: lime;
+    }
+
+    .list-user-name {
+      color: $border-color;
+      margin-bottom: 0 !important;
+    }
   }
 }
