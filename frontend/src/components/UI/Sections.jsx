@@ -1,13 +1,19 @@
-export default function Sections({
+export function SectionRow({
   title = 'NO TITLE',
   children,
   orientation = 'row',
   id,
 }) {
   return (
-    <div className="standard-section" stlye={{ flexDirection: orientation }}>
+    <div className="standard-section" id={id}>
       <h4 className="section-header">{title}</h4>
-      <div className="section-children">{children}</div>
+      <div style={{ flexDirection: orientation }} className="section-children">
+        {children}
+      </div>
     </div>
   );
+}
+
+export function SectionDivider({ children }) {
+  return <div className="standard-section-divider">{children}</div>;
 }

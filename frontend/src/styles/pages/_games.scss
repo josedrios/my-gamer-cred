@@ -35,29 +35,3 @@
     flex-wrap: wrap;
   }
 }
-
-#games-misc-section {
-  height: 200px;
-  display: flex;
-  gap: $spacing-md;
-
-  #games-recent-reviews {
-    width: 60%;
-    height: 100%;
-  }
-
-  #games-list-recommendations {
-    width: 40%;
-    height: 100%;
-  }
-}
-
-@media (max-width: #{$breakpoint-sm}) {
-  #games-recent-reviews {
-    width: 100% !important;
-  }
-
-  #games-list-recommendations {
-    display: none;
-  }
-}

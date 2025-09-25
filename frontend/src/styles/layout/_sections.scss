@@ -18,3 +18,30 @@
     padding-bottom: $spacing-lg;
   }
 }
+
+.standard-section-divider {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-md;
+  width: 100%;
+
+  > :first-child {
+    width: 60%;
+  }
+
+  > :last-child {
+    width: 40%;
+  }
+}
+
+@media (max-width: #{$breakpoint-sm}) {
+  .standard-section-divider {
+    > :first-child {
+      width: 100%;
+    }
+
+    > :last-child {
+      display: none;
+    }
+  }
+}
