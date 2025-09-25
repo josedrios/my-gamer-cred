@@ -4,6 +4,7 @@ import titan from '../assets/images/game_cover3.jpg';
 import lbp from '../assets/images/game_cover4.jpg';
 import mgs from '../assets/images/game_cover5.jpg';
 import re from '../assets/images/game_cover6.jpg';
+import Sections from '../components/UI/Sections.jsx';
 
 export default function Lists() {
   return (
@@ -14,16 +15,17 @@ export default function Lists() {
   );
 }
 
-function ListSection({ title }) {
+function ListSection({ title = 'NO TITLE' }) {
   return (
-    <div className="list-section">
-      <h4 className="section-header">{title}</h4>
-      <div className="list-section-children">
-        <ListCard />
-        <ListCard />
-        <ListCard />
-      </div>
-    </div>
+    <Sections title={title}>
+      <ListCard />
+      <ListCard />
+      <ListCard />
+      <ListCard />
+      <ListCard />
+      <ListCard />
+      <ListCard />
+    </Sections>
   );
 }
 

@@ -1,18 +1,3 @@
-.list-section {
-  .list-section-children {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100%;
-    gap: $spacing-md;
-    overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: $border-color transparent;
-    padding-bottom: $spacing-sm;
-  }
-}
-
 .list-card {
   flex: 0 0 330px;
   display: flex;
