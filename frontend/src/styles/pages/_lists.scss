@@ -14,7 +14,7 @@
 }
 
 .list-card {
-  flex: 0 0 200px;
+  flex: 0 0 330px;
   display: flex;
   flex-direction: column;
 
@@ -23,10 +23,27 @@
     color: $border-color;
   }
 
-  .list-poster-cards {
+  .list-posters {
     height: 200px;
     background-color: $border-color;
     margin-bottom: $spacing-xs;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 100%;
+    }
+  }
+
+  .list-game-count {
+    color: white;
+    position: absolute;
+    padding: 0 $spacing-sm;
+    background-color: rgba($border-color, 0.75);
+    bottom: 0;
+    left: 0;
   }
 
   .list-card-title {
@@ -49,6 +66,14 @@
     .list-user-name {
       color: $border-color;
       margin-bottom: 0 !important;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .list-posters {
+      filter: brightness(50%);
     }
   }
 }

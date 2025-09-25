@@ -85,9 +85,10 @@
       background-color: rgba($border-color, 0.75);
       transition: opacity $transition-fast;
 
-      svg * {
+      svg {
         stroke: $primary-color;
         stroke-width: 40;
+        margin-right: $spacing-xs;
       }
     }
 
