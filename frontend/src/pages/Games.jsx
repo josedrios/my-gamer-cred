@@ -30,6 +30,7 @@ export default function Games() {
 function GameSection({ title = 'NO TITLE' }) {
   return (
     <SectionRow title={title}>
+      <TestCard />
       <GameCard source={elden} title="Elden Ring" />
       <GameCard source={batman} title="Batman Arkham Asylum" />
       <GameCard source={titan} title="Titan Fall 2" />
@@ -37,6 +38,21 @@ function GameSection({ title = 'NO TITLE' }) {
       <GameCard source={mgs} title="Metal Gear Solid 3: Snake Eater" />
       <GameCard source={re} title="Resident Evil 2 Remake" />
     </SectionRow>
+  );
+}
+
+function TestCard() {
+  return (
+    <div className="row-card row-card--game">
+      <div className="row-card__body">
+        <img src={mgs} alt="" />
+        <p className="row-card__banner">
+          <IoCubeOutline />
+          100
+        </p>
+      </div>
+      <p className="row-card__subheader">627k Players</p>
+    </div>
   );
 }
 

@@ -154,3 +154,51 @@
     }
   }
 }
+
+.row-card {
+  // General row card layout
+  display: flex;
+  flex-direction: column;
+
+  &--game {
+    // Game card related styling
+    flex: 0 0 150px;
+  }
+
+  &--list {
+    // Game related styling
+  }
+
+  &__body &__banner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: 0 $spacing-xs;
+    background-color: rgba($border-color, 0.75);
+
+    svg * {
+      stroke: $primary-color;
+      stroke-width: 45;
+    }
+  }
+
+  &__title {
+  }
+
+  &__subheader {
+    padding: $spacing-xs 0;
+    font-size: $font-size-sm;
+    color: $border-color;
+  }
+}
+
+// Row card specifc image styling
+.row-card--game .row-card__body {
+  position: relative;
+}
+
+.row-card--list .row-card__body {
+}
