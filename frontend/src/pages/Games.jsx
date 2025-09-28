@@ -3,6 +3,7 @@ import { IoCheckmark } from 'react-icons/io5';
 import { IoEllipsisVertical } from 'react-icons/io5';
 import SearchForm from '../components/Search/SearchForm';
 import { SectionRow, SectionDivider } from '../components/UI/Sections.jsx';
+import { RowCard } from '../components/UI/Cards.jsx';
 import batman from '../assets/images/game_cover.jpg';
 import elden from '../assets/images/game_cover2.jpg';
 import titan from '../assets/images/game_cover3.jpg';
@@ -43,7 +44,7 @@ function GameSection({ title = 'NO TITLE' }) {
 
 function TestCard() {
   return (
-    <div className="row-card row-card--game">
+    <RowCard type={'game'}>
       <div className="row-card__body">
         <img src={mgs} alt="" />
         <p className="row-card__banner">
@@ -52,7 +53,7 @@ function TestCard() {
         </p>
       </div>
       <p className="row-card__subheader">627k Players</p>
-    </div>
+    </RowCard>
   );
 }
 

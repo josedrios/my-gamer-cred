@@ -25,3 +25,11 @@ export function HomeCard({ title, content, id, children }) {
     </motion.div>
   );
 }
+
+export function RowCard({ children, type }) {
+  return (
+    <div className={`row-card ${type ? `row-card--${type}` : ''}`}>
+      {children}
+    </div>
+  );
+}

@@ -167,9 +167,15 @@
 
   &--list {
     // Game related styling
+    flex: 0 0 330px;
   }
 
-  &__body &__banner {
+  &__body {
+    height: 200px;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__banner {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -186,12 +192,31 @@
   }
 
   &__title {
+    font-size: $font-size-lg;
   }
 
   &__subheader {
-    padding: $spacing-xs 0;
     font-size: $font-size-sm;
     color: $border-color;
+  }
+
+  &__user {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+
+    span {
+      color: $border-color;
+      margin-bottom: 0;
+      font-size: $font-size-md;
+    }
+
+    .row-card__pfp {
+      height: $spacing-md;
+      aspect-ratio: 1/1;
+      border-radius: 1000px;
+      background: lime;
+    }
   }
 }
 
@@ -201,4 +226,10 @@
 }
 
 .row-card--list .row-card__body {
+  position: relative;
+
+  img {
+    width: 150px;
+    position: absolute;
+  }
 }

@@ -5,6 +5,7 @@ import lbp from '../assets/images/game_cover4.jpg';
 import mgs from '../assets/images/game_cover5.jpg';
 import re from '../assets/images/game_cover6.jpg';
 import { SectionRow, SectionDivider } from '../components/UI/Sections.jsx';
+import { RowCard } from '../components/UI/Cards.jsx';
 
 export default function Lists() {
   return (
@@ -22,14 +23,41 @@ export default function Lists() {
 function ListSection({ title = 'NO TITLE' }) {
   return (
     <SectionRow title={title}>
-      <ListCard />
-      <ListCard />
-      <ListCard />
-      <ListCard />
-      <ListCard />
-      <ListCard />
-      <ListCard />
+      <TestCard />
+      <TestCard />
+      <TestCard />
+      <TestCard />
+      <TestCard />
     </SectionRow>
+  );
+}
+
+function TestCard() {
+  const posters = [titan, lbp, mgs, re];
+
+  return (
+    <RowCard type={'list'}>
+      <div className="row-card__body">
+        {posters.map((poster, i) => (
+          <img
+            src={poster}
+            alt=""
+            style={{
+              left: `${i * 60}px`,
+              zIndex: 1000 - i,
+            }}
+          />
+        ))}
+        <p className="row-card__banner" style={{ zIndex: 1001 }}>
+          6 Games
+        </p>
+      </div>
+      <p className="row-card__title">Top 10 Something</p>
+      <div className="row-card__user">
+        <div className="row-card__pfp" />
+        <span>LoreConsumer</span>
+      </div>
+    </RowCard>
   );
 }
 
