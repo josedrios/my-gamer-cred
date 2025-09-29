@@ -28,7 +28,10 @@ export function HomeCard({ title, content, id, children }) {
 
 export function RowCard({ children, type }) {
   return (
-    <div className={`row-card ${type ? `row-card--${type}` : ''}`}>
+    <div
+      onClick={() => console.log('GAME CARD CLICKED')}
+      className={`row-card ${type ? `row-card--${type}` : ''}`}
+    >
       {children}
     </div>
   );

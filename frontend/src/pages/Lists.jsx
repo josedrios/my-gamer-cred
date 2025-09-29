@@ -23,16 +23,21 @@ export default function Lists() {
 function ListSection({ title = 'NO TITLE' }) {
   return (
     <SectionRow title={title}>
-      <TestCard />
-      <TestCard />
-      <TestCard />
-      <TestCard />
-      <TestCard />
+      <ListCard
+        title={'Games You Have to Play at Least Once'}
+        user="LoreConsumer"
+      />
+      <ListCard title={'10 out of 10s'} user="WizMo" />
+      <ListCard title={'Masterpieces'} user="darrow420" />
+      <ListCard
+        title={'My Personal Favorite Games in the Month of October'}
+        user="chews.worth"
+      />
     </SectionRow>
   );
 }
 
-function TestCard() {
+function ListCard({ title = 'NO TITLE', user = 'UNKNOWN' }) {
   const posters = [titan, lbp, mgs, re];
 
   return (
@@ -43,7 +48,7 @@ function TestCard() {
             src={poster}
             alt=""
             style={{
-              left: `${i * 60}px`,
+              left: `${i * 50}px`,
               zIndex: 1000 - i,
             }}
           />
@@ -52,46 +57,12 @@ function TestCard() {
           6 Games
         </p>
       </div>
-      <p className="row-card__title">Top 10 Something</p>
+      <p className="row-card__list-title">{title}</p>
       <div className="row-card__user">
         <div className="row-card__pfp" />
-        <span>LoreConsumer</span>
+        <span>{user}</span>
       </div>
     </RowCard>
-  );
-}
-
-function ListCard() {
-  const posters = [titan, lbp, mgs, re];
-
-  return (
-    <div className="list-card">
-      <div className="list-posters">
-        {posters.map((poster, i) => (
-          <img
-            src={poster}
-            alt=""
-            style={{
-              left: `${i * 60}px`,
-              zIndex: 1000 - i,
-            }}
-          />
-        ))}
-        <p
-          className="list-game-count"
-          style={{
-            zIndex: 1001,
-          }}
-        >
-          6 games
-        </p>
-      </div>
-      <p className="list-card-title">My Game List</p>
-      <div className="list-user-container">
-        <div className="list-user-pfp" />
-        <p className="list-user-name">LoreConsumer</p>
-      </div>
-    </div>
   );
 }
 

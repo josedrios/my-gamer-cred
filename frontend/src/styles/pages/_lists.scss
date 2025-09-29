@@ -1,27 +1,47 @@
+// CARD RELATED
 .row-card--list {
-  flex: 0 0 330px;
+  flex: 0 0 225px;
 
-  .row-card__body img {
-    width: 150px;
-    position: absolute;
+  .row-card__body {
+    height: 100px !important;
+    img {
+      height: 100px;
+      position: absolute;
+    }
   }
 
-  .row-card__user {
-    display: flex;
-    gap: $spacing-sm;
-    align-items: center;
-
-    span {
-      color: $border-color;
-      margin-bottom: 0;
-      font-size: $font-size-md;
+  &:hover {
+    .row-card__list-title {
+      color: $primary-color;
     }
+  }
+}
 
-    .row-card__pfp {
-      height: $spacing-md;
-      aspect-ratio: 1/1;
-      border-radius: 1000px;
-      background: lime;
-    }
+// ROW CARD LIST TITLE
+.row-card__list-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ROW CARD LIST USER INFO
+.row-card__user {
+  display: flex;
+  gap: calc($spacing-xs * 2);
+  align-items: center;
+  font-size: $font-size-sm;
+
+  span {
+    font-size: $font-size-sm;
+    color: $border-color;
+    margin-bottom: 0;
+  }
+
+  .row-card__pfp {
+    height: $spacing-md;
+    aspect-ratio: 1/1;
+    border-radius: 1000px;
+    background: lime;
   }
 }

@@ -87,12 +87,14 @@
     }
   }
 
-  &__title {
-    font-size: $font-size-lg;
-  }
-
   &__subheader {
+    cursor: auto;
+    margin-bottom: 0 !important;
     font-size: $font-size-sm;
     color: $border-color;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

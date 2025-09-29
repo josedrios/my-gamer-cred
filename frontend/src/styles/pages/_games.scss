@@ -37,25 +37,10 @@
 }
 
 // CARD RELATED
+
+// GAME ROW CARD LAYOUT
 .row-card--game {
   flex: 0 0 150px;
-
-  &:hover {
-    cursor: pointer;
-
-    .row-card__body img {
-      filter: brightness(0.5);
-    }
-
-    .row-card__game-title,
-    .row-card__options {
-      opacity: 1;
-    }
-
-    .row-card__banner {
-      opacity: 0;
-    }
-  }
 }
 
 // GAME ROW CARD OPTIONS STYLING
@@ -94,4 +79,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transition: opacity $transition-fast;
+}
+
+// GAME ROW CARD HOVER
+.row-card--game .row-card__body:hover {
+  img {
+    filter: brightness(0.5);
+  }
+
+  .row-card__game-title,
+  .row-card__options {
+    opacity: 1;
+  }
+
+  .row-card__banner {
+    opacity: 0;
+  }
 }
