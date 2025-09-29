@@ -31,7 +31,6 @@ export default function Games() {
 function GameSection({ title = 'NO TITLE' }) {
   return (
     <SectionRow title={title}>
-      <TestCard />
       <GameCard source={elden} title="Elden Ring" />
       <GameCard source={batman} title="Batman Arkham Asylum" />
       <GameCard source={titan} title="Titan Fall 2" />
@@ -42,39 +41,24 @@ function GameSection({ title = 'NO TITLE' }) {
   );
 }
 
-function TestCard() {
+function GameCard({ source, title = 'NO TITLE' }) {
   return (
     <RowCard type={'game'}>
       <div className="row-card__body">
-        <img src={mgs} alt="" />
+        <img src={source} alt="" />
         <p className="row-card__banner">
           <IoCubeOutline />
           100
         </p>
-      </div>
-      <p className="row-card__subheader">627k Players</p>
-    </RowCard>
-  );
-}
-
-function GameCard({ source, title = 'NO TITLE' }) {
-  return (
-    <div className="game-card">
-      <div className="game-card-body">
-        <img src={source} alt="" />
-        <p className="game-card-title">{title}</p>
-        <p className="game-card-gc">
-          <IoCubeOutline />
-          100
-        </p>
-        <div className="game-card-options">
+        <p className="row-card__game-title">{title}</p>
+        <div className="row-card__options">
           <IoCheckmark />
           <IoCubeOutline />
           <IoEllipsisVertical />
         </div>
       </div>
-      <p className="player-count">627k Players</p>
-    </div>
+      <p className="row-card__subheader">627k Players</p>
+    </RowCard>
   );
 }
 

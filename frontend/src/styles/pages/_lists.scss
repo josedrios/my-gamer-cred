@@ -1,0 +1,27 @@
+.row-card--list {
+  flex: 0 0 330px;
+
+  .row-card__body img {
+    width: 150px;
+    position: absolute;
+  }
+
+  .row-card__user {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+
+    span {
+      color: $border-color;
+      margin-bottom: 0;
+      font-size: $font-size-md;
+    }
+
+    .row-card__pfp {
+      height: $spacing-md;
+      aspect-ratio: 1/1;
+      border-radius: 1000px;
+      background: lime;
+    }
+  }
+}

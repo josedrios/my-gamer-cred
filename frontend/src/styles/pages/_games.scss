@@ -35,3 +35,63 @@
     flex-wrap: wrap;
   }
 }
+
+// CARD RELATED
+.row-card--game {
+  flex: 0 0 150px;
+
+  &:hover {
+    cursor: pointer;
+
+    .row-card__body img {
+      filter: brightness(0.5);
+    }
+
+    .row-card__game-title,
+    .row-card__options {
+      opacity: 1;
+    }
+
+    .row-card__banner {
+      opacity: 0;
+    }
+  }
+}
+
+// GAME ROW CARD OPTIONS STYLING
+.row-card--game .row-card__options {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding: 0 $spacing-lg;
+  justify-content: space-around;
+  align-items: center;
+  margin: $spacing-sm 0;
+  bottom: $spacing-sm;
+  transition: opacity $transition-fast;
+
+  svg {
+    font-size: $font-size-xl;
+    transition: stroke $transition-fast;
+
+    &:hover {
+      stroke: $primary-color;
+      fill: $primary-color;
+    }
+  }
+}
+
+// ROW CARD GAME TITLE STYLING
+.row-card--game .row-card__game-title {
+  opacity: 0;
+  position: absolute;
+  padding: 0 $spacing-xs;
+  width: calc(100% - 2 * $spacing-xs);
+  left: $spacing-xs;
+  top: 20%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity $transition-fast;
+}

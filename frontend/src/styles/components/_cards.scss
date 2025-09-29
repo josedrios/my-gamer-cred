@@ -1,3 +1,4 @@
+// HOME RELATED CARDS
 .home-card {
   border-width: 1px;
   border-style: solid;
@@ -59,120 +60,15 @@
   }
 }
 
-// GAME PAGE RELATED
-.game-card {
-  flex: 0 0 150px;
-  display: flex;
-  flex-direction: column;
-
-  .game-card-body {
-    height: 200px;
-    width: 100%;
-    flex: 1;
-    margin-bottom: $spacing-xs;
-    transition: filter $transition-fast;
-    position: relative;
-
-    .game-card-gc {
-      opacity: 1;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba($border-color, 0.75);
-      transition: opacity $transition-fast;
-
-      svg {
-        stroke: $primary-color;
-        stroke-width: 40;
-        margin-right: $spacing-xs;
-      }
-    }
-
-    .game-card-title {
-      opacity: 0;
-      position: absolute;
-      padding: 0 $spacing-xs;
-      width: calc(100% - 2 * $spacing-xs);
-      left: $spacing-xs;
-      top: 20%;
-      text-align: center;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      transition: opacity $transition-fast;
-    }
-
-    .game-card-options {
-      opacity: 0;
-      position: absolute;
-      display: flex;
-      width: 100%;
-      padding: 0 $spacing-lg;
-      justify-content: space-around;
-      align-items: center;
-      margin: $spacing-sm 0;
-      bottom: $spacing-sm;
-      transition: opacity $transition-fast;
-
-      svg {
-        font-size: $font-size-xl;
-        transition: stroke $transition-fast;
-
-        &:hover {
-          stroke: $primary-color;
-          fill: $primary-color;
-        }
-      }
-    }
-  }
-
-  .player-count {
-    text-align: center;
-    height: $spacing-md;
-    font-size: $font-size-xs;
-    color: $border-color;
-    margin-bottom: 0 !important;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    .game-card-body img {
-      filter: brightness(0.5);
-    }
-
-    .game-card-title,
-    .game-card-options {
-      opacity: 1;
-    }
-
-    .game-card-gc {
-      opacity: 0;
-    }
-  }
-}
-
+// ROW SECTION RELATED CARDS
 .row-card {
-  // General row card layout
   display: flex;
   flex-direction: column;
-
-  &--game {
-    // Game card related styling
-    flex: 0 0 150px;
-  }
-
-  &--list {
-    // Game related styling
-    flex: 0 0 330px;
-  }
 
   &__body {
     height: 200px;
     margin-bottom: $spacing-xs;
+    position: relative;
   }
 
   &__banner {
@@ -198,38 +94,5 @@
   &__subheader {
     font-size: $font-size-sm;
     color: $border-color;
-  }
-
-  &__user {
-    display: flex;
-    gap: $spacing-sm;
-    align-items: center;
-
-    span {
-      color: $border-color;
-      margin-bottom: 0;
-      font-size: $font-size-md;
-    }
-
-    .row-card__pfp {
-      height: $spacing-md;
-      aspect-ratio: 1/1;
-      border-radius: 1000px;
-      background: lime;
-    }
-  }
-}
-
-// Row card specifc image styling
-.row-card--game .row-card__body {
-  position: relative;
-}
-
-.row-card--list .row-card__body {
-  position: relative;
-
-  img {
-    width: 150px;
-    position: absolute;
   }
 }
