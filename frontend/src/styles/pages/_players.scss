@@ -1,0 +1,25 @@
+// CARD RELATED
+
+.row-card--player {
+  flex: 0 0 180px;
+  align-items: center;
+  border: 1px solid lime;
+}
+
+// CARD PFP
+.row-card--player .row-card__pfp {
+  width: calc($spacing-xl * 2);
+  border-radius: 1000px;
+  aspect-ratio: 1/1;
+  background-color: red;
+}
+
+// GC AND FOLLOWER COUNT
+.row-card__user-misc {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    font-size: $font-size-sm;
+  }
+}

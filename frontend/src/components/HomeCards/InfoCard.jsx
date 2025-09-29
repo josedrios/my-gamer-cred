@@ -1,10 +1,10 @@
-import { HomeCard } from "../UI/Cards";
-import { IoCubeOutline } from "react-icons/io5";
+import { HomeCard } from '../UI/Cards';
+import { IoCubeOutline } from 'react-icons/io5';
 
 export default function InfoCard() {
   return (
     <HomeCard
-      title={'what is gamer cred?'}
+      title={'What is gamer cred?'}
       content={
         'Gamer cred is acquired when playing games of great taste. It separates the seasoned from the unseasoned.'
       }

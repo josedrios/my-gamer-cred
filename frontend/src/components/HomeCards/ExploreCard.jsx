@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 export default function ExploreCard() {
   return (
     <HomeCard
-      title={'share and explore'}
+      title={'Share and Explore'}
       content={
         'Let the words of others help you find your next game. Also voice your own gaming takes & reviews.'
       }

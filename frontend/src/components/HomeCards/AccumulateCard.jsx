@@ -18,7 +18,7 @@ export default function AccumulateCard() {
   }, [countEnter]);
   return (
     <HomeCard
-      title={'accumulate gc'}
+      title={'Accumulate GC'}
       content={
         'Add games you played to your account to accumulate gamer cred. The higher the gamer cred, the more sunlight you need.'
       }

@@ -16,7 +16,7 @@ export function HomeCard({ title, content, id, children }) {
       id={id === 'share-explore' ? 'home-left' : ''}
     >
       <div className="home-card-body">
-        <h3>{title.toUpperCase()}</h3>
+        <h3>{title}</h3>
         <p>{content}</p>
       </div>
       <motion.div className="home-card-diagram" id={id}>
@@ -28,10 +28,7 @@ export function HomeCard({ title, content, id, children }) {
 
 export function RowCard({ children, type }) {
   return (
-    <div
-      onClick={() => console.log('GAME CARD CLICKED')}
-      className={`row-card ${type ? `row-card--${type}` : ''}`}
-    >
+    <div className={`row-card ${type ? `row-card--${type}` : ''}`}>
       {children}
     </div>
   );
