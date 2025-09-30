@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Nav from './components/Nav';
-import Footer from './components/Footer';
+import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
-import Home from './pages/Home';
-import Games from './pages/Games';
-import Players from './pages/Players';
-import Lists from './pages/Lists';
-import Search from './pages/Search';
-import About from './pages/About';
-import Account from './pages/Account';
-import Design from './pages/Design';
+import Home from '@/app/routes/Home';
+import Games from '@/app/routes/Games';
+import Players from '@/app/routes/Players';
+import Lists from '@/app/routes/Lists';
+import Search from '@/app/routes/Search';
+import About from '@/app/routes/About';
+import Account from '@/app/routes/Account';
+import Design from '@/app/routes/Design';
 
-function App() {
+function AppRouter() {
   return (
     <>
       <Router>
@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRouter;

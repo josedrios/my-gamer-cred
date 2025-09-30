@@ -1,9 +1,9 @@
 import { IoCubeOutline } from 'react-icons/io5';
 import { motion } from 'motion/react';
-import { container, children } from '../components/animations.js';
-import InfoCard from '../components/HomeCards/InfoCard.jsx';
-import ExploreCard from '../components/HomeCards/ExploreCard.jsx';
-import AccumulateCard from '../components/HomeCards/AccumulateCard.jsx';
+import { container, children } from '@/components/animations.js';
+import InfoCard from '@/components/HomeCards/InfoCard.jsx';
+import ExploreCard from '@/components/HomeCards/ExploreCard.jsx';
+import AccumulateCard from '@/components/HomeCards/AccumulateCard.jsx';
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
+import { container, fadeIn } from '@/components/animations';
 import { motion } from 'motion/react';
-import { container, fadeIn } from './animations';
 import { NavLink } from 'react-router-dom';
 import { IoCubeOutline } from 'react-icons/io5';
 import { IoPersonOutline } from 'react-icons/io5';

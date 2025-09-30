@@ -1,5 +1,5 @@
-import { SectionRow, SectionDivider } from '../components/UI/Sections.jsx';
-import { RowCard } from '../components/UI/Cards.jsx';
+import { SectionRow, SectionDivider } from '@/components/UI/Sections.jsx';
+import { RowCard } from '@/components/UI/Cards.jsx';
 import { IoCubeOutline } from 'react-icons/io5';
 
 export default function Players() {

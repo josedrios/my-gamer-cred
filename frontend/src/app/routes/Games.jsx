@@ -1,15 +1,15 @@
 import { IoCubeOutline } from 'react-icons/io5';
 import { IoCheckmark } from 'react-icons/io5';
 import { IoEllipsisVertical } from 'react-icons/io5';
-import SearchForm from '../components/Search/SearchForm';
-import { SectionRow, SectionDivider } from '../components/UI/Sections.jsx';
-import { RowCard } from '../components/UI/Cards.jsx';
-import batman from '../assets/images/game_cover.jpg';
-import elden from '../assets/images/game_cover2.jpg';
-import titan from '../assets/images/game_cover3.jpg';
-import lbp from '../assets/images/game_cover4.jpg';
-import mgs from '../assets/images/game_cover5.jpg';
-import re from '../assets/images/game_cover6.jpg';
+import SearchForm from '../../components/Search/SearchForm';
+import { SectionRow, SectionDivider } from '../../components/UI/Sections.jsx';
+import { RowCard } from '@/components/UI/Cards.jsx';
+import batman from '@/assets/images/game_cover.jpg';
+import elden from '@/assets/images/game_cover2.jpg';
+import titan from '@/assets/images/game_cover3.jpg';
+import lbp from '@/assets/images/game_cover4.jpg';
+import mgs from '@/assets/images/game_cover5.jpg';
+import re from '@/assets/images/game_cover6.jpg';
 
 export default function Games() {
   const filters = ['rating', 'time', 'popular', 'genre'];
