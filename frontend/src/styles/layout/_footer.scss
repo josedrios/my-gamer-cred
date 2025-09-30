@@ -46,7 +46,7 @@ footer {
   padding: $spacing-md;
 
   #footer-content, #footer-copyright {
-    color: $border-color;
+    color: $secondary-font-color;
     font-size: $font-size-xs;
   }
   
@@ -58,7 +58,7 @@ footer {
     margin-bottom: $spacing-sm;
     
     a {
-      color: $border-color;
+      color: $secondary-font-color;
       transition: color $transition-fast;
     }
 

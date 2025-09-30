@@ -1,9 +1,18 @@
 // CARD RELATED
-
 .row-card--player {
   flex: 0 0 180px;
   align-items: center;
-  border: 1px solid lime;
+  padding-top: $spacing-sm;
+
+  &:hover {
+    .row-card__username {
+      color: $primary-color;
+    }
+
+    .row-card__pfp {
+      box-shadow: 0 0 4px 4px black;
+    }
+  }
 }
 
 // CARD PFP
@@ -12,14 +21,31 @@
   border-radius: 1000px;
   aspect-ratio: 1/1;
   background-color: red;
-}
+} 
 
 // GC AND FOLLOWER COUNT
 .row-card__user-misc {
   display: flex;
   flex-direction: row;
 
+  .row-card__gc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $spacing-xs;
+
+    svg {
+      font-size: $font-size-md;
+    }
+
+    svg * {
+      stroke: $primary-color;
+      stroke-width: 45;
+    }
+  }
+
   p {
+    color: $secondary-font-color;
     font-size: $font-size-sm;
   }
 }
