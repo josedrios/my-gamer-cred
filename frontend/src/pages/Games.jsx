@@ -17,7 +17,7 @@ export default function Games() {
   return (
     <main>
       <SearchForm filters={filters} placeholder={'Search for games...'} />
-      <GameSection title={'Trending in September'} />
+      <GameSection title={'Currently Trending'} />
       <GameSection title={'Recently Played'} />
 
       <SectionDivider>
@@ -69,11 +69,12 @@ function RecentReviews() {
       title={'Hot Reviews'}
       id="games-recent-reviews"
     >
-      <p>Review</p>
-      <p>Review</p>
-      <p>Review</p>
-      <p>Review</p>
-      <p>Review</p>
+      <p>REVIEW</p>
+      <p>REVIEW</p>
+      <p>REVIEW</p>
+      <p>REVIEW</p>
+      <p>REVIEW</p>
+      <p>REVIEW</p>
     </SectionRow>
   );
 }
@@ -82,8 +83,15 @@ function ListRecommendations() {
   return (
     <SectionRow
       orientation={'column'}
-      title={'List Recommendations'}
+      title={'Best of 2025'}
       id="games-list-recommendations"
-    ></SectionRow>
+    >
+      <p>GAME</p>
+      <p>GAME</p>
+      <p>GAME</p>
+      <p>GAME</p>
+      <p>GAME</p>
+      <p>GAME</p>
+    </SectionRow>
   );
 }

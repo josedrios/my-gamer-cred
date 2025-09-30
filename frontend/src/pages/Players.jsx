@@ -1,17 +1,22 @@
-import { SectionRow } from '../components/UI/Sections.jsx';
+import { SectionRow, SectionDivider } from '../components/UI/Sections.jsx';
 import { RowCard } from '../components/UI/Cards.jsx';
 import { IoCubeOutline } from 'react-icons/io5';
 
 export default function Players() {
   return (
     <main>
-      <PlayersSection title='On the Rise'/>
-      <PlayersSection title='Popular Players'/>
+      <PlayerSection title='On the Rise'/>
+      <PlayerSection title='Popular Players'/>
+
+      <SectionDivider>
+        <FellowGamers />
+        <MostGamerCred />        
+      </SectionDivider>
     </main>
   );
 }
 
-function PlayersSection({title= 'NO TITLE'}) {
+function PlayerSection({title= 'NO TITLE'}) {
   return (
       <SectionRow title={title}>
         <PlayerCard username="LoreConsumer" gc={2987} games={427} />
@@ -37,4 +42,32 @@ function PlayerCard({ username = 'UKNOWN', gc = 999, games = 999 }) {
       </div>
     </RowCard>
   );
+}
+
+// generate a random list of people above a certain follower count threshold every month
+// and add them here
+function FellowGamers() {
+ return (
+   <SectionRow title='Discover New Gamers' orientation='column'>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+  </SectionRow>
+ )
+}
+
+function MostGamerCred() {
+ return (
+   <SectionRow title='Most Gamer Cred' orientation='column'>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+    <p>GAMER</p>
+  </SectionRow>
+ )
 }

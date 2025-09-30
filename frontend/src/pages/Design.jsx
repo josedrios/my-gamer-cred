@@ -1,6 +1,3 @@
 export default function Design() {
-  return (
-    <main>
-    </main>
-  );
+  return <main>DESIGN</main>;
 }

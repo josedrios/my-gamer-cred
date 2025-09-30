@@ -1,5 +1,3 @@
-import batman from '../assets/images/game_cover.jpg';
-import elden from '../assets/images/game_cover2.jpg';
 import titan from '../assets/images/game_cover3.jpg';
 import lbp from '../assets/images/game_cover4.jpg';
 import mgs from '../assets/images/game_cover5.jpg';
@@ -10,11 +8,12 @@ import { RowCard } from '../components/UI/Cards.jsx';
 export default function Lists() {
   return (
     <main>
-      <ListSection title={'Trending in September'} />
+      <ListSection title={'Currently Trending'} />
       <ListSection title={'Best of 2025'} />
+      
       <SectionDivider>
         <RecentLists />
-        <Temporary />
+        <MostLiked />
       </SectionDivider>
     </main>
   );
@@ -68,17 +67,26 @@ function ListCard({ title = 'NO TITLE', user = 'UNKNOWN' }) {
 
 function RecentLists() {
   return (
-    <SectionRow title={'Recently Created Lists'} orientation={'column'}>
-      <div>new list</div>
-      <div>new list</div>
-      <div>new list</div>
-      <div>new list</div>
-      <div>new list</div>
-      <div>new list</div>
+    <SectionRow title={'Recently Liked'} orientation={'column'}>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
     </SectionRow>
   );
 }
 
-function Temporary() {
-  return <SectionRow title={'Temporary'}></SectionRow>;
+function MostLiked() {
+  return (
+    <SectionRow title={'Most Liked'} orientation={'column'}>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+      <p>LIST</p>
+    </SectionRow>
+  );
 }

@@ -1,33 +1,33 @@
-#home-greeting-container {
+.home-greeter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 70vh;
   min-height: 200px;
   max-height: 400px;
-}
 
-#home-greeting {
-  letter-spacing: 2px;
-  text-align: center;
-  font-family: 'JetBrains Mono';
-}
+  &__title {
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'JetBrains Mono';
+  }
 
-#sub-home-greeting {
-  text-align: center;
-  color: $secondary-font-color;
-}
+  &__subtitle {
+    text-align: center;
+    color: $secondary-font-color;
+  }
 
-#floating-gc-container {
-  display: flex;
-  justify-content: center;
-  margin: $spacing-xl 0;
+  &__gc {
+    display: flex;
+    justify-content: center;
+    margin: $spacing-xl 0;
 
-  svg {
-    stroke: $primary-color;
-    font-size: 40px;
-    @include glowing();
-    @include floating($distance: $spacing-md, $name: main-gc);
+    svg {
+      stroke: $primary-color;
+      font-size: 40px;
+      @include glowing();
+      @include floating($distance: $spacing-md, $name: main-gc);
+    }
   }
 }
 
