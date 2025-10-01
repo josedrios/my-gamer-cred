@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
-import Home from '@/app/routes/Home';
-import Games from '@/app/routes/Games';
-import Players from '@/app/routes/Players';
-import Lists from '@/app/routes/Lists';
-import Search from '@/app/routes/Search';
-import About from '@/app/routes/About';
-import Account from '@/app/routes/Account';
-import Design from '@/app/routes/Design';
+import Landing from '@/app/routes/landing';
+import Games from '@/app/routes/games';
+import Players from '@/app/routes/players';
+import Lists from '@/app/routes/lists';
+import Search from '@/app/routes/search';
+import About from '@/app/routes/about';
+import Account from '@/app/routes/account';
+import Design from '@/app/routes/design';
 
 function AppRouter() {
   return (
@@ -20,7 +20,7 @@ function AppRouter() {
           <Nav />
           <div id="content-container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Landing />} />
               <Route path="/games" element={<Games />} />
               <Route path="/lists" element={<Lists />} />
               <Route path="/players" element={<Players />} />
@@ -28,8 +28,6 @@ function AppRouter() {
               <Route path="/about" element={<About />} />
               <Route path="/search" element={<Search />} />
               <Route path="/design" element={<Design />} />
-              {/* need to add: */}
-              {/* search(global), contact, help, terms, socials */}
             </Routes>
           </div>
         </div>

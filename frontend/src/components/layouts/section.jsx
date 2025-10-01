@@ -1,13 +1,14 @@
 export function SectionRow({
   title = 'NO TITLE',
   children,
-  orientation = 'row',
   id,
 }) {
   return (
     <div className="standard-section" id={id}>
       <h4 className="section-header">{title}</h4>
-      <div style={{ flexDirection: orientation }} className="section-children">
+      <div
+        className="section-children"
+      >
         {children}
       </div>
     </div>

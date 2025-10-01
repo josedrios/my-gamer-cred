@@ -1,6 +1,7 @@
-import { HomeCard } from '../UI/Cards';
-import { IoPaperPlaneOutline, IoEarthOutline } from 'react-icons/io5';
 import { motion } from 'motion/react';
+import { IoPaperPlaneOutline, IoEarthOutline } from 'react-icons/io5';
+import { HomeCard } from '@/components/ui/Cards';
+
 export default function ExploreCard() {
   return (
     <HomeCard

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { HomeCard } from '../UI/Cards';
 import { motion, useTransform, animate, useMotionValue } from 'motion/react';
 import { IoPersonOutline, IoCubeOutline } from 'react-icons/io5';
+import { HomeCard } from '@/components/ui/Cards';
 
 export default function AccumulateCard() {
   const [countEnter, setCountEnter] = useState(false);

@@ -25,6 +25,10 @@
   gap: $spacing-md;
   width: 100%;
 
+  .section-children {
+    flex-direction: column;
+  }
+
   > :first-child {
     width: 60%;
   }
