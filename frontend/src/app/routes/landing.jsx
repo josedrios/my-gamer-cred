@@ -15,7 +15,7 @@ export default function Landing() {
         <Greeter />
       </motion.div>
       <GameSection title={'Review Your Favorite Games'} />
-      <section id="home-card-section">
+      <section id="landing-card-section">
         <InfoCard />
         <ExploreCard />
         <AccumulateCard />

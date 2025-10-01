@@ -11,36 +11,36 @@ export default function Nav() {
   const path = location.pathname;
 
   return (
-    <motion.nav variants={container} initial="hidden" animate="show">
-      <motion.div id='nav-home-wrapper' variants={fadeIn}>
+    <motion.nav className='nav' variants={container} initial="hidden" animate="show">
+      <motion.div className='nav__logo' variants={fadeIn}>
         <NavLink id="nav-home" to="/">
           <IoCubeOutline />
         </NavLink>
       </motion.div>
-      <motion.div variants={fadeIn} id="nav-body">
-        <NavLink className="nav-link icon-link" to="/search">
+      <motion.div variants={fadeIn} className="nav__body">
+        <NavLink className="nav__link nav__link--icon" to="/search">
           <IoSearchOutline />
         </NavLink>
-        <NavLink className="nav-link non-icon-link" to="/games">
+        <NavLink className="nav__link nav__link--non-icon" to="/games">
           <span className={path !== '/games' ? `hide` : ``}>#</span>
           GAMES
         </NavLink>
-        <NavLink className="nav-link non-icon-link" to="/lists">
+        <NavLink className="nav__link nav__link--non-icon" to="/lists">
           <span className={path !== '/lists' ? `hide` : ``}>#</span>
           LISTS
         </NavLink>
-        <NavLink className="nav-link non-icon-link" to="/players">
+        <NavLink className="nav__link nav__link--non-icon" to="/players">
           <span className={path !== '/players' ? `hide` : ``}>#</span>
           PLAYERS
         </NavLink>
-        <NavLink className="nav-link icon-link" to="/account">
+        <NavLink className="nav__link nav__link--icon" to="/account">
           <IoPersonOutline />
         </NavLink>
-        <div id="responsive-icon-container">
-          <NavLink className="nav-link" to="/home">
+        <div className="nav__responsive-container">
+          <NavLink className="nav__link" to="/home">
             <IoSearchOutline />
           </NavLink>
-          <NavLink className="nav-link" to="/account">
+          <NavLink className="nav__link" to="/account">
             <IoPersonOutline />
           </NavLink>
         </div>

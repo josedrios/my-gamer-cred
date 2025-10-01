@@ -31,20 +31,7 @@
   }
 }
 
-.landing-page-placeholder {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid $border-color;
-  margin-bottom: $spacing-xl;
-
-  p {
-    color: $border-color;
-  }
-}
-
-#home-card-section {
+#landing-card-section {
   display: flex;
   flex-direction: column;
   gap: $spacing-xl;

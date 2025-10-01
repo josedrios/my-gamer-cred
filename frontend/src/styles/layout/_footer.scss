@@ -1,4 +1,4 @@
-footer {
+.footer {
   max-width: 1000px;
   width: 100%;
   display: flex;
@@ -9,12 +9,12 @@ footer {
   margin-right: auto;
   padding: $spacing-md;
 
-  #footer-content, #footer-copyright {
+  &__content, &__copyright {
     color: $secondary-font-color;
     font-size: $font-size-xs;
   }
   
-  #footer-content {
+  &__content {
     display: flex;
     width: 100%;
     flex-direction: row;

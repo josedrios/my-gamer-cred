@@ -7,11 +7,11 @@
 
   &:hover {
     .row-card__username {
-      color: $primary-color;
+      text-decoration: underline;
     }
 
     .row-card__pfp {
-      box-shadow: 0 0 4px 4px black;
+      box-shadow: 0 0 10px 3px black;
     }
   }
 }

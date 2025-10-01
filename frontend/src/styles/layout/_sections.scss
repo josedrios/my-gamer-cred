@@ -1,11 +1,11 @@
-.standard-section {
-  .section-header {
+.section {
+  &__header {
     padding: $spacing-sm 0;
     border-bottom: 1px solid $border-color;
     margin-bottom: $spacing-sm;
   }
 
-  .section-children {
+  &__children {
     display: flex;
     flex-direction: row;
     flex-wrap: none;
@@ -19,13 +19,13 @@
   }
 }
 
-.standard-section-divider {
+.section-divider {
   display: flex;
   flex-direction: row;
   gap: $spacing-md;
   width: 100%;
 
-  .section-children {
+  .section__children {
     flex-direction: column;
   }
 
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: #{$breakpoint-sm}) {
-  .standard-section-divider {
+  .section-divider {
     > :first-child {
       width: 100%;
     }

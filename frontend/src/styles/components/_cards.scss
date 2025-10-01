@@ -1,5 +1,5 @@
 // HOME RELATED CARDS
-.home-card {
+.landing-card {
   border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(
@@ -27,7 +27,7 @@
     }
   }
 
-  .home-card-body {
+  &__body {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     }
   }
 
-  .home-card-diagram {
+  &__diagram {
     width: 40%;
   }
 }

@@ -1,4 +1,4 @@
-nav {
+.nav {
   display: flex;
   flex-direction: row;
   padding: $spacing-sm 0;
@@ -20,7 +20,7 @@ nav {
   border-left: 0;
   border-right: 0;
 
-  #nav-home-wrapper {
+  &__logo {
     display: flex;
     align-items: center;
     
@@ -38,7 +38,7 @@ nav {
     }
   }
 
-  #nav-body {
+  &__body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -83,23 +83,23 @@ nav {
   }
 }
 
-#responsive-icon-container {
+.nav__responsive-container {
   display: none;
 }
 
 @media (max-width: #{$breakpoint-xs}) {
-  nav {
+  .nav {
     flex-direction: column !important;
 
-    #nav-home {
+    &__logo {
       margin: auto;
       margin-bottom: $spacing-md;
     }
 
-    #nav-body {
+    &__body {
       justify-content: space-between !important;
 
-      .non-icon-link {
+      .nav__link--non-icon {
         min-width: 50px;
       }
     }
@@ -107,7 +107,7 @@ nav {
 }
 
 @media (max-width: 360px) {
-  #nav-body {
+  .nav__body {
     flex-wrap: wrap;
     gap: $spacing-xs !important;
 
@@ -116,11 +116,11 @@ nav {
     }
   }
 
-  .icon-link {
+  .nav__link--icon {
     display: none;
   }
 
-  #responsive-icon-container {
+  .nav__responsive-container {
     width: 100%;
     display: flex;
     justify-content: center;

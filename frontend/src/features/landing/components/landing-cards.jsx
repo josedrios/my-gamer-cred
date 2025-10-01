@@ -13,7 +13,7 @@ function HomeCard({ title, content, id, children }) {
 
   return (
     <motion.div
-      className="home-card"
+      className="landing-card"
       variants={whenInViewport}
       initial={'offscreen'}
       animate={shown ? 'onscreen' : ''}
@@ -21,11 +21,11 @@ function HomeCard({ title, content, id, children }) {
       viewport={{ amount: 1 }}
       id={id === 'share-explore' ? 'home-left' : ''}
     >
-      <div className="home-card-body">
+      <div className="landing-card__body">
         <h3>{title}</h3>
         <p>{content}</p>
       </div>
-      <motion.div className="home-card-diagram" id={id}>
+      <motion.div className="landing-card__diagram" id={id}>
         {children}
       </motion.div>
     </motion.div>

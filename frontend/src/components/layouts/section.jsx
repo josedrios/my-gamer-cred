@@ -1,20 +1,12 @@
-export function SectionRow({
-  title = 'NO TITLE',
-  children,
-  id,
-}) {
+export function SectionRow({ title = 'NO TITLE', children, id }) {
   return (
-    <div className="standard-section" id={id}>
-      <h4 className="section-header">{title}</h4>
-      <div
-        className="section-children"
-      >
-        {children}
-      </div>
+    <div className="section" id={id}>
+      <h4 className="section__header">{title}</h4>
+      <div className="section__children">{children}</div>
     </div>
   );
 }
 
 export function SectionDivider({ children }) {
-  return <div className="standard-section-divider">{children}</div>;
+  return <div className="section-divider">{children}</div>;
 }
