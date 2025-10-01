@@ -1,4 +1,3 @@
-import { RowCard } from '@/components/ui/Cards';
 import titan from '@/assets/images/game_cover3.jpg';
 import lbp from '@/assets/images/game_cover4.jpg';
 import mgs from '@/assets/images/game_cover5.jpg';
@@ -8,7 +7,7 @@ function ListCardRow({ title = 'NO TITLE', user = 'UNKNOWN' }) {
   const posters = [titan, lbp, mgs, re];
 
   return (
-    <RowCard type={'list'}>
+    <div className='row-card row-card--list'>
       <div className="row-card__body">
         {posters.map((poster, i) => (
           <img
@@ -29,7 +28,7 @@ function ListCardRow({ title = 'NO TITLE', user = 'UNKNOWN' }) {
         <div className="row-card__pfp" />
         <span>{user}</span>
       </div>
-    </RowCard>
+    </div>
   );
 }
 

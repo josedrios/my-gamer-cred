@@ -66,7 +66,6 @@
   flex-direction: column;
 
   &__body {
-    height: 200px;
     margin-bottom: $spacing-xs;
     position: relative;
   }
@@ -85,13 +84,6 @@
       stroke: $primary-color;
       stroke-width: 45;
     }
-  }
-
-  &__subheader {
-    cursor: auto;
-    margin-bottom: 0 !important;
-    font-size: $font-size-sm;
-    color: $border-color;
   }
 
   &:hover {

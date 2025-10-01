@@ -3,11 +3,10 @@ import {
   IoCubeOutline,
   IoEllipsisVertical,
 } from 'react-icons/io5';
-import { RowCard } from '@/components/ui/Cards';
 
 function GameCardRow({ source, title = 'NO TITLE' }) {
   return (
-    <RowCard type={'game'}>
+    <div className='row-card row-card--game'>
       <div className="row-card__body">
         <img src={source} alt="" />
         <p className="row-card__banner">
@@ -22,7 +21,7 @@ function GameCardRow({ source, title = 'NO TITLE' }) {
         </div>
       </div>
       <p className="row-card__subheader">627k Players</p>
-    </RowCard>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import SearchForm from '@/components/Search/SearchForm.jsx';
+import SearchForm from '@/components/search/search-form.jsx';
 import GameSection from '@/features/games/components/game-section';
 import { SectionDivider } from '@/components/layouts/section';
 

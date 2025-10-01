@@ -82,6 +82,14 @@
   transition: opacity $transition-fast;
 }
 
+// ROW CARD SUBHEADER STYLING
+.row-card--game .row-card__subheader {
+  cursor: auto;
+  margin-bottom: 0 !important;
+  font-size: $font-size-sm;
+  color: $border-color;
+}
+
 // GAME ROW CARD HOVER
 .row-card--game .row-card__body:hover {
   img {

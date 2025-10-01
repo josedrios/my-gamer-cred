@@ -1,4 +1,4 @@
-import SearchForm from '@/components/Search/SearchForm';
+import SearchForm from '@/components/search/search-form';
 
 export default function Search() {
   const filters = ['games', 'lists', 'players'];

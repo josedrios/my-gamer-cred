@@ -1,9 +1,8 @@
-import { RowCard } from "@/components/ui/Cards";
-import { IoCubeOutline } from "react-icons/io5";
+import { IoCubeOutline } from 'react-icons/io5';
 
 function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
   return (
-    <RowCard type={'player'}>
+    <div className="row-card row-card--player">
       <div className="row-card__pfp" />
       <p className="row-card__username">{username}</p>
       <div className="row-card__user-misc">
@@ -13,14 +12,12 @@ function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
         <p>&nbsp;|&nbsp;</p>
         <p className="row-card__game-count">{games} games</p>
       </div>
-    </RowCard>
+    </div>
   );
 }
 
 function PlayerCardCol() {
-  return (
-    <div>PLAYER COL CARD</div>
-  )
+  return <div>PLAYER COL CARD</div>;
 }
 
 export { PlayerCardRow, PlayerCardCol };

@@ -1,18 +1,20 @@
 import { motion } from 'motion/react';
 import { container } from '@/components/animations.js';
-import InfoCard from '@/features/landing/components/info-card';
-import ExploreCard from '@/features/landing/components/explore-card';
-import AccumulateCard from '@/features/landing/components/accumulate-card';
 import Greeter from '@/features/landing/components/greeter';
-import HotGames from '@/features/landing/components/hot-games';
+import GameSection from '@/features/games/components/game-section';
+import {
+  InfoCard,
+  ExploreCard,
+  AccumulateCard,
+} from '@/features/landing/components/landing-cards';
 
 export default function Landing() {
   return (
     <main>
       <motion.div variants={container} initial="hidden" animate="show">
         <Greeter />
-        <HotGames />
       </motion.div>
+      <GameSection title={'Review Your Favorite Games'} />
       <section id="home-card-section">
         <InfoCard />
         <ExploreCard />
