@@ -8,8 +8,8 @@ export default function Players() {
       <PlayerSection title="Popular Players" />
 
       <SectionDivider>
-        <PlayerSection title="Discover New Gamers" />
-        <PlayerSection title="Most Gamer Cred" />
+        <PlayerSection title="Discover New Gamers" column={true}/>
+        <PlayerSection title="Most Gamer Cred" column={true}/>
       </SectionDivider>
     </main>
   );

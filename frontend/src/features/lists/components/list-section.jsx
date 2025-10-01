@@ -1,21 +1,34 @@
-import { SectionRow } from "@/components/layouts/section";
-import { ListCard } from "./list-card";
+import { SectionRow } from '@/components/layouts/section';
+import { ListCardRow, ListCardCol } from './list-card';
 
-function ListSection({ title = 'NO TITLE' }) {
-  return (
-    <SectionRow title={title}>
-      <ListCard
+function ListSection({ title = 'NO TITLE', column = false }) {
+  const row = (
+    <>
+      <ListCardRow
         title={'Games You Have to Play at Least Once'}
         user="LoreConsumer"
       />
-      <ListCard title={'10 out of 10s'} user="WizMo" />
-      <ListCard title={'Masterpieces'} user="darrow420" />
-      <ListCard
+      <ListCardRow title={'10 out of 10s'} user="WizMo" />
+      <ListCardRow title={'Masterpieces'} user="darrow420" />
+      <ListCardRow
         title={'My Personal Favorite Games in the Month of October'}
         user="chews.worth"
       />
-    </SectionRow>
+    </>
   );
+
+  const col = (
+    <>
+      <ListCardCol />
+      <ListCardCol />
+      <ListCardCol />
+      <ListCardCol />
+      <ListCardCol />
+      <ListCardCol />
+    </>
+  );
+
+  return <SectionRow title={title}>{column ? col : row}</SectionRow>;
 }
 
 export default ListSection;

@@ -1,12 +1,10 @@
 import { RowCard } from '@/components/ui/Cards';
-import batman from '@/assets/images/game_cover.jpg';
-import elden from '@/assets/images/game_cover2.jpg';
 import titan from '@/assets/images/game_cover3.jpg';
 import lbp from '@/assets/images/game_cover4.jpg';
 import mgs from '@/assets/images/game_cover5.jpg';
 import re from '@/assets/images/game_cover6.jpg';
 
-function ListCard({ title = 'NO TITLE', user = 'UNKNOWN' }) {
+function ListCardRow({ title = 'NO TITLE', user = 'UNKNOWN' }) {
   const posters = [titan, lbp, mgs, re];
 
   return (
@@ -35,4 +33,12 @@ function ListCard({ title = 'NO TITLE', user = 'UNKNOWN' }) {
   );
 }
 
-export { ListCard };
+function ListCardCol() {
+  return (
+    <div>
+      LIST COL CARD
+    </div>
+  )
+}
+
+export { ListCardRow, ListCardCol };

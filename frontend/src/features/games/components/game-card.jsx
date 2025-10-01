@@ -5,7 +5,7 @@ import {
 } from 'react-icons/io5';
 import { RowCard } from '@/components/ui/Cards';
 
-function GameCard({ source, title = 'NO TITLE' }) {
+function GameCardRow({ source, title = 'NO TITLE' }) {
   return (
     <RowCard type={'game'}>
       <div className="row-card__body">
@@ -26,4 +26,8 @@ function GameCard({ source, title = 'NO TITLE' }) {
   );
 }
 
-export { GameCard };
+function GameCardCol() {
+  return <div>GAME COL CARD</div>;
+}
+
+export { GameCardRow, GameCardCol };

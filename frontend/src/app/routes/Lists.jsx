@@ -8,8 +8,8 @@ export default function Lists() {
       <ListSection title={'Best of 2025'} />
       
       <SectionDivider>
-        <ListSection title={'Recently Liked'}/>
-        <ListSection title={'Most Liked'}/>
+        <ListSection title={'Recently Liked'} column={true}/>
+        <ListSection title={'Most Liked'} column={true}/>
       </SectionDivider>
     </main>
   );

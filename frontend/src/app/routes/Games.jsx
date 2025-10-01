@@ -11,8 +11,8 @@ export default function Games() {
       <GameSection title={'Currently Trending'} />
       <GameSection title={'Recently Played'} />
       <SectionDivider>
-        <GameSection title={'Hot Reviews'} />
-        <GameSection title={'Best of 2025'} />
+        <GameSection title={'Hot Reviews'} column={true}/>
+        <GameSection title={'Best of 2025'} column={true}/>
       </SectionDivider>
     </main>
   );
