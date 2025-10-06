@@ -16,7 +16,7 @@ function AppRouter() {
   return (
     <>
       <Router>
-        <div id="website-container">
+        <div id="website-container" className='text-white'>
           <Nav />
           <div id="content-container">
             <Routes>

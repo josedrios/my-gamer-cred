@@ -7,6 +7,7 @@ import {
   ExploreCard,
   AccumulateCard,
 } from '@/features/landing/components/landing-cards';
+import '@/styles/main.scss'
 
 export default function Landing() {
   return (
