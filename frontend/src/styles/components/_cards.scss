@@ -14,7 +14,7 @@
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-  max-width: 750px;
+  max-width: 900px;
   margin: auto;
   padding: $spacing-md;
   display: flex;
@@ -22,7 +22,7 @@
   gap: $spacing-lg;
 
   &#home-left {
-    .home-card-body {
+    .landing-card__body {
       order: 100;
     }
   }

@@ -5,11 +5,11 @@ export default function Lists() {
   return (
     <main>
       <ListSection title={'Currently Trending'} />
-      <ListSection title={'Best of 2025'} />
+      <ListSection title={'Best of October'} />
       
       <SectionDivider>
         <ListSection title={'Recently Liked'} column={true}/>
-        <ListSection title={'Most Liked'} column={true}/>
+        <ListSection title={'Best of 2025'} column={true}/>
       </SectionDivider>
     </main>
   );
