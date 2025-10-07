@@ -1,12 +1,5 @@
 .nav {
-  display: flex;
-  flex-direction: row;
-  padding: $spacing-sm 0;
-  margin: auto;
-  margin-top: $spacing-sm;
-  max-width: 1000px;
-  border-width: 1px;
-  border-style: solid;
+  border-bottom: 1px solid transparent;
   border-image: linear-gradient(
       to right,
       $bg-color,
@@ -16,119 +9,17 @@
       $bg-color
     )
     1;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
 
   &__logo {
-    display: flex;
-    align-items: center;
-    
     svg {
-      font-size: 30px;
-      stroke: $primary-color;
       transition: transform $transition-slow, filter $transition-slow;
     }
-    
+
     &:hover {
       svg {
         filter: drop-shadow(0 0 4px $primary-color);
         transform: translateY(-$spacing-xs);
       }
-    }
-  }
-
-  &__body {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: $spacing-xl;
-    flex: 1;
-
-    a {
-      width: min-content;
-      min-width: 25px;
-      white-space: nowrap;
-      transition: color $transition-normal;
-
-      span {
-        color: $primary-color;
-        transition: color $transition-normal;
-
-        &.hide {
-          color: transparent;
-        }
-      }
-
-      &:hover {
-        span {
-          color: $primary-color;
-        }
-      }
-
-      svg {
-        font-size: $font-size-xl;
-        transition: stroke $transition-normal;
-
-        &:hover {
-          stroke: $primary-color;
-        }
-      }
-    }
-  }
-
-  a {
-    font-size: $font-size-sm;
-    letter-spacing: 1px;
-  }
-}
-
-.nav__responsive-container {
-  display: none;
-}
-
-@media (max-width: #{$breakpoint-xs}) {
-  .nav {
-    flex-direction: column !important;
-
-    &__logo {
-      margin: auto;
-      margin-bottom: $spacing-md;
-    }
-
-    &__body {
-      justify-content: space-between !important;
-
-      .nav__link--non-icon {
-        min-width: 50px;
-      }
-    }
-  }
-}
-
-@media (max-width: 360px) {
-  .nav__body {
-    flex-wrap: wrap;
-    gap: $spacing-xs !important;
-
-    a {
-      margin: auto;
-    }
-  }
-
-  .nav__link--icon {
-    display: none;
-  }
-
-  .nav__responsive-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: $spacing-md;
-    margin-top: $spacing-xs;
-
-    a {
-      margin: 0 !important;
     }
   }
 }
