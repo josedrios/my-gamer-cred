@@ -1,7 +1,7 @@
 .section {
   &__header {
     padding: $spacing-sm 0;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $color-border;
     margin-bottom: $spacing-sm;
   }
 
@@ -14,7 +14,7 @@
     gap: $spacing-md;
     overflow: auto;
     scrollbar-width: thin;
-    scrollbar-color: $border-color transparent;
+    scrollbar-color: $color-border transparent;
     padding-bottom: $spacing-md;
   }
 }
@@ -40,12 +40,10 @@
 
 @media (max-width: #{$breakpoint-sm}) {
   .section-divider {
-    > :first-child {
-      width: 100%;
-    }
+    flex-direction: column;
 
-    > :last-child {
-      display: none;
+    .section {
+      width: 100%;
     }
   }
 }

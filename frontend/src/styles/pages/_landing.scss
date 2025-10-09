@@ -14,7 +14,7 @@
 
   &__subtitle {
     text-align: center;
-    color: $secondary-font-color;
+    color: $color-text-secondary;
   }
 
   &__gc {
@@ -23,7 +23,7 @@
     margin: $spacing-xl 0;
 
     svg {
-      stroke: $primary-color;
+      stroke: $color-primary;
       font-size: 40px;
       @include glowing();
       @include floating($distance: $spacing-md, $name: main-gc);
@@ -47,12 +47,14 @@
   max-width: 200px;
 
   svg {
-    stroke: $primary-color-transparent;
+    // was like a primary transparent color will change back later if this
+    // component still remains
+    stroke: red;
     font-size: 30px;
   }
 
   #glowing-gc svg {
-    stroke: $primary-color;
+    stroke: $color-primary;
     @include glowing();
     @include floating($distance: $spacing-sm, $name: distinguished-gc);
   }
@@ -76,13 +78,13 @@
     font-size: 30px;
     left: calc(50% - 15px);
     top: calc(50% - 15px);
-    stroke: $primary-color;
-    fill: $primary-color;
+    stroke: $color-primary;
+    fill: $color-primary;
     @include floating($distance: $spacing-sm, $name: planet);
   }
 
   #plane {
-    stroke: $primary-color;
+    stroke: $color-primary;
     @include glowing();
     font-size: 30px;
   }
@@ -94,7 +96,7 @@
   width: fit-content;
   height: fit-content;
   gap: $spacing-xs;
-  border: 1px solid $border-color;
+  border: 1px solid $color-border;
   border-radius: $border-radius-xs;
   padding: $spacing-sm;
   margin: auto;
@@ -109,18 +111,20 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $primary-color-transparent;
+      // was like a primary transparent color will change back later if this
+      // component still remains
+      background-color: red;
       padding: $spacing-xs;
       border-radius: $border-radius-sm;
 
       svg {
         font-size: $font-size-xl;
-        stroke: $primary-color;
+        stroke: $color-primary;
       }
     }
 
     #account-name-example {
-      color: $secondary-font-color;
+      color: $color-text-secondary;
       display: flex;
       align-items: flex-end;
       margin-bottom: 0 !important;
@@ -140,7 +144,7 @@
       align-items: center;
 
       svg {
-        stroke: $primary-color;
+        stroke: $color-primary;
         @include glowing();
       }
     }

@@ -41,13 +41,13 @@
     }
 
     svg * {
-      stroke: $primary-color;
+      stroke: $color-primary;
       stroke-width: 45;
     }
   }
 
   p {
-    color: $secondary-font-color;
+    color: $color-text-secondary;
     font-size: $font-size-sm;
   }
 }

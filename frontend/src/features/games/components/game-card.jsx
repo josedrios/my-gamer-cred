@@ -41,7 +41,8 @@ function GameCardCol() {
         {/* prevent overflow */}
         <p className="col-card__description">
           This is the description of one of the best games of 2025. The users on
-          this platformed deemed it worthy to be on this list
+          this platform have deemed it worthy of being on this list. That means
+          this is a really good game.
         </p>
       </div>
     </div>

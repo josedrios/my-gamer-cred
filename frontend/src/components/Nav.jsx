@@ -47,10 +47,10 @@ export default function Nav() {
         variants={fadeIn}
         className="nav__body max-xs:justify-between flex flex-1 items-center justify-end gap-5 max-[360px]:flex-wrap max-[360px]:gap-2"
       >
-        {navLinks.map(({ to, icon, label, key }) => (
+        {navLinks.map(({ to, icon, label, i }) => (
           <NavLink
             to={to}
-            key={key}
+            key={i}
             className={`group w-min min-w-[25px] text-xs tracking-wider whitespace-nowrap max-[360px]:m-auto ${
               icon
                 ? 'nav__link--icon max-[360px]:hidden'

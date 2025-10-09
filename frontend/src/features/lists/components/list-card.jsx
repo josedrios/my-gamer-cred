@@ -13,6 +13,7 @@ function ListCardRow({ title = 'NO TITLE', user = 'UNKNOWN' }) {
           <img
             src={poster}
             alt=""
+            key={i}
             style={{
               left: `${i * 50}px`,
               zIndex: 1000 - i,

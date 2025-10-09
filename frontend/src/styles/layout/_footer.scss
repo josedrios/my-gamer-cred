@@ -1,5 +1,4 @@
 .footer {
-  max-width: $breakpoint-md;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,10 +6,10 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding: $spacing-md;
+  padding: $spacing-md $spacing-lg;
 
   &__content, &__copyright {
-    color: $secondary-font-color;
+    color: $color-text-secondary;
     font-size: $font-size-xs;
   }
   
@@ -22,12 +21,12 @@
     margin-bottom: $spacing-sm;
     
     a {
-      color: $secondary-font-color;
+      color: $color-text-secondary;
       transition: color $transition-fast;
     }
 
     a:hover {
-        color: $primary-color;
+        color: $color-primary;
     }
   }
 }

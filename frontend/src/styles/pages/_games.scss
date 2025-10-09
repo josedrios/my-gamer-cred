@@ -13,7 +13,7 @@
   p {
     margin-bottom: 0 !important;
     font-size: $font-size-sm;
-    color: $border-color;
+    color: $color-border;
   }
 
   // TEMP DROPDOWN STYLING FOR FILTERS
@@ -59,8 +59,8 @@
     transition: stroke $transition-fast;
 
     &:hover {
-      stroke: $primary-color;
-      fill: $primary-color;
+      stroke: $color-primary;
+      fill: $color-primary;
     }
   }
 }
@@ -82,7 +82,7 @@
   cursor: auto;
   margin-bottom: 0 !important;
   font-size: $font-size-sm;
-  color: $border-color;
+  color: $color-border;
 }
 
 .row-card--game .row-card__body:hover {
@@ -104,24 +104,24 @@
 .col-card--game {
   display: flex;
   flex-direction: row;
-  gap: $spacing-sm;
 
   .col-card__poster {
-    max-width: 100px;
-    height: fit-content;
+    height: 140px;
     position: relative;
 
     img {
-      width: 100%;
+      height: 100%;
     }
   }
 
   .col-card__body {
+    padding: 0 $spacing-sm 0 $spacing-sm;
     flex: 1;
   }
 
   &:hover {
     cursor: pointer;
+    background-color: $color-background-secondary;
 
     .col-card__title {
       text-decoration: underline;
@@ -136,12 +136,16 @@
   align-items: center;
 
   svg {
-    stroke: $primary-color;
+    stroke: $color-primary;
   }
 }
 
 .col-card--game .col-card__description {
-  color: $secondary-font-color;
+  color: $color-text-secondary;
   font-size: $font-size-sm;
-  max-height: 140px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

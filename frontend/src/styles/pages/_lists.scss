@@ -1,4 +1,4 @@
-// CARD RELATED
+// --- List Cards --- 
 .row-card--list {
   flex: 0 0 225px;
   max-width: 225px;
@@ -18,7 +18,6 @@
   }
 }
 
-// ROW CARD LIST TITLE
 .row-card__list-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -26,7 +25,6 @@
   overflow: hidden;
 }
 
-// ROW CARD LIST USER INFO
 .row-card__user {
   display: flex;
   gap: calc($spacing-xs * 1.5);
@@ -35,7 +33,7 @@
 
   span {
     font-size: $font-size-sm;
-    color: $secondary-font-color;
+    color: $color-text-secondary;
     margin-bottom: 0;
   }
 

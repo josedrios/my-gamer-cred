@@ -1,44 +1,43 @@
 // ==========================
 // Colors
 // ==========================
+// --- Accent ---
+$color-primary: #e98b38;
 
-// MAIN
-$primary-color: #e98b38;
-$primary-color-transparent: #e98b385d;
+// --- Font ---
+// primary = white
+$color-text-secondary: rgb(161, 161, 161);
 
-// FONT
-$primary-font-color: white;
-$secondary-font-color: rgb(161, 161, 161);
+// --- Background ---
+$color-background-primary: #333333;
+$color-background-secondary: #4d4c4c;
 
-// BACKGROUND
-$bg-color: #333333;
-$container-color: #4d4c4c;
-
-// BORDER
-$border-color: rgb(98, 98, 98);
+// --- Border ---
+$color-border: rgb(98, 98, 98);
 
 // ==========================
 // Spacings
 // ==========================
 // --- Spacing units ---
-$spacing-xs: 0.3125rem; // 5px  
-$spacing-sm: 0.625rem;  // 10px  
-$spacing-md: 0.9375rem; // 15px  
-$spacing-lg: 1.5625rem; // 25px  
-$spacing-xl: 1.875rem;  // 30px  
+$spacing-xs: 0.25rem; 
+$spacing-sm: 0.5rem;  
+$spacing-md: 0.75rem; 
+$spacing-lg: 1rem;   
+$spacing-xl: 1.25rem;   
 
 // --- Breakpoints ---
 $breakpoint-xs: 480px;
-$breakpoint-sm: 768px;
-$breakpoint-md: 1024px;
-$breakpoint-lg: 1200px;
-$breakpoint-xl: 1800px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1536px;
 
 // --- Border radius ---
-$border-radius-xs: 3px;
-$border-radius-sm: 8px;
-$border-radius-md: 13px;
-$border-radius-lg: 18px;
+$border-radius-xs: 0.125rem;
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.375rem;
+$border-radius-lg: 0.5rem;
 
 // --- Transitions --- 
 $transition-fast: 0.1s;

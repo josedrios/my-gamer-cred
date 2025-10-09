@@ -4,11 +4,11 @@
   border-style: solid;
   border-image: linear-gradient(
       to right,
-      $bg-color,
+      $color-background-primary,
       5%,
-      $border-color,
+      $color-border,
       95%,
-      $bg-color
+      $color-background-primary
     )
     1;
   border-left: 0;
@@ -35,7 +35,7 @@
     gap: $spacing-md;
 
     h3 {
-      color: $primary-color;
+      color: $color-primary;
     }
   }
 
@@ -87,10 +87,10 @@
     align-items: center;
     gap: $spacing-xs;
     padding: 0 $spacing-xs;
-    background-color: rgba($border-color, 0.75);
+    background-color: rgba($color-border, 0.75);
 
     svg * {
-      stroke: $primary-color;
+      stroke: $color-primary;
       stroke-width: 45;
     }
   }

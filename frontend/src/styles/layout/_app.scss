@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   overflow: auto;
-  background-color: $bg-color;
+  background-color: $color-background-primary;
 }
 
 #root {
@@ -11,7 +11,7 @@ body {
   width: calc(100%);
   min-width: 0px;
   overflow: auto;
-  background-color: $bg-color;
+  background-color: $color-background-primary;
 }
 
 #website-container {
@@ -30,7 +30,6 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: $breakpoint-md;
   margin: auto;
 
   main {
@@ -46,6 +45,13 @@ nav {
 
 footer {
   margin-top: auto;
+}
+
+// --- Max Widths ---
+nav,
+footer,
+#content-container {
+  max-width: $breakpoint-lg;
 }
 
 @media (max-width: #{$breakpoint-xs}) {
