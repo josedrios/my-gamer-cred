@@ -15,12 +15,15 @@ export default function Landing() {
       <motion.div variants={container} initial="hidden" animate="show">
         <Greeter />
       </motion.div>
-      <GameSection title={'Review Your Favorite Games'} />
+
+      {/* UNDER THE WORKS, STUDY UP ON LANDING PAGES AND PLAN OUT DESIGNS BEFORE WORKING ON THIS AGAIN */}
+
+      {/* <GameSection title={'Review Your Favorite Games'} />
       <section id="landing-card-section">
         <InfoCard />
         <ExploreCard />
         <AccumulateCard />
-      </section>
+      </section> */}
     </main>
   );
 }

@@ -6,6 +6,9 @@ import { IoPersonOutline } from 'react-icons/io5';
 import { IoSearchOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
 
+// TAILWIND WAS USED ON THE MAJORITY OF THE NAV BAR
+// (still finding the balance on when to use tailwind and when to use css)
+
 export default function Nav() {
   const location = useLocation();
   const path = location.pathname;
@@ -26,29 +29,29 @@ export default function Nav() {
 
   return (
     <motion.nav
-      className="nav flex py-3 m-auto mt-3 max-w-screen-lg max-xs:flex-col"
+      className="nav max-xs:flex-col m-auto mt-3 flex max-w-screen-lg py-3"
       variants={container}
       initial="hidden"
       animate="show"
     >
       <motion.div
-        className="nav__logo flex items-center max-xs:m-auto max-xs:mb-4"
+        className="nav__logo max-xs:m-auto max-xs:mb-4 flex items-center"
         variants={fadeIn}
       >
         <NavLink to="/">
-          <IoCubeOutline className="text-3xl stroke-primary" />
+          <IoCubeOutline className="stroke-primary text-3xl" />
         </NavLink>
       </motion.div>
 
       <motion.div
         variants={fadeIn}
-        className="nav__body flex justify-end items-center gap-5 flex-1 max-xs:justify-between max-[360px]:flex-wrap max-[360px]:gap-2"
+        className="nav__body max-xs:justify-between flex flex-1 items-center justify-end gap-5 max-[360px]:flex-wrap max-[360px]:gap-2"
       >
         {navLinks.map(({ to, icon, label, key }) => (
           <NavLink
             to={to}
             key={key}
-            className={`group text-xs tracking-wider w-min min-w-[25px] whitespace-nowrap max-[360px]:m-auto ${
+            className={`group w-min min-w-[25px] text-xs tracking-wider whitespace-nowrap max-[360px]:m-auto ${
               icon
                 ? 'nav__link--icon max-[360px]:hidden'
                 : 'nav__link--non-icon'
@@ -78,7 +81,7 @@ export default function Nav() {
 
 function ResponsiveNav({ iconClass }) {
   return (
-    <div className="hidden w-full flex mt-3 justify-center max-[360px]:flex max-[360px]:gap-4 ">
+    <div className="mt-3 flex hidden w-full justify-center max-[360px]:flex max-[360px]:gap-4">
       <NavLink to="/home" className="group">
         <IoSearchOutline className={iconClass} />
       </NavLink>

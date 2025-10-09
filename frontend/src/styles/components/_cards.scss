@@ -70,10 +70,19 @@
     position: relative;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.row-card,
+.col-card {
   &__banner {
+    margin-bottom: 0 !important;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: $spacing-xs;
+    right: $spacing-xs;
+    border-radius: $border-radius-xs;
     display: flex;
     align-items: center;
     gap: $spacing-xs;
@@ -84,9 +93,5 @@
       stroke: $primary-color;
       stroke-width: 45;
     }
-  }
-
-  &:hover {
-    cursor: pointer;
   }
 }
