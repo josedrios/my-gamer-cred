@@ -22,7 +22,7 @@
 .section-divider {
   display: flex;
   flex-direction: row;
-  gap: $spacing-md;
+  gap: $spacing-lg;
   width: 100%;
 
   .section__children {
@@ -30,15 +30,15 @@
   }
 
   > :first-child {
-    width: 60%;
+    flex: 1;
   }
 
   > :last-child {
-    width: 40%;
+    width: 300px;
   }
 }
 
-@media (max-width: #{$breakpoint-sm}) {
+@media (max-width: #{$breakpoint-md}) {
   .section-divider {
     flex-direction: column;
 

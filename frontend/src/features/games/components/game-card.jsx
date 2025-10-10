@@ -29,13 +29,13 @@ function GameCardRow({ source, title = 'NO TITLE' }) {
 function GameCardCol() {
   return (
     <div className="col-card col-card--game">
-      <div className="col-card__poster">
+      <div className="col-card__body">
         <img src={ror} alt="" />
         <p className="col-card__banner">
           <IoCubeOutline /> 100
         </p>
       </div>
-      <div className="col-card__body">
+      <div className="col-card__info">
         <h5 className="col-card__title">Risk of Rain 2</h5>
         {/* make is so that only the description can fit only a certain amount of characters */}
         {/* prevent overflow */}

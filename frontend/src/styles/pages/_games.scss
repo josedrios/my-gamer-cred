@@ -103,18 +103,17 @@
 // --- Column Cards --
 .col-card--game {
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
 
-  .col-card__poster {
+  .col-card__body {
     height: 140px;
-    position: relative;
 
     img {
       height: 100%;
     }
   }
 
-  .col-card__body {
+  .col-card__info {
     padding: 0 $spacing-sm 0 $spacing-sm;
     flex: 1;
   }

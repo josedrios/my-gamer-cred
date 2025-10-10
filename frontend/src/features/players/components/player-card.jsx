@@ -17,7 +17,20 @@ function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
 }
 
 function PlayerCardCol() {
-  return <div>PLAYER COL CARD</div>;
+  return (
+    <div className="col-card col-card--player">
+      <div className="col-card__pfp" />
+      <p className="col-card__username">BASHWIZzzzzzzzzz</p>
+      <p className="col-card__stat">
+        <IoCubeOutline />
+        900k
+      </p>
+      <p>|</p>
+      <p className="col-card__stat">
+        900k Followers
+      </p>
+    </div>
+  );
 }
 
 export { PlayerCardRow, PlayerCardCol };

@@ -7,7 +7,7 @@ function ListCardRow({ title = 'NO TITLE', user = 'UNKNOWN' }) {
   const posters = [titan, lbp, mgs, re];
 
   return (
-    <div className='row-card row-card--list'>
+    <div className="row-card row-card--list">
       <div className="row-card__body">
         {posters.map((poster, i) => (
           <img
@@ -34,11 +34,7 @@ function ListCardRow({ title = 'NO TITLE', user = 'UNKNOWN' }) {
 }
 
 function ListCardCol() {
-  return (
-    <div>
-      LIST COL CARD
-    </div>
-  )
+  return <div className="col-card col-card--list">LIST COL CARD</div>;
 }
 
 export { ListCardRow, ListCardCol };

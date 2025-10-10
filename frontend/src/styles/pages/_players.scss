@@ -1,4 +1,4 @@
-// CARD RELATED
+// --- Player Cards ---
 .row-card--player {
   flex: 0 0 180px;
   max-width: 180px;
@@ -16,7 +16,6 @@
   }
 }
 
-// CARD PFP
 .row-card--player .row-card__pfp {
   width: calc($spacing-xl * 2);
   border-radius: 1000px;
@@ -25,7 +24,6 @@
   margin-bottom: $spacing-xs;
 } 
 
-// GC AND FOLLOWER COUNT
 .row-card__user-misc {
   display: flex;
   flex-direction: row;
