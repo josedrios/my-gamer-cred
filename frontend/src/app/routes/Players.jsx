@@ -8,14 +8,14 @@ import {
 export default function Players() {
   return (
     <main>
-      <SectionRow title="Top Players of October">
+      <SectionRow title="Reviewers of the Month">
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
       </SectionRow>
-      <SectionRow title="Top Players of October">
+      <SectionRow title="Most Followed in October">
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
         <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
@@ -32,9 +32,13 @@ export default function Players() {
           <PlayerCardCol />
           <PlayerCardCol />
         </SectionRow>
-        <SectionRow title="Find Friends">
-          This will be a paragraph about adding friends. Include a link to the
-          search page with the 'player' filter already preset
+        {/* This will be a paragraph about adding friends. Include a link to the
+          search page with the 'player' filter already preset */}
+        <SectionRow title="Find Friends" id="section-find-friends">
+          <p>
+            Compare gamer cred with people you know, seeing their gaming
+            activity, reviews and more!
+          </p>
         </SectionRow>
       </SectionDivider>
     </main>

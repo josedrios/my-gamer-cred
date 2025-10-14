@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { container } from '@/components/animations.js';
 import Greeter from '@/features/landing/components/greeter';
-import GameSection from '@/features/games/components/game-section';
 import {
   InfoCard,
   ExploreCard,

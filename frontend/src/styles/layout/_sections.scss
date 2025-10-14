@@ -1,5 +1,6 @@
 .section {
   &__header {
+    font-weight: 400;
     padding: $spacing-sm 0;
     border-bottom: 1px solid $color-border;
     margin-bottom: $spacing-sm;
@@ -22,7 +23,7 @@
 .section-divider {
   display: flex;
   flex-direction: row;
-  gap: $spacing-lg;
+  gap: $spacing-xl;
   width: 100%;
 
   .section__children {

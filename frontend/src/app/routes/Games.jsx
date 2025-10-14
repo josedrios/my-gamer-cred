@@ -1,18 +1,51 @@
-import SearchForm from '@/components/search/search-form.jsx';
-import GameSection from '@/features/games/components/game-section';
-import { SectionDivider } from '@/components/layouts/section';
+import { SectionRow, SectionDivider } from '@/components/layouts/section';
+import {
+  GameCardRow,
+  GameCardCol,
+} from '@/features/games/components/game-card';
+import batman from '@/assets/images/game_cover.jpg';
+import elden from '@/assets/images/game_cover2.jpg';
+import titan from '@/assets/images/game_cover3.jpg';
+import lbp from '@/assets/images/game_cover4.jpg';
+import mgs from '@/assets/images/game_cover5.jpg';
+import re from '@/assets/images/game_cover6.jpg';
 
 export default function Games() {
-  const filters = ['rating', 'time', 'popular', 'genre'];
-
   return (
     <main>
-      <SearchForm filters={filters} placeholder={'Search for games...'} />
-      <GameSection title={'Currently Trending'} />
-      <GameSection title={'Recently Played'} />
+      <SectionRow title="Currently Trending">
+        <GameCardRow source={elden} title="Elden Ring" />
+        <GameCardRow source={batman} title="Batman Arkham Asylum" />
+        <GameCardRow source={titan} title="Titan Fall 2" />
+        <GameCardRow source={lbp} title="LittleBigPlanet" />
+        <GameCardRow source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+        <GameCardRow source={re} title="Resident Evil 2 Remake" />
+      </SectionRow>
+      <SectionRow title="Recently Played">
+        <GameCardRow source={elden} title="Elden Ring" />
+        <GameCardRow source={batman} title="Batman Arkham Asylum" />
+        <GameCardRow source={titan} title="Titan Fall 2" />
+        <GameCardRow source={lbp} title="LittleBigPlanet" />
+        <GameCardRow source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+        <GameCardRow source={re} title="Resident Evil 2 Remake" />
+      </SectionRow>
       <SectionDivider>
-        <GameSection title={'Hot Reviews'} column={true}/>
-        <GameSection title={'Best of 2025'} column={true}/>
+        <SectionRow title="Hot Reviews">
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+        </SectionRow>
+        <SectionRow title="Best of 2025">
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+          <GameCardCol />
+        </SectionRow>
       </SectionDivider>
     </main>
   );

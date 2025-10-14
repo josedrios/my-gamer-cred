@@ -44,31 +44,3 @@
     background: lime;
   }
 }
-
-.col-card--player {
-  flex-direction: row !important;
-  gap: $spacing-xs;
-
-  .col-card__pfp {
-    width: $spacing-xl;
-    height: $spacing-xl;
-    background-color: lime;
-    border-radius: 1000px;
-  }
-
-  .col-card__username {
-    flex: 1;
-  }
-
-  .col-card__stat {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-xs;
-
-    svg * {
-      stroke: $color-primary;
-      stroke-width: 40;
-    }
-  }
-}

@@ -22,13 +22,14 @@
   aspect-ratio: 1/1;
   background-color: red;
   margin-bottom: $spacing-xs;
-} 
+}
 
 .row-card__user-misc {
   display: flex;
   flex-direction: row;
 
-  .row-card__gc {
+  .row-card__gc,
+  .row-card__game-count {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,12 +41,55 @@
 
     svg * {
       stroke: $color-primary;
-      stroke-width: 45;
+      stroke-width: 40;
     }
   }
 
   p {
     color: $color-text-secondary;
     font-size: $font-size-sm;
+  }
+}
+
+.col-card--player {
+  padding: $spacing-sm $spacing-xs;
+  flex-direction: row !important;
+  gap: $spacing-xs;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+
+  .col-card__pfp {
+    width: $spacing-xl;
+    height: $spacing-xl;
+    background-color: lime;
+    border-radius: 1000px;
+  }
+
+  .col-card__username {
+    margin-left: $spacing-xs;
+    flex: 1;
+  }
+
+  .col-card__stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    font-size: $font-size-sm;
+
+    svg {
+      font-size: $font-size-md !important;
+    }
+
+    svg * {
+      stroke: $color-primary;
+      stroke-width: 40;
+    }
+  }
+
+  &:hover {
+    background-color: $color-background-secondary;
   }
 }
