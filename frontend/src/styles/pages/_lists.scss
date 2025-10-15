@@ -2,9 +2,11 @@
 .row-card--list {
   flex: 0 0 225px;
   max-width: 225px;
+  height: fit-content;
 
   .row-card__body {
     height: 100px !important;
+    
     img {
       height: 100px;
       position: absolute;
@@ -42,5 +44,38 @@
     aspect-ratio: 1/1;
     border-radius: 1000px;
     background: lime;
+  }
+}
+
+.col-card--list {
+  max-width: 100%;
+  flex: auto;
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: $color-background-secondary;
+  }
+
+  .row-card__list-title {
+    font-size: $font-size-lg;
+    order: -1;
+  }
+
+  .row-card__body {
+    max-width: 300px;
+    margin-bottom: $spacing-xs;
+  }
+
+  .list-description {
+    padding: $spacing-xs 0;
+    font-size: $font-size-sm;
+    border-radius: 0 0 $border-radius-xs $border-radius-xs;
+    margin-bottom: $spacing-sm !important;
   }
 }

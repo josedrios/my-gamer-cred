@@ -1,9 +1,11 @@
 import {
   IoCheckmark,
   IoCubeOutline,
+  IoBookmarkOutline,
   IoEllipsisVertical,
 } from 'react-icons/io5';
 import ror from '@/assets/images/game_cover7.jpg';
+import { rand } from '@/temp-util';
 
 function GameCardRow({ source, title = 'NO TITLE' }) {
   return (
@@ -12,16 +14,16 @@ function GameCardRow({ source, title = 'NO TITLE' }) {
         <img src={source} alt="" />
         <p className="row-card__banner">
           <IoCubeOutline />
-          100
+          {rand(32,100)}
         </p>
         <p className="row-card__game-title">{title}</p>
         <div className="row-card__options">
           <IoCheckmark />
-          <IoCubeOutline />
+          <IoBookmarkOutline />
           <IoEllipsisVertical />
         </div>
       </div>
-      <p className="row-card__subheader">627k Players</p>
+      <p className="row-card__subheader">{rand(2,340)}k Players</p>
     </div>
   );
 }

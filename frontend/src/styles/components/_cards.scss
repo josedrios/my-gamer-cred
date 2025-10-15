@@ -87,7 +87,7 @@
     align-items: center;
     gap: $spacing-xs;
     padding: 0 $spacing-xs;
-    background-color: rgba($color-border, 0.75);
+    background-color: rgba($color-background-primary, 0.85);
 
     svg * {
       stroke: $color-primary;

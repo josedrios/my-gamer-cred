@@ -4,7 +4,7 @@ import { children } from '@/components/animations.js';
 
 function Greeter() {
   return (
-    <motion.div variants={children} class="home-greeter">
+    <motion.div variants={children} className="home-greeter">
       <h2 className="home-greeter__title">MY GAMER CRED</h2>
       <div className="home-greeter__gc">
         <IoCubeOutline />

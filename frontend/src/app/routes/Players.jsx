@@ -9,18 +9,18 @@ export default function Players() {
   return (
     <main>
       <SectionRow title="Reviewers of the Month">
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
+        <PlayerCardRow username="I AM USER" gc={2987} games={427} />
+        <PlayerCardRow username="gamer123" gc={2987} games={427} />
+        <PlayerCardRow username="dragonslayer" gc={2987} games={427} />
+        <PlayerCardRow username="Xx_yolo_xX" gc={2987} games={427} />
+        <PlayerCardRow username="onepiecelover" gc={2987} games={427} />
       </SectionRow>
       <SectionRow title="Most Followed in October">
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
-        <PlayerCardRow username="LoreConsumer" gc={2987} games={427} />
+        <PlayerCardRow username="pizzaman415" gc={2987} games={427} />
+        <PlayerCardRow username="johndoe" gc={2987} games={427} />
+        <PlayerCardRow username="minecraft" gc={2987} games={427} />
+        <PlayerCardRow username="i_use_arch_btw" gc={2987} games={427} />
+        <PlayerCardRow username="asd.asd.asd" gc={2987} games={427} />
       </SectionRow>
 
       <SectionDivider>
@@ -36,7 +36,7 @@ export default function Players() {
           search page with the 'player' filter already preset */}
         <SectionRow title="Find Friends" id="section-find-friends">
           <p>
-            Compare gamer cred with people you know, seeing their gaming
+            Compare gamer cred with people you know. See their gaming
             activity, reviews and more!
           </p>
         </SectionRow>

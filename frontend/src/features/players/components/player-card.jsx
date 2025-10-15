@@ -1,4 +1,4 @@
-import { IoCubeOutline ,IoPeopleOutline } from 'react-icons/io5';
+import { IoCubeOutline, IoPeopleOutline } from 'react-icons/io5';
 
 function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
   return (
@@ -10,7 +10,10 @@ function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
           <IoCubeOutline /> {gc}
         </p>
         <p>&nbsp;|&nbsp;</p>
-        <p className="row-card__game-count"><IoPeopleOutline /> {games}</p>
+        <p className="row-card__game-count">
+          <IoPeopleOutline /> {games}
+        </p>
+        <p className="row-card__add-player">+</p>
       </div>
     </div>
   );
@@ -25,11 +28,12 @@ function PlayerCardCol() {
         <IoCubeOutline />
         87.2k
       </p>
-      <p>·</p>
+      <p>&nbsp;</p>
       <p className="col-card__stat">
         <IoPeopleOutline />
         12.1k
       </p>
+      <p className="col-card__add-player">+</p>
     </div>
   );
 }

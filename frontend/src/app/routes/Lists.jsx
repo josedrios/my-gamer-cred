@@ -34,20 +34,36 @@ export default function Lists() {
 
       <SectionDivider>
         <SectionRow title="Recently Liked">
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
+          {/* USE ROW CARDS? */}
+          <ListCardRow
+          description
+            title={'Games You Have to Play at Least Once'}
+            user="LoreConsumer"
+            column
+          />
+          <ListCardRow description title={'10 out of 10s'} user="WizMo" column />
+          <ListCardRow description title={'Masterpieces'} user="darrow420" column />
+          <ListCardRow
+          description
+            title={'My Personal Favorite Games in the Month of October'}
+            user="chews.worth"
+            column
+          />
         </SectionRow>
-        <SectionRow title="Best of 2025">
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
-          <ListCardCol />
+        <SectionRow title="Featured">
+          {/* USE ROW CARDS? */}
+          <ListCardRow
+            title={'Games You Have to Play at Least Once'}
+            user="LoreConsumer"
+            column
+          />
+          <ListCardRow title={'10 out of 10s'} user="WizMo" column />
+          <ListCardRow title={'Masterpieces'} user="darrow420" column />
+          <ListCardRow
+            title={'My Personal Favorite Games in the Month of October'}
+            user="chews.worth"
+            column
+          />
         </SectionRow>
       </SectionDivider>
     </main>
