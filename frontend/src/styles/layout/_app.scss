@@ -6,6 +6,7 @@ body {
 }
 
 #root {
+  color: var(--color-foreground-default);
   display: flex;
   flex-direction: column;
   width: calc(100%);

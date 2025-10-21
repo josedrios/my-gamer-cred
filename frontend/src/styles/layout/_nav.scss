@@ -1,4 +1,7 @@
 .nav {
+  display: flex;
+  max-width: $breakpoint-lg;
+  padding: $spacing-md 0;
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(
       to right,
@@ -9,10 +12,18 @@
       var(--color-background-default)
     )
     1;
+  margin: auto;
+  margin-top: $spacing-md;
 
   &__logo {
+    display: flex;
+    align-items: center;
     svg {
-      transition: transform $transition-slow, filter $transition-slow;
+      stroke: var(--color-foreground-primary);
+      font-size: calc($font-size-md * 2);
+      transition:
+        transform $transition-slow,
+        filter $transition-slow;
     }
 
     &:hover {
@@ -23,5 +34,94 @@
     }
   }
 
-  
+  &__body {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $spacing-lg;
+  }
+
+  &__link {
+    width: min-content;
+    min-width: 25px;
+    white-space: nowrap;
+  }
+
+  &__link--icon {
+    font-size: $font-size-lg;
+
+    svg * {
+      stroke-width: 40;
+    }
+
+    &:hover {
+      svg {
+        stroke: var(--color-foreground-primary);
+      }
+    }
+  }
+
+  &__link--non-icon {
+    font-size: $font-size-sm;
+    letter-spacing: calc($spacing-xs / 4);
+
+    span {
+      &.visible-nav-link {
+        color: var(--color-foreground-primary);
+      }
+
+      &.invisible-nav-link {
+        color: transparent;
+      }
+    }
+
+    &:hover {
+      span {
+        color: var(--color-foreground-primary) !important;
+      }
+    }
+  }
+
+  &__responsive-body {
+    margin-top: $spacing-md;
+    display: none;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: #{$breakpoint-xs}) {
+  .nav {
+    flex-direction: column;
+
+    &__logo {
+      margin: auto;
+      margin-bottom: $spacing-lg;
+    }
+
+    &__body {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .nav__body {
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+  }
+
+  .nav__link {
+    margin: auto;
+  }
+
+  .nav__link--icon {
+    display: none;
+  }
+
+  .nav__responsive-body {
+    display: flex;
+    gap: $spacing-lg;
+  }
 }
