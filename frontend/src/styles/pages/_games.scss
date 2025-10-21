@@ -21,8 +21,8 @@
     transition: stroke $transition-fast;
 
     &:hover {
-      stroke: $color-primary;
-      fill: $color-primary;
+      stroke: var(--color-foreground-primary);
+      fill: var(--color-foreground-primary);
     }
   }
 }
@@ -44,7 +44,7 @@
   cursor: auto;
   margin-bottom: 0 !important;
   font-size: $font-size-sm;
-  color: $color-border;
+  color: var(--color-border-default);
 }
 
 .row-card--game .row-card__body:hover {
@@ -89,7 +89,7 @@
     }
     
     .col-card__info {
-      background-color: $color-background-secondary;
+      background-color: var(--color-background-subtle);
       border-radius: $border-radius-xs;
     }
   }
@@ -102,12 +102,12 @@
   align-items: center;
 
   svg {
-    stroke: $color-primary;
+    stroke: var(--color-foreground-primary);
   }
 }
 
 .col-card--game .col-card__description {
-  color: $color-text-secondary;
+  color: var(--color-foreground-sublte);
   font-size: $font-size-sm;
   display: -webkit-box;
   -webkit-line-clamp: 5;

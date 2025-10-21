@@ -4,11 +4,11 @@
   border-style: solid;
   border-image: linear-gradient(
       to right,
-      $color-background-primary,
+      var(--color-background-default),
       5%,
-      $color-border,
+      var(--color-background-subtle),
       95%,
-      $color-background-primary
+      var(--color-background-default)
     )
     1;
   border-left: 0;
@@ -35,7 +35,7 @@
     gap: $spacing-md;
 
     h3 {
-      color: $color-primary;
+      color: var(--color-foreground-default);
     }
   }
 
@@ -87,10 +87,10 @@
     align-items: center;
     gap: $spacing-xs;
     padding: 0 $spacing-xs;
-    background-color: rgba($color-background-primary, 0.85);
+    background-color: rgba(var(--color-background-default), 0.85);
 
     svg * {
-      stroke: $color-primary;
+      stroke: var(--color-foreground-default);
       stroke-width: 45;
     }
   }

@@ -42,13 +42,13 @@
     }
 
     svg * {
-      stroke: $color-primary;
+      stroke: var(--color-foreground-primary);
       stroke-width: 40;
     }
   }
 
   p {
-    color: $color-text-secondary;
+    color: var(--color-foreground-sublte);
     font-size: $font-size-sm;
   }
 }
@@ -87,13 +87,13 @@
     }
 
     svg * {
-      stroke: $color-primary;
+      stroke: var(--color-foreground-primary);
       stroke-width: 40;
     }
   }
 
   &:hover {
-    background-color: $color-background-secondary;
+    background-color: var(--color-background-subtle);
 
     .col-card__username {
       text-decoration: underline;
@@ -105,8 +105,8 @@
 .row-card {
   &__add-player {
     margin-left: $spacing-sm;
-    color: $color-text-secondary;
-    border: 1px solid $color-border;
+    color: var(--color-foreground-sublte);
+    border: 1px solid var(--color-border-default);
     border-radius: $border-radius-xs;
     aspect-ratio: 1/1;
     text-align: center;

@@ -14,7 +14,7 @@
 
   &__subtitle {
     text-align: center;
-    color: $color-text-secondary;
+    color: var(--color-foreground-sublte);
   }
 
   &__gc {
@@ -23,7 +23,7 @@
     margin: $spacing-xl 0;
 
     svg {
-      stroke: $color-primary;
+      stroke: var(--color-foreground-primary);
       font-size: 40px;
       @include glowing();
       @include floating($distance: $spacing-md, $name: main-gc);
@@ -54,7 +54,7 @@
   }
 
   #glowing-gc svg {
-    stroke: $color-primary;
+    stroke: var(--color-foreground-primary);
     @include glowing();
     @include floating($distance: $spacing-sm, $name: distinguished-gc);
   }
@@ -78,13 +78,13 @@
     font-size: 30px;
     left: calc(50% - 15px);
     top: calc(50% - 15px);
-    stroke: $color-primary;
-    fill: $color-primary;
+    stroke: var(--color-foreground-primary);
+    fill: var(--color-foreground-primary);
     @include floating($distance: $spacing-sm, $name: planet);
   }
 
   #plane {
-    stroke: $color-primary;
+    stroke: var(--color-foreground-primary);
     @include glowing();
     font-size: 30px;
   }
@@ -96,7 +96,7 @@
   width: fit-content;
   height: fit-content;
   gap: $spacing-xs;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border-default);
   border-radius: $border-radius-xs;
   padding: $spacing-sm;
   margin: auto;
@@ -119,12 +119,12 @@
 
       svg {
         font-size: $font-size-xl;
-        stroke: $color-primary;
+        stroke: var(--color-foreground-primary);
       }
     }
 
     #account-name-example {
-      color: $color-text-secondary;
+      color: var(--color-foreground-sublte);
       display: flex;
       align-items: flex-end;
       margin-bottom: 0 !important;
@@ -144,7 +144,7 @@
       align-items: center;
 
       svg {
-        stroke: $color-primary;
+        stroke: var(--color-foreground-primary);
         @include glowing();
       }
     }

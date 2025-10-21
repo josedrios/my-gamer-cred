@@ -20,5 +20,5 @@
 }
 
 @mixin glowing() {
-  filter: drop-shadow(0 0 4px $color-primary);
+  filter: drop-shadow(0 0 4px var(--color-foreground-primary));
 }

@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   overflow: auto;
-  background-color: $color-background-primary;
+  background-color: var(--color-background-default);
 }
 
 #root {
@@ -11,7 +11,7 @@ body {
   width: calc(100%);
   min-width: 0px;
   overflow: auto;
-  background-color: $color-background-primary;
+  background-color: var(--color-background-default);
 }
 
 #website-container {

@@ -9,7 +9,7 @@
   padding: $spacing-md $spacing-lg;
 
   &__content, &__copyright {
-    color: $color-text-secondary;
+    color: var(--color-foreground-subtle);
     font-size: $font-size-xs;
   }
   
@@ -21,12 +21,12 @@
     margin-bottom: $spacing-sm;
     
     a {
-      color: $color-text-secondary;
+      color: var(--color-foreground-subtle);
       transition: color $transition-fast;
     }
 
     a:hover {
-        color: $color-primary;
+        color: var(--color-foreground-primary);
     }
   }
 }

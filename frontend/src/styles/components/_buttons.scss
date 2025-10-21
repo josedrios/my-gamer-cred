@@ -1,6 +1,6 @@
 button {
     height: $spacing-xl;
     padding: 0 $spacing-sm;
-    background-color: $color-background-secondary;
+    background-color: var(--color-background-subtle);
     border-radius: $border-radius-xs;
 }

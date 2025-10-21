@@ -2,11 +2,11 @@
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(
       to right,
-      $color-background-primary,
+      var(--color-background-default),
       5%,
-      $color-border,
+      var(--color-background-subtle),
       95%,
-      $color-background-primary
+      var(--color-background-default)
     )
     1;
 
@@ -17,9 +17,11 @@
 
     &:hover {
       svg {
-        filter: drop-shadow(0 0 4px $color-primary);
+        filter: drop-shadow(0 0 4px var(--color-background-default));
         transform: translateY(-$spacing-xs);
       }
     }
   }
+
+  
 }

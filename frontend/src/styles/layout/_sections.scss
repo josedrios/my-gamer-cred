@@ -2,7 +2,7 @@
   &__header {
     font-weight: 400;
     padding: $spacing-sm 0;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border-default);
     margin-bottom: $spacing-sm;
   }
 
@@ -15,7 +15,7 @@
     gap: $spacing-md;
     overflow: auto;
     scrollbar-width: thin;
-    scrollbar-color: $color-border transparent;
+    scrollbar-color: var(--color-border-default) transparent;
     padding-bottom: $spacing-md;
   }
 }

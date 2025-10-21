@@ -6,9 +6,6 @@ import { IoPersonOutline } from 'react-icons/io5';
 import { IoSearchOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
 
-// TAILWIND WAS USED ON THE MAJORITY OF THE NAV BAR
-// (still finding the balance on when to use tailwind and when to use css)
-
 export default function Nav() {
   const location = useLocation();
   const path = location.pathname;

@@ -115,9 +115,9 @@ p {
 // ==========================
 
 .primary {
-  color: $color-primary;
+  color: var(--color-foreground-default);
 }
 
 .border {
-  color: $color-border;
+  color: var(--color-border-default);
 }

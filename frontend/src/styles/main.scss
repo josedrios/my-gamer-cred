@@ -1,11 +1,14 @@
 // ABSTRACT FILES 
-@import './abstracts/_variables';
-@import './abstracts/_mixins';
+@import './tokens/_colors';
+@import './tokens/_spacing';
+@import './tokens/_radius';
+@import './tokens/_transitions';
 
 // BASE FILES
 @import './base/_typography';
 @import './base/_reset';
 @import './base/_base';
+@import './base/_mixins';
 
 // LAYOUT FILES
 @import './layout/_app';

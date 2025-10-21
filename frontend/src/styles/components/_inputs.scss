@@ -1,6 +1,6 @@
 input {
     height: $spacing-xl;
-    background-color: $color-background-secondary;
+    background-color: var(--color-background-subtle);
     padding: 0 $spacing-sm;
     font-size: $font-size-sm;
     border-radius: $border-radius-xs;
