@@ -1,4 +1,4 @@
-// --- Column Cards --
+// --- Game Review Cards --
 .review-card {
   display: flex;
   padding: $spacing-md;
@@ -7,55 +7,36 @@
   border-radius: $border-radius-md;
   border: 1px solid var(--color-border-default);
   transition: background-color $transition-fast;
-
-  .col-card__body {
-    height: 140px;
-    margin-bottom: 0;
-
-    img {
-      height: 100%;
-      border-radius: $border-radius-xs;
-    }
-  }
-
-  .col-card__info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-xs;
-    padding: 0 $spacing-md;
-
-    h5 {
-      font-weight: 400;
-    }
-
-    p {
-      color: var(--color-foreground-subtle);
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: var(--color-background-raised);
-
-    .col-card__title {
-      text-decoration: underline;
-    }
-  }
 }
 
-.review-card .col-card__stats {
+.review-card:hover {
+  cursor: pointer;
+  background-color: var(--color-background-raised);
+}
+
+.review-card__poster {
+  height: 140px;
+  margin-bottom: 0;
+}
+
+.review-card__poster-img {
+  height: 100%;
+  border-radius: $border-radius-xs;
+}
+
+.review-card__content {
+  flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: $spacing-xs;
-  align-items: center;
-
-  svg {
-    stroke: var(--color-foreground-primary);
-  }
+  padding: 0 $spacing-md;
 }
 
-.review-card .col-card__description {
+.review-card__content-title {
+  font-weight: 400;
+}
+
+.review-card__content-description {
   color: var(--color-foreground-subtle);
   font-size: $font-size-sm;
   display: -webkit-box;

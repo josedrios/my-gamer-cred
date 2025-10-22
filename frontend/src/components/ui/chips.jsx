@@ -1,12 +1,12 @@
 import { IoCubeOutline } from 'react-icons/io5';
 
-function GamerCredChip({ value }) {
+function MetricChip({ value }) {
   return (
-    <p className="chip chip--gamer-cred">
+    <p className="chip chip--metric">
       <IoCubeOutline />
       <span>{value}</span>
     </p>
   );
 }
 
-export { GamerCredChip };
+export { MetricChip };
