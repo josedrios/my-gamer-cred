@@ -18,12 +18,11 @@ function GameCardRow({ source, title = 'NO TITLE' }) {
         </p>
         <p className="row-card__game-title">{title}</p>
         <div className="row-card__options">
-          <IoCheckmark />
+          <IoCheckmark/>
           <IoBookmarkOutline />
-          <IoEllipsisVertical />
+          <IoEllipsisVertical className='row-card__ellipsis'/>
         </div>
       </div>
-      <p className="row-card__subheader">{rand(2,340)}k Players</p>
     </div>
   );
 }

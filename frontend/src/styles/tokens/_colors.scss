@@ -48,7 +48,7 @@
   --yellow-900: hsl(47, 100%, 15%);
 
   // --- NEUTRALS ---
- --gray-100: hsl(0, 0%, 98%);
+  --gray-100: hsl(0, 0%, 98%);
   --gray-200: hsl(0, 0%, 94%);
   --gray-300: hsl(0, 0%, 86%);
   --gray-400: hsl(0, 0%, 74%);
@@ -60,6 +60,20 @@
   --gray-1000: hsl(0, 0%, 10%);
   --gray-1100: hsl(0, 0%, 6%);
   --gray-1200: hsl(0, 0%, 3%);
+
+  // 75% opaque
+  --gray-100-75: hsla(0, 0%, 98%, 0.75);
+  --gray-200-75: hsla(0, 0%, 94%, 0.75);
+  --gray-300-75: hsla(0, 0%, 86%, 0.75);
+  --gray-400-75: hsla(0, 0%, 74%, 0.75);
+  --gray-500-75: hsla(0, 0%, 62%, 0.75);
+  --gray-600-75: hsla(0, 0%, 50%, 0.75);
+  --gray-700-75: hsla(0, 0%, 38%, 0.75);
+  --gray-800-75: hsla(0, 0%, 26%, 0.75);
+  --gray-900-75: hsla(0, 0%, 16%, 0.75);
+  --gray-1000-75: hsla(0, 0%, 10%, 0.75);
+  --gray-1100-75: hsla(0, 0%, 6%, 0.75);
+  --gray-1200-75: hsla(0, 0%, 3%, 0.75);
 
   // --- GOLD (PRIMARY) ---
   --gold-100: hsl(45, 100%, 95%);
@@ -91,9 +105,9 @@
   --color-foreground-placeholder: var(--gray-800);
 
   // --- BACKGROUND ---
-  --color-background-default: var(--gray-900);
-  --color-background-raised: var(--gray-800);
-  --color-background-recessed: var(--gray-1000);
+  --color-background-default: var(--gray-1000);
+  --color-background-raised: var(--gray-900);
+  --color-background-recessed: var(--gray-1100);
   --color-background-subtle: var(--gray-800);
   --color-background-emphasis: var(--gray-500);
   --color-background-success: var(--green-900);
@@ -104,10 +118,11 @@
   --color-background-warningEmphasis: var(--yellow-600);
   --color-background-dangerEmphasis: var(--red-600);
   --color-background-disabled: var(--gray-700);
+  --color-background-default-opaque: var(--gray-1000-75);
   // add hovers
 
   // --- BORDERS ---
-  --color-border-default: var(--gray-700);
+  --color-border-default: var(--gray-800);
   --color-border-emphasis: var(--gray-600);
   --color-border-subtle: var(--gray-800);
   --color-border-success: var(--green-900);

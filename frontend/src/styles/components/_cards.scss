@@ -82,16 +82,16 @@
     position: absolute;
     bottom: $spacing-xs;
     right: $spacing-xs;
-    border-radius: $border-radius-xs;
+    border-radius: $border-radius-sm;
     display: flex;
     align-items: center;
     gap: $spacing-xs;
     padding: 0 $spacing-xs;
-    background-color: rgba(var(--color-background-default), 0.85);
+    background-color: var(--color-background-default-opaque);
 
     svg * {
-      stroke: var(--color-foreground-default);
-      stroke-width: 45;
+      stroke: var(--color-foreground-primary);
+      stroke-width: 40;
     }
   }
 }

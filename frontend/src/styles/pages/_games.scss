@@ -14,15 +14,25 @@
   align-items: center;
   margin: $spacing-sm 0;
   bottom: $spacing-sm;
-  transition: opacity $transition-fast;
+  transition: opacity $transition-slow;
 
   svg {
     font-size: $font-size-xl;
-    transition: stroke $transition-fast;
+    transition: stroke $transition-normal;
+
+    * {
+      stroke-width: 40;
+    }
 
     &:hover {
       stroke: var(--color-foreground-primary);
       fill: var(--color-foreground-primary);
+    }
+  }
+
+  .row-card__ellipsis {
+    * {
+      stroke-width: 25;
     }
   }
 }
@@ -38,13 +48,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transition: opacity $transition-fast;
+  font-size: $font-size-md;
 }
 
-.row-card--game .row-card__subheader {
-  cursor: auto;
-  margin-bottom: 0 !important;
-  font-size: $font-size-sm;
-  color: var(--color-border-default);
+.row-card--game .row-card__body {
+  img {
+    border-radius: $border-radius-sm;
+    transition: filter $transition-slow;
+  }
 }
 
 .row-card--game .row-card__body:hover {
@@ -65,7 +76,11 @@
 // --- Column Cards --
 .col-card--game {
   display: flex;
+  padding: $spacing-sm;
   flex-direction: row !important;
+  background-color: var(--color-background-raised);
+  border-radius: $border-radius-sm;
+  border: 1px solid var(--color-border-default);
 
   .col-card__body {
     height: 140px;
@@ -73,6 +88,7 @@
 
     img {
       height: 100%;
+      border-radius: $border-radius-xs;
     }
   }
 
@@ -83,13 +99,12 @@
 
   &:hover {
     cursor: pointer;
-    
+
     .col-card__title {
       text-decoration: underline;
     }
-    
+
     .col-card__info {
-      background-color: var(--color-background-subtle);
       border-radius: $border-radius-xs;
     }
   }

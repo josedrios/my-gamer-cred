@@ -38,7 +38,7 @@ export default function Games() {
           <GameCardCol />
           <GameCardCol />
         </SectionRow>
-        <SectionRow title="Best of 2025">
+        <SectionRow title="2025's Best">
           <GameCardCol />
           <GameCardCol />
           <GameCardCol />

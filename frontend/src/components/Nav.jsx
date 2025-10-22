@@ -1,5 +1,3 @@
-import { container, fadeIn } from '@/components/animations';
-import { motion } from 'motion/react';
 import { NavLink } from 'react-router-dom';
 import { IoCubeOutline } from 'react-icons/io5';
 import { IoPersonOutline } from 'react-icons/io5';
@@ -24,19 +22,16 @@ export default function Nav() {
   ];
 
   return (
-    <motion.nav
+    <nav
       className="nav"
-      variants={container}
-      initial="hidden"
-      animate="show"
     >
-      <motion.div className="nav__logo" variants={fadeIn}>
+      <div className="nav__logo" >
         <NavLink to="/">
           <IoCubeOutline />
         </NavLink>
-      </motion.div>
+      </div>
 
-      <motion.div variants={fadeIn} className="nav__body">
+      <div className="nav__body">
         {navLinks.map(({ to, icon, label, i }) => (
           <NavLink
             to={to}
@@ -61,9 +56,9 @@ export default function Nav() {
             )}
           </NavLink>
         ))}
-      </motion.div>
+      </div>
       <ResponsiveNav />
-    </motion.nav>
+    </nav>
   );
 }
 

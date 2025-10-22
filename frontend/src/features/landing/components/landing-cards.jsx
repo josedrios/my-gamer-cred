@@ -1,34 +1,27 @@
 import { useState, useEffect } from 'react';
-import { motion, useTransform, animate, useMotionValue } from 'motion/react';
 import {
   IoPersonOutline,
   IoCubeOutline,
   IoPaperPlaneOutline,
   IoEarthOutline,
 } from 'react-icons/io5';
-import { whenInViewport } from '@/components/animations';
 
 function HomeCard({ title, content, id, children }) {
   const [shown, setShown] = useState(false);
 
   return (
-    <motion.div
+    <div
       className="landing-card"
-      variants={whenInViewport}
-      initial={'offscreen'}
-      animate={shown ? 'onscreen' : ''}
-      onViewportEnter={() => setShown(true)}
-      viewport={{ amount: 1 }}
       id={id === 'share-explore' ? 'home-left' : ''}
     >
       <div className="landing-card__body">
         <h3>{title}</h3>
         <p>{content}</p>
       </div>
-      <motion.div className="landing-card__diagram" id={id}>
+      <div className="landing-card__diagram" id={id}>
         {children}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
 
@@ -63,13 +56,13 @@ function ExploreCard() {
       id={'share-explore'}
     >
       <IoEarthOutline id="planet" />
-      <motion.div
+      <div
         id="rotating-container"
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 4, ease: 'linear' }}
       >
         <IoPaperPlaneOutline id="plane" />
-      </motion.div>
+      </div>
     </HomeCard>
   );
 }
@@ -105,9 +98,9 @@ function AccumulateCard() {
         <div id="gc-value-icon-container">
           <IoCubeOutline />
         </div>
-        <motion.pre onViewportEnter={() => setCountEnter(true)} id="gc-value">
+        <pre onViewportEnter={() => setCountEnter(true)} id="gc-value">
           {rounded}
-        </motion.pre>
+        </pre>
       </div>
     </HomeCard>
   );
