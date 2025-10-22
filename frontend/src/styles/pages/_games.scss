@@ -1,11 +1,12 @@
-// --- Row Cards ---
-.game-poster-card {
+// --- Poster Card ---
+.poster-card {
   flex: 0 0 150px;
   max-width: 150px;
   min-width: 150px;
+  position: relative;
 }
 
-.game-poster-card .row-card__options {
+.poster-card__options {
   opacity: 0;
   position: absolute;
   display: flex;
@@ -16,29 +17,29 @@
   margin: $spacing-sm 0;
   bottom: $spacing-sm;
   transition: opacity $transition-normal;
+}
 
-  svg {
-    font-size: $font-size-xl;
-    transition: stroke $transition-normal;
+.poster-card__options-icon {
+  font-size: $font-size-xl;
+  transition: stroke $transition-normal;
 
-    * {
-      stroke-width: 40;
-    }
-
-    &:hover {
-      stroke: var(--color-foreground-primary);
-      fill: var(--color-foreground-primary);
-    }
+  * {
+    stroke-width: 40;
   }
 
-  .row-card__ellipsis {
-    * {
-      stroke-width: 25;
-    }
+  &:hover {
+    stroke: var(--color-foreground-primary);
+    fill: var(--color-foreground-primary);
   }
 }
 
-.game-poster-card .row-card__game-title {
+.poster-card__options-icon--ellipsis {
+  * {
+    stroke-width: 25;
+  }
+}
+
+.poster-card__title {
   opacity: 0;
   position: absolute;
   padding: 0 $spacing-xs;
@@ -52,24 +53,25 @@
   font-size: $font-size-md;
 }
 
-.game-poster-card .row-card__body {
-  img {
-    border-radius: $border-radius-sm;
-    transition: filter $transition-normal;
-  }
+.poster-card__image {
+  border-radius: $border-radius-sm;
+  transition: filter $transition-normal;
 }
 
-.game-poster-card .row-card__body:hover {
-  img {
+.poster-card:hover {
+  .poster-card__image {
     filter: brightness(0.3);
   }
 
-  .row-card__game-title,
-  .row-card__options {
+  .poster-card__title {
     opacity: 1;
   }
 
-  .row-card__banner {
+  .poster-card__options {
+    opacity: 1;
+  }
+
+  .chip--gamer-cred {
     opacity: 0;
   }
 }

@@ -1,5 +1,5 @@
 import { SectionRow, SectionDivider } from '@/components/layouts/section';
-import { GameCardRow } from '@/features/games/components/game-card';
+import { PosterCard } from '@/features/games/components/poster-card';
 import { ReviewCard } from '@/features/reviews/components/review-card';
 import batman from '@/assets/images/game_cover.jpg';
 import elden from '@/assets/images/game_cover2.jpg';
@@ -12,20 +12,20 @@ export default function Games() {
   return (
     <main>
       <SectionRow title="Currently Trending">
-        <GameCardRow source={elden} title="Elden Ring" />
-        <GameCardRow source={batman} title="Batman Arkham Asylum" />
-        <GameCardRow source={titan} title="Titan Fall 2" />
-        <GameCardRow source={lbp} title="LittleBigPlanet" />
-        <GameCardRow source={mgs} title="Metal Gear Solid 3: Snake Eater" />
-        <GameCardRow source={re} title="Resident Evil 2 Remake" />
+        <PosterCard source={elden} title="Elden Ring" />
+        <PosterCard source={batman} title="Batman Arkham Asylum" />
+        <PosterCard source={titan} title="Titan Fall 2" />
+        <PosterCard source={lbp} title="LittleBigPlanet" />
+        <PosterCard source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+        <PosterCard source={re} title="Resident Evil 2 Remake" />
       </SectionRow>
       <SectionRow title="Recently Played">
-        <GameCardRow source={elden} title="Elden Ring" />
-        <GameCardRow source={batman} title="Batman Arkham Asylum" />
-        <GameCardRow source={titan} title="Titan Fall 2" />
-        <GameCardRow source={lbp} title="LittleBigPlanet" />
-        <GameCardRow source={mgs} title="Metal Gear Solid 3: Snake Eater" />
-        <GameCardRow source={re} title="Resident Evil 2 Remake" />
+        <PosterCard source={elden} title="Elden Ring" />
+        <PosterCard source={batman} title="Batman Arkham Asylum" />
+        <PosterCard source={titan} title="Titan Fall 2" />
+        <PosterCard source={lbp} title="LittleBigPlanet" />
+        <PosterCard source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+        <PosterCard source={re} title="Resident Evil 2 Remake" />
       </SectionRow>
       <SectionDivider>
         <SectionRow title="Hot Reviews">
@@ -37,12 +37,12 @@ export default function Games() {
           <ReviewCard />
         </SectionRow>
         <SectionRow title="2025's Best">
-          <GameCardRow source={elden} title="Elden Ring" />
-          <GameCardRow source={batman} title="Batman Arkham Asylum" />
-          <GameCardRow source={titan} title="Titan Fall 2" />
-          <GameCardRow source={lbp} title="LittleBigPlanet" />
-          <GameCardRow source={mgs} title="Metal Gear Solid 3: Snake Eater" />
-          <GameCardRow source={re} title="Resident Evil 2 Remake" />
+          <PosterCard source={elden} title="Elden Ring" />
+          <PosterCard source={batman} title="Batman Arkham Asylum" />
+          <PosterCard source={titan} title="Titan Fall 2" />
+          <PosterCard source={lbp} title="LittleBigPlanet" />
+          <PosterCard source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+          <PosterCard source={re} title="Resident Evil 2 Remake" />
         </SectionRow>
       </SectionDivider>
     </main>
