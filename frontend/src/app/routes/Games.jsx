@@ -1,8 +1,6 @@
 import { SectionRow, SectionDivider } from '@/components/layouts/section';
-import {
-  GameCardRow,
-  GameCardCol,
-} from '@/features/games/components/game-card';
+import { GameCardRow } from '@/features/games/components/game-card';
+import { ReviewCard } from '@/features/reviews/components/review-card';
 import batman from '@/assets/images/game_cover.jpg';
 import elden from '@/assets/images/game_cover2.jpg';
 import titan from '@/assets/images/game_cover3.jpg';
@@ -31,20 +29,20 @@ export default function Games() {
       </SectionRow>
       <SectionDivider>
         <SectionRow title="Hot Reviews">
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
         </SectionRow>
         <SectionRow title="2025's Best">
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
-          <GameCardCol />
+          <GameCardRow source={elden} title="Elden Ring" />
+          <GameCardRow source={batman} title="Batman Arkham Asylum" />
+          <GameCardRow source={titan} title="Titan Fall 2" />
+          <GameCardRow source={lbp} title="LittleBigPlanet" />
+          <GameCardRow source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+          <GameCardRow source={re} title="Resident Evil 2 Remake" />
         </SectionRow>
       </SectionDivider>
     </main>
