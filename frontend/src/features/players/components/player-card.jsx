@@ -1,9 +1,10 @@
+import { randColor } from '@/temp-util';
 import { IoCubeOutline, IoPeopleOutline } from 'react-icons/io5';
 
 function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
   return (
     <div className="row-card row-card--player">
-      <div className="row-card__pfp" />
+      <div className="row-card__pfp" style={{ backgroundColor: randColor() }} />
       <p className="row-card__username">{username}</p>
       <div className="row-card__user-misc">
         <p className="row-card__gc">
@@ -22,7 +23,7 @@ function PlayerCardRow({ username = 'UKNOWN', gc = 999, games = 999 }) {
 function PlayerCardCol() {
   return (
     <div className="col-card col-card--player">
-      <div className="col-card__pfp" />
+      <div className="col-card__pfp" style={{ backgroundColor: randColor() }} />
       <p className="col-card__username">BASHWIZzzzzzzzzz</p>
       <p className="col-card__stat">
         <IoCubeOutline />

@@ -37,12 +37,12 @@ export default function Games() {
           <ReviewCard />
         </SectionRow>
         <SectionRow title="2025's Best">
-          <PosterCard source={elden} title="Elden Ring" />
-          <PosterCard source={batman} title="Batman Arkham Asylum" />
-          <PosterCard source={titan} title="Titan Fall 2" />
-          <PosterCard source={lbp} title="LittleBigPlanet" />
-          <PosterCard source={mgs} title="Metal Gear Solid 3: Snake Eater" />
-          <PosterCard source={re} title="Resident Evil 2 Remake" />
+          <PosterCard sidebar source={elden} title="Elden Ring" />
+          <PosterCard sidebar source={batman} title="Batman Arkham Asylum" />
+          <PosterCard sidebar source={titan} title="Titan Fall 2" />
+          <PosterCard sidebar source={lbp} title="LittleBigPlanet" />
+          <PosterCard sidebar source={mgs} title="Metal Gear Solid 3: Snake Eater" />
+          <PosterCard sidebar source={re} title="Resident Evil 2 Remake" />
         </SectionRow>
       </SectionDivider>
     </main>

@@ -1,14 +1,16 @@
 import {
   IoCheckmark,
   IoBookmarkOutline,
-  IoEllipsisVertical,
+  IoEllipsisVertical
 } from 'react-icons/io5';
 import { MetricChip } from '@/components/ui/chips';
 import { rand } from '@/temp-util';
 
-function PosterCard({ source, title = 'NO TITLE' }) {
+function PosterCard({ source, title = 'NO TITLE', sidebar = false }) {
   return (
-    <div className="card poster-card">
+    <div
+      className={`card poster-card ${sidebar ? 'poster-card--sidebar' : ''}`}
+    >
       <img className="poster-card__image" src={source} alt="" />
       <MetricChip value={rand(82, 100)} />
       <p className="poster-card__title">{title}</p>

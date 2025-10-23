@@ -77,8 +77,9 @@
   // ==================
 
   // --- FOREGROUND ---
-  --color-foreground-default: hsl(var(--gray-200));
-  --color-foreground-subtle: hsl(var(--gray-400));
+  --color-foreground-default: hsl(var(--gray-300));
+  --color-foreground-header: hsl(var(--gray-100));
+  --color-foreground-subtle: hsl(var(--gray-500));
   --color-foreground-onEmphasis: hsl(var(--gray-1000));
   --color-foreground-primary: hsl(var(--gold-500));
   --color-foreground-success: hsl(var(--green-400));
@@ -111,7 +112,7 @@
   --color-border-default: hsl(var(--gray-800));
   --color-border-emphasis: hsl(var(--gray-600));
   --color-border-subtle: hsl(var(--gray-700));
-  --color-border-success: hsl(var(--green-900));
+  --color-border-success: hsl(var(--green-800));
   --color-border-warning: hsl(var(--yellow-900));
   --color-border-danger: hsl(var(--red-900));
   --color-border-primaryEmphasis: hsl(var(--red-100));

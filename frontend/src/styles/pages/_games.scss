@@ -1,9 +1,31 @@
 // --- Poster Card ---
 .poster-card {
-  flex: 0 0 150px;
-  max-width: 150px;
-  min-width: 150px;
+  flex: 1 1 150px;
+  min-width: 100px;
+  max-width: 200px;
   position: relative;
+}
+
+.poster-card--sidebar {
+  min-width: 150px;
+}
+
+.poster-card__title {
+  opacity: 0;
+  position: absolute;
+  padding: 0 $spacing-xs;
+  width: calc(100% - 2 * $spacing-xs);
+  left: $spacing-xs;
+  top: 20%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity $transition-fast;
+  font-size: $font-size-md;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .poster-card__options {
@@ -39,26 +61,15 @@
   }
 }
 
-.poster-card__title {
-  opacity: 0;
-  position: absolute;
-  padding: 0 $spacing-xs;
-  width: calc(100% - 2 * $spacing-xs);
-  left: $spacing-xs;
-  top: 20%;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: opacity $transition-fast;
-  font-size: $font-size-md;
-}
-
 .poster-card__image {
   border-radius: $border-radius-sm;
+  border: 1px solid var(--color-border-default);
   transition: filter $transition-normal;
 }
 
 .poster-card:hover {
+  cursor: pointer;
+
   .poster-card__image {
     filter: brightness(0.3);
   }

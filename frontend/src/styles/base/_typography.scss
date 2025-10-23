@@ -11,11 +11,11 @@ $primary-font: 'JetBrains Mono';
 // ==========================
 // Font Measurements
 // ==========================
-$font-size-xs: 0.6875rem; // 11px
-$font-size-sm: 0.75rem; // 12px
-$font-size-md: 0.9375rem; // 15px
-$font-size-lg: 1.0625rem; // 17px
-$font-size-xl: 1.2rem; // 19px
+$font-size-xs: 0.625rem; 
+$font-size-sm: 0.75rem; 
+$font-size-md: 0.875rem; 
+$font-size-lg: 1rem; 
+$font-size-xl: 1.25rem; 
 
 body {
   font-family: $primary-font;
@@ -25,7 +25,7 @@ body {
 // Tag Adjustments
 // ==========================
 body {
-  font-size: $font-size-md;
+  font-size: 1rem;
 }
 
 h1,
@@ -35,6 +35,7 @@ h4,
 h4,
 h5,
 h6 {
+  color: var(--color-foreground-header);
   font-family: $primary-font;
   font-weight: 300;
 }
@@ -77,36 +78,6 @@ p {
 
   &.sm {
     font-size: $font-size-sm;
-  }
-}
-
-// --- Breakpoint Tag Adjustments ---
-@media (max-width: #{$breakpoint-xs}) {
-  h1 {
-    font-size: 1.4rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-  h3 {
-    font-size: 1.125rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  h5 {
-    font-size: 0.875rem;
-  }
-  h6 {
-    font-size: 0.75rem;
-  }
-
-  p {
-    font-size: $font-size-sm;
-
-    &.sm {
-      font-size: $font-size-xs;
-    }
   }
 }
 

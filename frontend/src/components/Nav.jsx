@@ -49,7 +49,7 @@ export default function Nav() {
                     path === to ? 'visible-nav-link' : 'invisible-nav-link'
                   }
                 >
-                  #
+                  !
                 </span>
                 {label.toUpperCase()}
               </>

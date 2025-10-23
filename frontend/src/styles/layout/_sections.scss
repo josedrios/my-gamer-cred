@@ -1,10 +1,8 @@
 .section {
-  margin-bottom: $spacing-sm;
+  margin-bottom: $spacing-xs;
 
   &__header {
-    font-weight: 400;
-    padding: $spacing-sm 0;
-    border-bottom: 1px solid var(--color-border-default);
+    font-weight: 300;
   }
 
   &__children {
@@ -24,7 +22,7 @@
 .section-divider {
   display: flex;
   flex-direction: row;
-  gap: $spacing-xl;
+  gap: $spacing-lg;
   width: 100%;
 
   .section__children {
