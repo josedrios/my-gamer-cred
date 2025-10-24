@@ -1,81 +1,103 @@
-// --- List Cards --- 
-.row-card--list {
-  flex: 0 0 225px;
-  max-width: 225px;
-  height: fit-content;
+// --- Poster Spread ---
+.poster-spread {
+  position: relative;
 
-  .row-card__body {
-    height: 100px !important;
-    
-    img {
-      height: 100px;
-      position: absolute;
-    }
-  }
-
-  &:hover {
-    .row-card__list-title {
-      text-decoration: underline;
-    }
+  img {
+    position: absolute;
+    border-radius: $border-radius-xs;
   }
 }
 
-.row-card__list-title {
+// --- List Cards ---
+.list-card {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  // THIS LINE WILL CAUSES ERRORS FOR BASIC LIST CARDS ON THE SIDEBAR
+  flex: 1 1 225px;
+  min-width: 200px;
+  height: fit-content;
+}
+
+.list-card:hover {
+  cursor: pointer;
+}
+
+.list-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.list-card__posters {
+  height: 100px !important;
+
+  img {
+    height: 100px;
+  }
+}
+
+.list-card__title {
   display: -webkit-box;
+  overflow: hidden;
+  color: var(--color-foreground-header);
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
-.row-card__user {
+.list-card:hover .list-card__title {
+  text-decoration: underline;
+}
+
+.list-card__account {
   display: flex;
   gap: calc($spacing-xs * 1.5);
   align-items: center;
   font-size: $font-size-sm;
+}
 
-  span {
-    font-size: $font-size-sm;
-    color: var(--color-foreground-sublte);
-    margin-bottom: 0;
-  }
+.list-card__pfp {
+  height: $spacing-lg;
+  border-radius: $border-radius-full;
+  aspect-ratio: 1/1;
+}
 
-  .row-card__pfp {
-    height: $spacing-md;
-    aspect-ratio: 1/1;
-    border-radius: 1000px;
-    background: lime;
+.list-card__username {
+  font-size: $font-size-sm;
+  color: var(--color-foreground-subtle);
+}
+
+.list-card--detailed {
+  border: 1px solid red;
+  display: flex;
+}
+
+.list-card--detailed .list-card__posters {
+  width: 200px;
+  height: 100px !important;
+
+  img {
+    height: 100px;
   }
 }
 
-.col-card--list {
-  max-width: 100%;
-  flex: auto;
-  padding-top: $spacing-sm;
-  padding-bottom: $spacing-md;
-  border-bottom: 1px solid var(--color-border-default);
+.list-card--detailed .list-card__content {
+}
 
-  &:last-child {
-    border-bottom: none;
-  }
+.list-card--detailed .list-card__header {
+}
 
-  &:hover {
-    background-color: var(--color-background-subtle);
-  }
+.list-card--detailed .list-card__title {
+}
 
-  .row-card__list-title {
-    font-size: $font-size-lg;
-    order: -1;
-  }
+.list-card--detailed .list-card__game-count {
+}
 
-  .row-card__body {
-    max-width: 300px;
-    margin-bottom: $spacing-xs;
-  }
+.list-card--detailed .list-card__account {
+}
 
-  .list-description {
-    padding: $spacing-xs 0;
-    font-size: $font-size-sm;
-    border-radius: 0 0 $border-radius-xs $border-radius-xs;
-    margin-bottom: $spacing-sm !important;
-  }
+.list-card--detailed .list-card__description {
+}
+
+.list-card--detailed .list-card__footer {
 }

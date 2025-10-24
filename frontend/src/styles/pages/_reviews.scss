@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  gap: $spacing-xs;
+  gap: $spacing-sm;
   padding: 0 $spacing-md;
 
   @media (max-width: #{375px}) {
@@ -71,12 +71,22 @@
   }
 }
 
-.review-card__author {
-  color: var(--color-foreground-subtle);
-  font-size: $font-size-sm;
+.review-card__account {
+  display: flex;
+  gap: $spacing-sm;
 }
 
-.review-card__description {
+.review-card__pfp {
+  aspect-ratio: 1/1;
+  border-radius: $border-radius-full;
+}
+
+.review-card__username {
+  font-size: $font-size-sm;
+  color: var(--color-foreground-subtle);
+}
+
+.review-card__review {
   font-size: $font-size-md;
   display: -webkit-box;
   -webkit-line-clamp: 3;

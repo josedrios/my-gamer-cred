@@ -4,5 +4,5 @@ export function rand(min, max) {
 }
 
 export function randColor() {
-  return `hsl(${rand(0,360)}, 50%, 50%)`
+  return `hsl(${rand(0,360)}, 80%, 50%)`
 }

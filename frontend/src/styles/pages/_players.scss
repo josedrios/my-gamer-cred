@@ -47,7 +47,7 @@
   }
 
   p {
-    color: var(--color-foreground-sublte);
+    color: var(--color-foreground-subtle);
     font-size: $font-size-sm;
   }
 }
@@ -103,7 +103,7 @@
 .row-card {
   &__add-player {
     margin-left: $spacing-sm;
-    color: var(--color-foreground-sublte);
+    color: var(--color-foreground-subtle);
     border: 1px solid var(--color-border-default);
     border-radius: $border-radius-xs;
     aspect-ratio: 1/1;

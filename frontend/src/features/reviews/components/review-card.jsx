@@ -1,5 +1,5 @@
 import ror from '@/assets/images/game_cover7.jpg';
-import { rand } from '@/temp-util';
+import { rand, randColor } from '@/temp-util';
 import {
   IoChatbubbleOutline,
   IoArrowDownOutline,
@@ -15,16 +15,20 @@ function ReviewCard() {
       </div>
       <div className="review-card__content">
         <h5 className="review-card__header">
-          <span className="review-card__title">
-            Risk of Rain RISK RISK RISK 2
-          </span>
+          <span className="review-card__title">Risk of Rain 2</span>
           <span className="review-card__rating">
             {' '}
             <IoCubeOutline /> {rand(85, 100)}
           </span>
         </h5>
-        <p className="review-card__author">By SOMEDUDE</p>
-        <p className="review-card__description">
+        <div className="review-card__account">
+          <div
+            className="review-card__pfp"
+            style={{ backgroundColor: randColor() }}
+          />
+          <p className='review-card__username'>SOMEDUDE</p>
+        </div>
+        <p className="review-card__review">
           This is the description of one of the best games of 2025. The users on
           this platform have deemed it worthy of being on this list. That means
           this is a really good game. This is the description of one of the best

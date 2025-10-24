@@ -1,5 +1,5 @@
 import { SectionRow, SectionDivider } from '@/components/layouts/section';
-import { PosterCard } from '@/features/games/components/poster-card';
+import { PosterCard } from '@/features/games/components/game-card';
 import { ReviewCard } from '@/features/reviews/components/review-card';
 import batman from '@/assets/images/game_cover.jpg';
 import elden from '@/assets/images/game_cover2.jpg';

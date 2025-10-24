@@ -12,6 +12,7 @@
   gap: $spacing-xs;
   padding: 0 $spacing-xs;
   background-color: var(--color-background-default-opaque);
+  color: var(--color-foreground-header);
 
   svg * {
     stroke: var(--color-foreground-primary);
