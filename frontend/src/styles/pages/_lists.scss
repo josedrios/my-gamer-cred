@@ -5,6 +5,7 @@
   img {
     position: absolute;
     border-radius: $border-radius-xs;
+    transition: filter $transition-fast;
   }
 }
 
@@ -16,11 +17,23 @@
   // THIS LINE WILL CAUSES ERRORS FOR BASIC LIST CARDS ON THE SIDEBAR
   flex: 1 1 225px;
   min-width: 175px;
+  max-width: 275px;
   height: fit-content;
+}
+
+.list-card--sidebar {
+  flex: 1 1 0px;
+  margin-bottom: $spacing-sm;
 }
 
 .list-card:hover {
   cursor: pointer;
+
+  .poster-spread {
+    img {
+      filter: brightness(80%);
+    }
+  }
 }
 
 .list-card__content {
@@ -65,4 +78,10 @@
 .list-card__username {
   font-size: $font-size-sm;
   color: var(--color-foreground-subtle);
+}
+
+@media (max-width: #{$breakpoint-md}) {
+  .section-sidebar--lists .section__children {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
 }

@@ -2,12 +2,16 @@
 .poster-card {
   flex: 1 1 150px;
   min-width: 100px;
-  max-width: 200px;
+  max-width: 250px;
   position: relative;
 }
 
 .poster-card--sidebar {
   min-width: 150px;
+
+  @media(max-width: #{$breakpoint-md}) {
+    min-width: 100px !important;
+  }
 }
 
 .poster-card__title {
@@ -84,5 +88,11 @@
 
   .chip--metric {
     opacity: 0;
+  }
+}
+
+@media (max-width: #{$breakpoint-md}) {
+  .section-sidebar--games .section__children {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }

@@ -1,6 +1,6 @@
-export function SectionRow({ title = 'NO TITLE', children, id }) {
+export function SectionRow({ title = 'NO TITLE', children, className }) {
   return (
-    <div className="section" id={id}>
+    <div className={`section ${className}`}>
       <h4 className="section__header">{title}</h4>
       <div className="section__children">{children}</div>
     </div>

@@ -79,7 +79,7 @@ export default function Lists() {
             downvotes={rand(10, 30)}
           />
         </SectionRow>
-        <SectionRow title="Featured">
+        <SectionRow title="Featured" className={'section-sidebar--lists'}>
           <ListCard
             title={'Games You Have to Play at Least Once'}
             user="LoreConsumer"

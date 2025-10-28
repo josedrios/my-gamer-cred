@@ -25,7 +25,7 @@ function UniversalCard({
       ) : (
         <PosterSpread className="universal-card__poster-spread" />
       )}
-      <div className="universal-card__content">
+      <div className="universal-card__content"> 
         <h5 className="universal-card__header">
           <span className="universal-card__title">{title}</span>
           <span className="universal-card__value">

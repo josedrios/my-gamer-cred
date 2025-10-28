@@ -85,7 +85,7 @@ export default function Games() {
             downvotes={rand(10, 30)}
           />
         </SectionRow>
-        <SectionRow title="2025's Best">
+        <SectionRow title="2025's Best" className={'section-sidebar--games'}>
           <PosterCard sidebar source={elden} title="Elden Ring" />
           <PosterCard sidebar source={batman} title="Batman Arkham Asylum" />
           <PosterCard sidebar source={titan} title="Titan Fall 2" />

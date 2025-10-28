@@ -45,5 +45,9 @@
     .section {
       width: 100%;
     }
+
+    > :last-child .section__children {
+      display: grid;
+    }
   }
 }
