@@ -19,22 +19,4 @@ function ListCard({ title = 'NO TITLE', user = 'UNKNOWN' }) {
   );
 }
 
-function ListCardDetailed() {
-  return (
-    <div className="card list-card--detailed">
-      <PosterSpread className={'list-card__posters'} />
-      <div className="list-card__content">
-        <h5 className='list-card__header'>
-          <span className='list-card__title'></span>
-          <span className='list-card__game-count'></span>
-        </h5>
-        <p className='list-card__description'>
-          This is the description of the list I created. This list holds hella games. Hella good games too, not that weak ish.
-        </p>
-      </div>
-      <div className="list-card__footer"></div>
-    </div>
-  );
-}
-
-export { ListCard, ListCardDetailed };
+export { ListCard };

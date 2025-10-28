@@ -25,16 +25,16 @@
   gap: $spacing-lg;
   width: 100%;
 
-  .section__children {
-    flex-direction: column;
-  }
-
   > :first-child {
     flex: 1;
   }
 
   > :last-child {
     width: min-content;
+  }
+
+  .section__children {
+    flex-direction: column;
   }
 }
 

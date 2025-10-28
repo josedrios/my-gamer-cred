@@ -1,0 +1,148 @@
+// --- Game universal Cards --
+.universal-card {
+  display: flex;
+  padding: $spacing-md;
+  background-color: var(--color-background-subtle);
+  border: 1px solid var(--color-border-default);
+  border-radius: $border-radius-md;
+  transition: background-color $transition-fast;
+}
+
+.universal-card:hover {
+  cursor: pointer;
+  background-color: var(--color-background-raised);
+}
+
+.universal-card__image {
+  width: 100px;
+  min-width: 100px;
+  position: relative;
+}
+
+.universal-card__poster-spread {
+  width: 25% !important;
+  min-width: 160px !important;
+
+  img {
+    height: 100px !important;
+  }
+}
+
+.universal-card__image,
+.universal-card__poster-spread {
+  border-radius: $border-radius-sm;
+  @media (max-width: #{375px}) {
+    display: none;
+  }
+}
+
+.universal-card__content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: $spacing-sm;
+  padding-left: $spacing-md;
+  flex: 1;
+
+  @media (max-width: #{375px}) {
+    padding: 0;
+  }
+}
+
+.universal-card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.universal-card__title {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0px;
+  font-weight: 400;
+  // THIS WIDTH VALUE ALLOWED THE CARD TO SHRINK EVEN
+  // WITH A LONG TITLE
+  width: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.universal-card__value {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: $font-size-lg;
+  margin-left: $spacing-sm;
+
+  svg {
+    stroke: var(--color-foreground-primary);
+  }
+
+  span {
+    color: var(--color-foreground-primary);
+  }
+}
+
+.universal-card__account {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.universal-card__pfp {
+  aspect-ratio: 1/1;
+  border-radius: $border-radius-full;
+}
+
+.universal-card__username {
+  font-size: $font-size-sm;
+  color: var(--color-foreground-subtle);
+}
+
+.universal-card__info {
+  font-size: $font-size-md;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.universal-card__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: $spacing-md;
+  margin-top: auto;
+}
+
+.universal-card__date {
+  color: var(--color-foreground-subtle);
+  margin-right: auto;
+
+  @media (max-width: #{$breakpoint-xs}) {
+    display: none;
+  }
+}
+
+.universal-card__metric {
+  color: var(--color-foreground-subtle);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: $font-size-md;
+
+  svg {
+    color: var(--color-foreground-default);
+    margin-right: $spacing-xs;
+  }
+
+  &:hover {
+    svg {
+      stroke: var(--color-foreground-primary);
+    }
+  }
+}

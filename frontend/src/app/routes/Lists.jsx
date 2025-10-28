@@ -1,7 +1,7 @@
 import { SectionRow, SectionDivider } from '@/components/layouts/section.jsx';
-import {
-  ListCard, ListCardDetailed
-} from '@/features/lists/components/list-card';
+import { ListCard } from '@/features/lists/components/list-card';
+import { UniversalCard } from '@/components/ui/cards';
+import { rand } from '@/temp-util';
 
 export default function Lists() {
   return (
@@ -33,15 +33,53 @@ export default function Lists() {
 
       <SectionDivider>
         <SectionRow title="Recently Liked">
-          <ListCardDetailed />
-          <ListCardDetailed />
-          <ListCardDetailed />
-          <ListCardDetailed />
-          <ListCardDetailed />
-          <ListCardDetailed />
+          <UniversalCard
+            title="Games You Must Play at Least Once In Your Life"
+            type="list"
+            value={rand(12, 60)}
+            info="This is a really good list, I am just writing extra filler words to see how the UI of the list cards turn out to look. Do not mind the extra words I put in here to make the info section longer and so on and stuff."
+            comments={rand(5, 100)}
+            upvotes={rand(700, 999)}
+            downvotes={rand(10, 30)}
+          />
+          <UniversalCard
+            title="Games You Must Play at Least Once In Your Life"
+            type="list"
+            value={rand(12, 60)}
+            info="This is a really good list, I am just writing extra filler words to see how the UI of the list cards turn out to look. Do not mind the extra words I put in here to make the info section longer and so on and stuff."
+            comments={rand(5, 100)}
+            upvotes={rand(700, 999)}
+            downvotes={rand(10, 30)}
+          />
+          <UniversalCard
+            title="Games You Must Play at Least Once In Your Life"
+            type="list"
+            value={rand(12, 60)}
+            info="This is a really good list, I am just writing extra filler words to see how the UI of the list cards turn out to look. Do not mind the extra words I put in here to make the info section longer and so on and stuff."
+            comments={rand(5, 100)}
+            upvotes={rand(700, 999)}
+            downvotes={rand(10, 30)}
+          />
+          <UniversalCard
+            title="Games You Must Play at Least Once In Your Life"
+            type="list"
+            value={rand(12, 60)}
+            info="This is a really good list, I am just writing extra filler words to see how the UI of the list cards turn out to look. Do not mind the extra words I put in here to make the info section longer and so on and stuff."
+            comments={rand(5, 100)}
+            upvotes={rand(700, 999)}
+            downvotes={rand(10, 30)}
+          />
+          <UniversalCard
+            title="Games You Must Play at Least Once In Your Life"
+            type="list"
+            value={rand(12, 60)}
+            info="This is a really good list, I am just writing extra filler words to see how the UI of the list cards turn out to look. Do not mind the extra words I put in here to make the info section longer and so on and stuff."
+            comments={rand(5, 100)}
+            upvotes={rand(700, 999)}
+            downvotes={rand(10, 30)}
+          />
         </SectionRow>
         <SectionRow title="Featured">
-          {/* USE ROW CARDS? */}
           <ListCard
             title={'Games You Have to Play at Least Once'}
             user="LoreConsumer"

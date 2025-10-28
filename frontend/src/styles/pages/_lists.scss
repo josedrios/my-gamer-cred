@@ -15,7 +15,7 @@
   gap: $spacing-sm;
   // THIS LINE WILL CAUSES ERRORS FOR BASIC LIST CARDS ON THE SIDEBAR
   flex: 1 1 225px;
-  min-width: 200px;
+  min-width: 175px;
   height: fit-content;
 }
 
@@ -65,39 +65,4 @@
 .list-card__username {
   font-size: $font-size-sm;
   color: var(--color-foreground-subtle);
-}
-
-.list-card--detailed {
-  border: 1px solid red;
-  display: flex;
-}
-
-.list-card--detailed .list-card__posters {
-  width: 200px;
-  height: 100px !important;
-
-  img {
-    height: 100px;
-  }
-}
-
-.list-card--detailed .list-card__content {
-}
-
-.list-card--detailed .list-card__header {
-}
-
-.list-card--detailed .list-card__title {
-}
-
-.list-card--detailed .list-card__game-count {
-}
-
-.list-card--detailed .list-card__account {
-}
-
-.list-card--detailed .list-card__description {
-}
-
-.list-card--detailed .list-card__footer {
 }
