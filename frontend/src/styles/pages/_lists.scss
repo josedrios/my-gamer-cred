@@ -1,6 +1,7 @@
 // --- Poster Spread ---
 .poster-spread {
   position: relative;
+  max-width: 300px;
 
   img {
     position: absolute;
@@ -17,7 +18,7 @@
   // THIS LINE WILL CAUSES ERRORS FOR BASIC LIST CARDS ON THE SIDEBAR
   flex: 1 1 225px;
   min-width: 175px;
-  max-width: 275px;
+  max-width: 400px;
   height: fit-content;
 }
 

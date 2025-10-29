@@ -1,117 +1,110 @@
 // --- Player Cards ---
-.row-card--player {
-  flex: 0 0 180px;
-  max-width: 200px;
-  align-items: center;
-  padding-top: $spacing-sm;
+.player-card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+  background-color: var(--color-background-subtle);
+  transition: background-color $transition-fast;
 
   &:hover {
-    .row-card__username {
-      text-decoration: underline;
-    }
-
-    .row-card__pfp {
-      box-shadow: 0 0 10px 3px black;
-    }
+    cursor: pointer;
+    background-color: var(--color-background-raised);
   }
 }
 
-.row-card--player .row-card__pfp {
-  width: calc($spacing-xl * 2);
-  border-radius: 1000px;
-  aspect-ratio: 1/1;
-  margin-bottom: $spacing-xs;
+.player-card__cover {
+  padding: $spacing-md;
+  padding-bottom: $spacing-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: bottom;
+  height: 85px;
+  width: 100%;
+  box-shadow: inset 0px -30px 30px 0px var(--color-background-subtle);
+  transition: box-shadow $transition-fast;
 }
 
-.row-card__user-misc {
+.player-card:hover .player-card__cover{
+    box-shadow: inset 0px -30px 30px 0px var(--color-background-raised);
+}
+
+.player-card__pfp {
+  height: 50px;
+  width: 50px;
+  border-radius: $border-radius-full;
+}
+
+.player-card__add {
+  margin-bottom: $spacing-sm;
+  height: 25px;
+  aspect-ratio: 1/1;  
+  border-radius: $border-radius-md;
+  padding: $spacing-xs;
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  width: 100%;
+  align-items: center;
+  background-color: var(--color-background-raised-opaque);
+  border: 1px solid var(--color-border-subtle);
+  transition: color $transition-fast, border-color $transition-fast;
 
-  .row-card__gc,
-  .row-card__game-count {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: $spacing-xs;
-
-    svg {
-      font-size: $font-size-md;
-    }
-
-    svg * {
-      stroke: var(--color-foreground-primary);
-      stroke-width: 40;
-    }
-  }
-
-  p {
-    color: var(--color-foreground-subtle);
-    font-size: $font-size-sm;
-  }
-}
-
-.col-card--player {
-  padding: $spacing-sm;
-  flex-direction: row !important;
-  gap: $spacing-xs;
-  border-radius: $border-radius-xs;
-
-  p {
-    margin-bottom: 0 !important;
-  }
-
-  .col-card__pfp {
-    width: $spacing-xl;
-    height: $spacing-xl;
-    border-radius: 1000px;
-  }
-
-  .col-card__username {
-    margin-left: $spacing-xs;
-    flex: 1;
-  }
-
-  .col-card__stat {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-xs;
-    font-size: $font-size-sm;
-
-    svg {
-      font-size: $font-size-md !important;
-    }
-
-    svg * {
-      stroke: var(--color-foreground-primary);
-      stroke-width: 40;
-    }
+  svg * {
+    stroke-width: 50;
   }
 
   &:hover {
-    background-color: var(--color-background-subtle);
+    color: var(--color-foreground-header);
+    border-color: var(--color-background-emphasis);
+  }
+}
 
-    .col-card__username {
-      text-decoration: underline;
+.player-card__body {
+  padding: 0 $spacing-md;
+  padding-bottom: $spacing-md;
+}
+
+.player-card__username {
+  font-size: $font-size-lg;
+  color: var(--color-foreground-header);
+  min-width: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.player-card:hover .player-card__username {
+  text-decoration: underline;
+}
+
+.player-card__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-card__reviews {
+  font-size: $font-size-sm;
+  color: var(--color-foreground-subtle);
+}
+
+.player-card__gc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  svg {
+    stroke: var(--color-foreground-primary);
+    margin-right: $spacing-xs;
+
+    * {
+      stroke-width: 45;
     }
   }
 }
 
-.col-card,
-.row-card {
-  &__add-player {
-    margin-left: $spacing-sm;
-    color: var(--color-foreground-subtle);
-    border: 1px solid var(--color-border-default);
-    border-radius: $border-radius-xs;
-    aspect-ratio: 1/1;
-    text-align: center;
-
-    &:hover {
-      color: white;
-      border-color: white;
-    }
-  }
-}
+// --- Universal Card --- 

@@ -89,10 +89,12 @@
 
 .universal-card__account {
   display: flex;
+  align-items: center;
   gap: $spacing-sm;
 }
 
 .universal-card__pfp {
+  height: $spacing-lg;
   aspect-ratio: 1/1;
   border-radius: $border-radius-full;
 }
