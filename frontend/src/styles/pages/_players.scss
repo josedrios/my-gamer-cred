@@ -29,8 +29,8 @@
   transition: box-shadow $transition-fast;
 }
 
-.player-card:hover .player-card__cover{
-    box-shadow: inset 0px -30px 30px 0px var(--color-background-raised);
+.player-card:hover .player-card__cover {
+  box-shadow: inset 0px -30px 30px 0px var(--color-background-raised);
 }
 
 .player-card__pfp {
@@ -40,9 +40,8 @@
 }
 
 .player-card__add {
-  margin-bottom: $spacing-sm;
   height: 25px;
-  aspect-ratio: 1/1;  
+  aspect-ratio: 1/1;
   border-radius: $border-radius-md;
   padding: $spacing-xs;
   display: flex;
@@ -50,7 +49,9 @@
   align-items: center;
   background-color: var(--color-background-raised-opaque);
   border: 1px solid var(--color-border-subtle);
-  transition: color $transition-fast, border-color $transition-fast;
+  transition:
+    color $transition-fast,
+    border-color $transition-fast;
 
   svg * {
     stroke-width: 50;
@@ -74,7 +75,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-} 
+}
 
 .player-card:hover .player-card__username {
   text-decoration: underline;
@@ -107,4 +108,46 @@
   }
 }
 
-// --- Universal Card --- 
+// --- Universal Card ---
+.universal-card__player {
+  align-items: center;
+  gap: $spacing-md;
+
+  p {
+    white-space: nowrap;
+  }
+}
+
+.universal-card__player .universal-card__pfp {
+  height: 25px;
+}
+.universal-card__player .universal-card__username {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0px;
+  width: 0px;
+  font-size: $font-size-md;
+  color: var(--color-foreground-header);
+}
+
+.universal-card__player .universal-card__reviews {
+  margin-left: auto;
+  color: var(--color-foreground-subtle);
+}
+
+.universal-card__player .universal-card__gc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  svg {
+    margin-right: $spacing-xs;
+    stroke: var(--color-foreground-primary);
+
+    * {
+      stroke-width: 45;
+    }
+  }
+}
