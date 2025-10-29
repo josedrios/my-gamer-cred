@@ -21,14 +21,20 @@ export default function Players() {
 
       <SectionDivider>
         <SectionRow title="Discover Players">
-          <UniversalCard type='player'/>
-          <UniversalCard type='player'/>
-          <UniversalCard type='player'/>
-          <UniversalCard type='player'/>
-          <UniversalCard type='player'/>
-          <UniversalCard type='player'/>
+          <UniversalCard type="player" />
+          <UniversalCard type="player" />
+          <UniversalCard type="player" />
+          <UniversalCard type="player" />
+          <UniversalCard type="player" />
+          <UniversalCard type="player" />
         </SectionRow>
-        <SectionRow title="Featured">
+        <SectionRow title="Featured" className={'section-sidebar--players'}>
+          <PlayerCard cov={1} sidebar />
+          <PlayerCard cov={2} sidebar />
+          <PlayerCard cov={1} sidebar />
+          <PlayerCard cov={2} sidebar />
+          <PlayerCard cov={1} sidebar />
+          <PlayerCard cov={2} sidebar />
         </SectionRow>
       </SectionDivider>
     </main>

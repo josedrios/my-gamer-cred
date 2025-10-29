@@ -15,6 +15,10 @@
   }
 }
 
+.player-card--sidebar {
+  flex: 0 0 fit-content;
+}
+
 .player-card__cover {
   padding: $spacing-md;
   padding-bottom: $spacing-lg;
@@ -68,10 +72,17 @@
   padding-bottom: $spacing-md;
 }
 
+.player-card__username-container {
+  display: flex;
+}
+
 .player-card__username {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0px;
+  width: 0px;
   font-size: $font-size-lg;
   color: var(--color-foreground-header);
-  min-width: 0px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -149,5 +160,11 @@
     * {
       stroke-width: 45;
     }
+  }
+}
+
+@media (max-width: #{$breakpoint-md}) {
+  .section-sidebar--players .section__children {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
