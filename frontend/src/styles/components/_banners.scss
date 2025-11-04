@@ -1,0 +1,42 @@
+.banner {
+  border: 1px solid red;
+  border-radius: $spacing-xs;
+  padding: $spacing-md;
+  text-align: center;
+}
+
+// Banner Status Variants
+.banner--success {
+  background: var(--color-background-success);
+  border: 1px solid var(--color-border-success);
+}
+
+.banner--warning {
+  background: var(--color-background-warning);
+  border: 1px solid var(--color-border-warning);
+}
+
+.banner--danger {
+  background: var(--color-background-danger);
+  border: 1px solid var(--color-border-danger);
+}
+
+.banner__text {
+
+}
+
+.banner--success .banner__text {
+  color: var(--color-foreground-success);
+}
+
+.banner--warning .banner__text {
+  color: var(--color-foreground-warning);
+}
+
+.banner--danger .banner__text {
+  color: var(--color-foreground-danger);
+}
+
+.banner__status {
+  color: var(--color-foreground-successEmphasis);
+}

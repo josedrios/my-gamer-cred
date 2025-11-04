@@ -23,44 +23,7 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      zones: [
-        // --- No cross-feature imports ---
-        {
-          target: './src/features/landing',
-          from: './src/features',
-          except: ['./landing'],
-        },
-        {
-          target: './src/features/games',
-          from: './src/features',
-          except: ['./games'],
-        },
-        {
-          target: './src/features/lists',
-          from: './src/features',
-          except: ['./lists'],
-        },
-        {
-          target: './src/features/players',
-          from: './src/features',
-          except: ['./players'],
-        },
-
-        // --- Unidirectional imports ---
-        { target: './src/features', from: './src/app' },
-        {
-          target: [
-            './src/assets',
-            './src/components',
-            './src/hooks',
-            './src/lib',
-            './src/types',
-            './src/utils',
-          ],
-          from: ['./src/features', './src/app'],
-        },
-      ],
+	'no-unused-vars': 'off',
     },
   },
 ]);

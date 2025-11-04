@@ -25,7 +25,7 @@ export default function PlayerCard({ cov, sidebar = false }) {
       <div className="player-card__body">
         <div className="player-card__username-container">
           <p className="player-card__username">
-            SOME DUDESOME DUDESOME DUDESOME DUDESOME DUDESOME DUDESOME DUDE
+            SOME DUDE
           </p>
         </div>{' '}
         <div className="player-card__info">

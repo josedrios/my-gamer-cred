@@ -7,7 +7,7 @@
   overflow: hidden;
   border: 1px solid var(--color-border-default);
   background-color: var(--color-background-subtle);
-  transition: background-color $transition-fast;
+  transition: background-color $transition-slow;
 
   &:hover {
     cursor: pointer;
@@ -30,7 +30,7 @@
   height: 85px;
   width: 100%;
   box-shadow: inset 0px -30px 30px 0px var(--color-background-subtle);
-  transition: box-shadow $transition-fast;
+  transition: box-shadow $transition-slow;
 }
 
 .player-card:hover .player-card__cover {
