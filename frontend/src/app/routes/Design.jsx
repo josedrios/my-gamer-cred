@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Banner from '@/components/ui/banners';
-import { LabeledInput } from '@/components/ui/inputs';
+import { InputSplit, LabeledInput } from '@/components/ui/inputs';
 export default function Design() {
   const [tab, setTab] = useState('Forms');
 
@@ -47,17 +47,31 @@ function Forms({ tab }) {
   return (
     <ComponentList title="Forms" tab={tab} value={value} setValue={setValue}>
       <LabeledInput
-        name={'email'}
+        id={'email'}
         label={'Email'}
         placeholder={'johndoe@email.com'}
         type={'email'}
       />
       <LabeledInput
-        name={'password'}
+        id={'password'}
         label={'Password'}
         placeholder={'Enter password'}
         type={'password'}
       />
+      <InputSplit>
+        <LabeledInput
+          id={'email'}
+          label={'Email'}
+          placeholder={'johndoe@email.com'}
+          type={'email'}
+        />
+        <LabeledInput
+          id={'password'}
+          label={'Password'}
+          placeholder={'Enter password'}
+          type={'password'}
+        />
+      </InputSplit>
     </ComponentList>
   );
 }

@@ -24,3 +24,8 @@ input {
   font-size: $font-size-lg;
 }
 
+.input-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+}

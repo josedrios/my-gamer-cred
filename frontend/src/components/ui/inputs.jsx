@@ -1,6 +1,6 @@
 function LabeledInput({
   type,
-  name,
+  id,
   label,
   placeholder,
   variants,
@@ -10,7 +10,7 @@ function LabeledInput({
   return (
     <div className="labeled-input">
       {label ? (
-        <label className="labeled-input__label" for={name}>
+        <label className="labeled-input__label" for={id}>
           {label}
         </label>
       ) : (
@@ -19,7 +19,7 @@ function LabeledInput({
       <input
         className="labeled-input__input"
         type={type}
-        name={name}
+        id={id}
         value={value}
         onChange={(e) => setValue(e.target.current)}
         placeholder={placeholder}
@@ -28,4 +28,8 @@ function LabeledInput({
   );
 }
 
-export { LabeledInput };
+function InputSplit({ children }) {
+  return <div className="input-split">{children}</div>;
+}
+
+export { LabeledInput, InputSplit };
