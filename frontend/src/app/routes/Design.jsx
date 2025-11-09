@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Banner from '@/components/ui/banners';
 import { InputSplit, LabeledInput } from '@/components/ui/inputs';
+import { StandardButton } from '@/components/ui/buttons';
 export default function Design() {
-  const [tab, setTab] = useState('Forms');
+  const [tab, setTab] = useState('Buttons');
 
   return (
     <main>
@@ -12,11 +13,13 @@ export default function Design() {
       </p>
       <ul>
         <li onClick={() => setTab('Banners')}>banners</li>
-        <li onClick={() => setTab('Forms')}>forms</li>
+        <li onClick={() => setTab('Inputs')}>inputs</li>
         <li onClick={() => setTab('Icons')}>icons</li>
+        <li onClick={() => setTab('Buttons')}>buttons</li>
       </ul>
       <Banners tab={tab} />
-      <Forms tab={tab} />
+      <Inputs tab={tab} />
+      <Buttons tab={tab} />
     </main>
   );
 }
@@ -42,10 +45,21 @@ function Banners({ tab }) {
   );
 }
 
-function Forms({ tab }) {
+function Buttons({ tab }) {
+  return (
+    <ComponentList title="Buttons" tab={tab}>
+      <StandardButton full>This is a full button</StandardButton>
+      <StandardButton>Test</StandardButton>
+      <StandardButton variant={'primary'}>Primary</StandardButton>
+      <StandardButton variant={'test'}>Test Primary</StandardButton>
+    </ComponentList>
+  );
+}
+
+function Inputs({ tab }) {
   const [value, setValue] = useState('');
   return (
-    <ComponentList title="Forms" tab={tab} value={value} setValue={setValue}>
+    <ComponentList title="Inputs" tab={tab} value={value} setValue={setValue}>
       <LabeledInput
         id={'email'}
         label={'Email'}
